@@ -1,0 +1,425 @@
+--=============================================================================
+-- PROGRAM: MeasureRodPoint
+-- DESCRIPTION: Program do pomiaru pozycji punktu (preta) w przestrzeni
+--              za pomoca flanszy (TCP0) i czujnika dotyku na DI[1].
+--              Wymaga 3 pomiarow z roznych kierunkow.
+--=============================================================================
+
+PROGRAM MeasureRodPoint
+
+-- Deklaracja zmiennych
+VAR
+  -- Zmienne na zarejestrowane pozycje kontaktu
+  pos_contact_X : POSITION   -- Poz. kontaktu przy podjezdzie w kier. X+
+  pos_contact_Y : POSITION   -- Poz. kontaktu przy podjezdzie w kier. Y+
+  pos_contact_Z : POSITION   -- Poz. kontaktu przy podjezdzie w kier. Z-
+
+  -- Zmienna na obliczona pozycje srodka preta
+  pos_rod_center : POSITION
+
+  -- Parametry pomiaru
+  v_approach     : REAL      -- Predkosc podjazdu (mm/s)
+  dist_approach  : REAL      -- Dystans 'przejechania' jesli brak kontaktu (mm) - powinien byc wiekszy niz oczekiwany dystans do kontaktu
+  dist_retreat   : REAL      -- Dystans odjazdu po kontakcie (mm)
+  rod_diameter   : REAL      -- Znana srednica preta (mm)
+
+  -- Wektory kierunkow podjazdu (zdefiniowane w WORLD frame)
+  -- Uzywamy P[1] jako vector, bo POSITION moze przechowywac wylacznie XYZWPR
+  -- Faktyczne wektory ruchu beda normalizowane i skorygowane o orientacje flanszy.
+  -- TUTAJ ZAKLADAMY PROSTE KIERUNKI W WORLD FRAME XYZ
+  -- (Lepsze podejscie: definiowac wektor jako XYZ, a orientacje WPR osobno lub w docelowym punkcie ruchu)
+  vec_dir_X_plus  : POSITION  -- Kierunek +X w WORLD (np. {x 1.0, y 0.0, z 0.0, w 0.0, p 0.0, r 0.0})
+  vec_dir_Y_plus  : POSITION  -- Kierunek +Y w WORLD
+  vec_dir_Z_minus : POSITION  -- Kierunek -Z w WORLD
+
+  -- Docelowa orientacja flanszy dla podjazdow poziomych (np. pionowo, skierowana w kier. ruchu)
+  -- Ta orientacja zalezy od tego, JAK dokladnie ma byc obrocona flansza.
+  -- Przyjmijmy, ze dla podjazdu w +X (flansza w pionie) orientacja WORLD ma byc np W=0, P=90, R=0
+  -- Dla podjazdu w +Y (flansza w pionie) orientacja WORLD ma byc np W=90, P=90, R=0
+  -- Dla podjazdu w -Z (flansza w poziomie) orientacja WORLD ma byc np W=0, P=0, R=0
+  orient_horiz_X  : POSITION -- Orientacja WPR dla podjazdu X
+  orient_horiz_Y  : POSITION -- Orientacja WPR dla podjazdu Y
+  orient_vert_Z   : POSITION -- Orientacja WPR dla podjazdu Z
+
+  -- Zmienne statusu i pomocnicze
+  status         : INTEGER   -- Status wykonania ruchu/procedury
+  current_pos    : POSITION  -- Aktualna pozycja robota
+  target_pos     : POSITION  -- Pozycja docelowa dla ruchu
+  pos_start_meas : POSITION  -- Pozycja startowa przed podjazdem
+
+  -- Flagi bledow
+  error_flag     : BOOLEAN := FALSE
+
+-- Deklaracja procedur (implementacja ponizej BEGIN)
+-- Procedure MeasureContact(kierunek_ruchu, docelowa_orientacja, OUT poz_kontaktu, OUT status_procedury)
+-- Procedure CalculateRodCenter(poz1, poz2, poz3, srednica, OUT poz_srodka, OUT status_kalkulacji)
+
+
+BEGIN -- Glowne cialo programu MeasureRodPoint
+
+  --=========================================================================
+  -- Inicjalizacja zmiennych i parametrow
+  --=========================================================================
+  v_approach    = 10.0      -- Predkosc podjazdu 10 mm/s
+  dist_approach = 30.0      -- Probujemy przejechac 30 mm (wiecej niz 5 cm poczatkowe zblizenie + tolerancja)
+  dist_retreat  = 100.0     -- Odjazd o 100 mm
+  rod_diameter  = 20.0      -- Przykładowa średnica pręta 20 mm
+
+  -- Definicja wektorow kierunkow (przykładowe wartości WPR = 0,0,0 dla samych XYZ)
+  -- W praktyce mozesz uzyc zarejestrowanych PR jako wektorow lub obliczyc je dynamicznie
+  vec_dir_X_plus  = {x 1.0, y 0.0, z 0.0, w 0.0, p 0.0, r 0.0}
+  vec_dir_Y_plus  = {x 0.0, y 1.0, z 0.0, w 0.0, p 0.0, r 0.0}
+  vec_dir_Z_minus = {x 0.0, y 0.0, z -1.0, w 0.0, p 0.0, r 0.0}
+
+  -- Definicja docelowych orientacji WPR dla flanszy (TCP0) w WORLD frame
+  -- To sa PRZYKLADY. Musisz ustalic, jaka orientacja WPR odpowiada "pionowej/poziomej flanszy"
+  -- w danych kierunkach ruchu w Twojej konkretnej konfiguracji robota/celi.
+  orient_horiz_X  = {x 0.0, y 0.0, z 0.0, w 0.0, p 90.0, r 0.0}  -- Przykladowa pionowa orientacja dla ruchu w +X
+  orient_horiz_Y  = {x 0.0, y 0.0, z 0.0, w 90.0, p 90.0, r 0.0} -- Przykladowa pionowa orientacja dla ruchu w +Y
+  orient_vert_Z   = {x 0.0, y 0.0, z 0.0, w 0.0, p 0.0, r 0.0}   -- Przykladowa pozioma orientacja dla ruchu w -Z
+
+  TPWRITE('--- Start programu pomiarowego ---');
+  TPWRITE('Ustaw robota reka ok. 5 cm od preta.');
+  TPWRITE('Nacisnij CYCLE START...');
+
+  -- Czekaj na start cyklu (wymagane, zeby uzytkownik ustawil robota)
+  -- (W realnym programie mozna uzyc np. WAIT PRG_START lub czegos innego)
+  -- TUTAJ PRZYKLADOWO ZAKLADAMY ZE PROGRAM STARTUJE PO USTWIENIU ROBOTA
+
+  --=========================================================================
+  -- Pomiar 1: Podjazd w kierunku +X
+  --=========================================================================
+  TPWRITE('Pomiar 1: Podjazd w kierunku +X');
+  -- Zakladamy, ze robot JEST juz ustawiony przez uzytkownika ok 5cm PRZED punktem styku
+  -- wzdluz kierunku +X, z flansza we wlasciwej orientacji.
+  -- Jesli orientacja mialaby byc ustawiona automatycznie:
+  -- GET_POS(0, pos_start_meas)
+  -- MOVE TO pos_start_meas WITH orient_horiz_X
+  -- STATUS = RNP_OK
+
+  MeasureContact(vec_dir_X_plus, orient_horiz_X, pos_contact_X, status)
+
+  IF status <> RNP_OK THEN
+    TPWRITE('BLAD w pomiarze 1. Status: ' + INT_TO_STR(status));
+    error_flag = TRUE
+    GOTO EndProgram -- Przejdz do konca programu w przypadku bledu
+  ENDIF
+
+  --=========================================================================
+  -- Ruch do pozycji przejsciowej i obrot (obsluga 'objazdu')
+  --=========================================================================
+  IF NOT error_flag THEN
+    TPWRITE('Wykonuje ruch przejsciowy...');
+    -- TUTAJ ZAWSZE ODAJEDZ OD POPRZEDNIEGO PUNKTU PRZED RUCHEM PRZEJSCIOWYM
+    -- Najprosciej: wroc do pozycji startowej pomiaru 1 lub do punktu bezpiecznego
+    -- MOVE TO pos_start_meas SPEED=100 -- Przykladowy odjazd do pozycji startowej pomiaru 1
+    -- LUB: oblicz punkt bezpieczny i tam przejedz
+    -- TUTAJ DLA PRZYKLADU ZAKLADAMY ISTNIENIE BEZPIECZNEGO PUNKTU pos_safe_interm1
+    -- MOVE TO pos_safe_interm1 SPEED=100 -- PRZYKLAD
+    -- (Ruch 'objazdu po okregu na 90 stopni' wymaga dokladniejszego zdefiniowania
+    -- punktow przejsciowych lub uzycia instrukcji CMOVE/LMOVE.
+    -- Pominmy to szczegolowe definiowanie ruchu przejsciowego w tym ogolnym przykladzie Karel.
+    -- ZAKLADAMY ZE ROBOT PRZEMIESZCZA SIE DO PUNKTU BEZPIECZNEGO I USTAWI SIE WLASCIWIE
+    -- PRZED KOLEJNYM POMIAREM)
+    -- POLECAM ZREALIZOWAC RUCH PRZEJSCIOWY I USTAWIANIE ORIENTACJI W PROGRAMIE TP, KTORY WYWOLA TEN KAREL
+  ENDIF
+
+  --=========================================================================
+  -- Pomiar 2: Podjazd w kierunku +Y (po obrocie o 90 stopni)
+  --=========================================================================
+  IF NOT error_flag THEN
+    TPWRITE('Pomiar 2: Podjazd w kierunku +Y');
+    -- TUTAJ ROBOT MUSI ZNAJDOWAC SIE OK 5CM PRZED PUNKTEM STYKU WZDLUZ KIERUNKU +Y
+    -- Z FLANSZA WE WLASCIWEJ ORIENTACJI (orient_horiz_Y)
+    MeasureContact(vec_dir_Y_plus, orient_horiz_Y, pos_contact_Y, status)
+
+    IF status <> RNP_OK THEN
+      TPWRITE('BLAD w pomiarze 2. Status: ' + INT_TO_STR(status));
+      error_flag = TRUE
+      GOTO EndProgram
+    ENDIF
+  ENDIF
+
+   --=========================================================================
+  -- Ruch do pozycji przejsciowej przed podjazdem pionowym
+  --=========================================================================
+  IF NOT error_flag THEN
+     TPWRITE('Wykonuje ruch przejsciowy przed pomiarem pionowym...');
+     -- ZNOW: ODAJEDZ BEZPIECZNIE I USTAWIENIE ROBOTA POWYZEJ PUNKTU POMIAROWEGO
+     -- Z FLANSZA W ORIENTACJI orient_vert_Z
+     -- TUTAJ ZAKLADAMY ISTNIENIE pos_safe_above_point
+     -- MOVE TO pos_safe_above_point SPEED=100 -- PRZYKLAD
+  ENDIF
+
+
+  --=========================================================================
+  -- Pomiar 3: Podjazd w kierunku -Z (od gory)
+  --=========================================================================
+  IF NOT error_flag THEN
+    TPWRITE('Pomiar 3: Podjazd w kierunku -Z');
+    -- TUTAJ ROBOT MUSI ZNAJDOWAC SIE OK 5CM POWYZEJ PUNKTU STYKU WZDLUZ KIERUNKU -Z
+    -- Z FLANSZA WE WLASCIWEJ ORIENTACJI (orient_vert_Z)
+    MeasureContact(vec_dir_Z_minus, orient_vert_Z, pos_contact_Z, status)
+
+    IF status <> RNP_OK THEN
+      TPWRITE('BLAD w pomiarze 3. Status: ' + INT_TO_STR(status));
+      error_flag = TRUE
+      GOTO EndProgram
+    ENDIF
+  ENDIF
+
+  --=========================================================================
+  -- Obliczenie pozycji srodka preta
+  --=========================================================================
+  IF NOT error_flag THEN
+    TPWRITE('Obliczam pozycje srodka preta...');
+    CalculateRodCenter(pos_contact_X, pos_contact_Y, pos_contact_Z, rod_diameter, pos_rod_center, status)
+
+    IF status <> RNP_OK THEN
+      TPWRITE('BLAD w obliczeniach. Status: ' + INT_TO_STR(status));
+      error_flag = TRUE
+    ELSE
+      -- Wyswietlenie wyniku (zostanie wyswietlone jako struktura pozycji)
+      TPWRITE('Obliczona pozycja srodka preta: ');
+      TPWRITE(pos_rod_center);
+      TPWRITE('X=' + REAL_TO_STR(pos_rod_center.x, 3, 3) +
+              ', Y=' + REAL_TO_STR(pos_rod_center.y, 3, 3) +
+              ', Z=' + REAL_TO_STR(pos_rod_center.z, 3, 3) );
+      -- Mozesz wyswietlic WPR jesli sa istotne
+    ENDIF
+  ENDIF
+
+
+  --=========================================================================
+  -- Zakonczenie programu
+  --=========================================================================
+  <LABEL> EndProgram: -- Etykieta do GOTO w przypadku bledu
+
+  IF error_flag THEN
+     TPWRITE('Program zakonczony z bledem.');
+     -- Tutaj mozesz dodac dalsza obsluge bledu
+  ELSE
+     TPWRITE('Program pomiarowy zakonczony pomyslnie.');
+  ENDIF
+
+END MeasureRodPoint -- Koniec glownego programu
+
+
+--=============================================================================
+-- ROUTINE: MeasureContact
+-- DESCRIPTION: Procedura wykonujaca pojedynczy podjazd w kierunku detekcji
+--              kontaktu na DI[1].
+-- PARAMETERS:
+--   kierunek_ruchu     : POSITION - Wektor kierunku podjazdu (WORLD frame)
+--   docelowa_orientacja : POSITION - Docelowa orientacja WPR flanszy (WORLD frame)
+--   OUT poz_kontaktu    : POSITION - Zarejestrowana pozycja flanszy w momencie kontaktu
+--   OUT status_procedury : INTEGER - Status wykonania (RNP_OK lub kod bledu)
+--=============================================================================
+
+ROUTINE MeasureContact(
+    kierunek_ruchu     : POSITION;
+    docelowa_orientacja : POSITION;
+    OUT poz_kontaktu    : POSITION;
+    OUT status_procedury : INTEGER )
+
+  VAR
+    start_pos_routine : POSITION
+    approach_vec_norm : POSITION -- Znormalizowany wektor kierunku
+    target_pos_move   : POSITION
+    status_move       : INTEGER -- Status ruchu
+
+BEGIN
+  status_procedury = RNP_OK -- Ustaw status poczatkowy na OK
+
+  -- Pobierz aktualna pozycje flanszy (TO JEST PUNKT STARTOWY RUCHU)
+  GET_POS(0, start_pos_routine) -- TCP0
+
+  -- Zapewnij poprawna orientacje przed ruchem
+  -- MOVE TO start_pos_routine WITH docelowa_orientacja SPEED=v_approach -- Mozna dodac ruch do ustawienia orientacji
+
+  -- Oblicz docelowa pozycje dla ruchu liniowego (punkt BARDZO DALEJ za oczekiwanym kontaktem)
+  -- Normalizuj wektor kierunku i pomnoz przez dystans 'przejechania'
+  -- FANUC Karel POSITION math: +,-,* (scalar), / (scalar), vector/frame operations like TRANS, INV
+  -- Normalizacja wektora wymaga obliczenia jego dlugosci
+  -- Dlugosc = SQRT(x*x + y*y + z*z)
+  -- Tutaj uproszczenie: zakladamy ze vec_dir_* ma dlugosc 1.0 LUB ze operatory dzialaja jak na wektorach
+  -- W praktyce lepiej normalizowac:
+  -- real_length = SQRT(POW(kierunek_ruchu.x, 2) + POW(kierunek_ruchu.y, 2) + POW(kierunek_ruchu.z, 2))
+  -- approach_vec_norm = kierunek_ruchu / real_length -- To nie dziala bezposrednio w Karel
+  -- Trzeba by to zrobic component po komponencie lub uzyc funkcji wektorowych/ramkowych jesli dostepne
+  -- Uzyjmy TRANSLATE do dodania wektora do pozycji
+  target_pos_move = start_pos_routine + TRANSLATE(kierunek_ruchu.x * dist_approach,
+                                                kierunek_ruchu.y * dist_approach,
+                                                kierunek_ruchu.z * dist_approach)
+
+
+  -- Wykonaj ruch liniowy i MONITORUJ DI[1]
+  -- Instrukcja MOVE TO z klauzula WHEN pozwala na przerwanie ruchu
+  MOVE TO target_pos_move
+    WITH
+      MB R[1] = 1, -- Opcjonalnie ustaw rejestr ruchu np. dla feedbacku
+      SPEED = v_approach,
+      CNT = 0,   -- Dokladny stop na pozycji docelowej, jesli brak kontaktu (wazne!)
+      ERROR_DISP = ALWAYS, -- Pokazuj bledy ruchu
+      WHEN DI[1]=ON DO JMP LBL[1] -- PRZERWIJ RUCH gdy DI[1] stanie sie ON i skocz do LBL[1]
+
+
+  -- Jesli ruch zakonczyl sie bez skoku (brak kontaktu w zadanym dystansie)
+  -- Jest to BLAD w procesie pomiaru
+  TPWRITE('BLAD: Brak kontaktu w zadanym dystansie!');
+  status_procedury = RNP_ERR -- Przykladowy kod bledu
+  GOTO EndRoutine -- Przejdz do konca procedury
+
+  <LABEL> LBL[1]: -- Tutaj skaczemy po wykryciu kontaktu DI[1]
+  -- Robot zatrzymal sie w tym miejscu
+
+  -- Pobierz pozycje robota W MOMENCIE DETEKCJI KONTAKTU
+  GET_POS(0, poz_kontaktu) -- TCP0
+
+  TPWRITE('Kontakt wykryty na pozycji: ');
+  TPWRITE(poz_kontaktu);
+
+  --=======================================================================
+  -- Odjazd po kontakcie
+  --=======================================================================
+  -- Oblicz pozycje odjazdu (np. powrot wzdluz wektora podejscia o dist_retreat)
+  -- OBLICZ POZYCJE ODWROTNEGO RUCHU
+  -- move_away_target = poz_kontaktu - TRANSLATE(kierunek_ruchu.x * dist_retreat,
+  --                                            kierunek_ruchu.y * dist_retreat,
+  --                                            kierunek_ruchu.z * dist_retreat)
+
+  -- LUB prosciej: wroc do pozycji startowej tego pomiaru
+  MOVE TO start_pos_routine SPEED=100 -- Szybki odjazd do pozycji poczatkowej tego pomiaru
+    WITH
+      ERROR_DISP = ALWAYS,
+      CNT = 0
+
+  GET_ATT(status_move) -- Sprawdz status ruchu odjazdu
+  IF status_move <> RNP_OK THEN
+    TPWRITE('BLAD podczas odjazdu po kontakcie. Status ruchu: ' + INT_TO_STR(status_move));
+    -- Mozesz zdecydowac, czy ten blad ma oznaczac blad calej procedury
+    -- status_procedury = RNP_ERR_MOVE -- Inny przykladowy kod bledu
+  ENDIF
+
+
+  <LABEL> EndRoutine: -- Etykieta do GOTO w przypadku bledu w procedurze
+
+  -- Opcjonalnie: Przywroc domyslne ustawienia ruchu (np. usun WHEN clause jesli byla ustawiana globalnie)
+  -- RESET MOTION_CONDITION -- PRZYKLAD
+
+END MeasureContact -- Koniec procedury MeasureContact
+
+
+--=============================================================================
+-- ROUTINE: CalculateRodCenter
+-- DESCRIPTION: Procedura obliczajaca pozycje srodka preta na podstawie
+--              trzech zarejestrowanych punktow kontaktu i srednicy preta.
+-- PARAMETERS:
+--   pos1, pos2, pos3   : POSITION - Zarejestrowane pozycje flanszy w momencie kontaktu
+--   srednica           : REAL     - Srednica preta
+--   OUT poz_srodka     : POSITION - Obliczona pozycja srodka preta
+--   OUT status_kalkulacji : INTEGER - Status wykonania (RNP_OK lub kod bledu)
+--=============================================================================
+
+ROUTINE CalculateRodCenter(
+    pos1           : POSITION;
+    pos2           : POSITION;
+    pos3           : POSITION;
+    srednica       : REAL;
+    OUT poz_srodka : POSITION;
+    OUT status_kalkulacji : INTEGER )
+
+  VAR
+    radius : REAL
+    -- Dodatkowe zmienne potrzebne do obliczen wektorowych i geometrycznych
+    vec12, vec13 : POSITION -- Wektory miedzy punktami
+    normal_plane_horiz : POSITION -- Wektor normalny do plaszczyzny z 2 punktow poziomych
+    -- ... inne zmienne do reprezentacji linii, plaszczyzn itp.
+
+BEGIN
+  status_kalkulacji = RNP_OK -- Ustaw status poczatkowy na OK
+  radius = srednica / 2.0
+
+  --=======================================================================
+  -- TUTAJ ZACZYNA SIE ZLOZONA CZESC: OBLICZENIA GEOMETRYCZNE
+  --=======================================================================
+  -- Logika obliczen:
+  -- 1. Dwa poziome punkty kontaktu (pos1, pos2) pochodza z podjazdow prostopadlych
+  --    do osi Z preta (zakladajac ze pret jest pionowy) i prostopadlych do siebie.
+  --    Kazdy punkt kontaktu lezy na powierzchni cylindra.
+  --    Wektor od SRODKA preta do punktu kontaktu na powierzchni jest PROSTOPADLY do wektora kierunku podjazdu
+  --    (w plaszczyznie XY).
+  -- 2. Z dwoch takich punktow i ZNANYCH kierunkow podjazdu (+X, +Y) mozesz wyznaczyc
+  --    pozycje SRODKA preta w plaszczyznie XY.
+  --    Np. Punkt P1 (pos1), wektor podjazdu V1 (+X). Punkt P1 jest na powierzchni.
+  --    Srodek C jest w odleglosci R od P1 w kierunku przeciwnym do V1, ale tylko w plaszczyznie prostopadlej do osi preta (XY).
+  --    Xc = P1.x - V1.x * Radius / ||V1.xy||
+  --    Yc = P1.y - V1.y * Radius / ||V1.xy||
+  --    Powtorz dla P2 (pos2) i V2 (+Y). Dwie pary (Xc, Yc) powinny byc takie same (w teorii).
+  --    W praktyce mozna je usrednic.
+  -- 3. Pionowy punkt kontaktu (pos3) pochodzi z podjazdu w kierunku -Z.
+  --    Ten punkt lezy na GORNEJ plaskiej powierzchni preta (lub na sferze/zaokragleniu, jesli pret ma czolo).
+  --    Zakladajac plaskie czolo, Z-owa wspolrzedna SRODKA preta (na gorze) to Z_kontakt + Radius.
+  --    Zc = pos3.z + Radius
+  -- 4. Ostateczna pozycja srodka preta (pos_srodka) bedzie miala wspolrzedne (Xc_avg, Yc_avg, Zc).
+
+  -- Przykladowy kod (BEZ PELNEJ IMPLEMENTACJI OBLICZEN GEOMETRYCZNYCH):
+
+  -- Oblicz srodek XY z pos1 i pos2 (uzywajac wektorow podjazdu vec_dir_X_plus, vec_dir_Y_plus)
+  -- Wymaga funkcji wektorowych lub manualnych obliczen component-po-component.
+  -- Np. oblicz punkt na powierzchni w kierunku przeciwnym do podjazdu o odleglosc Radius.
+  -- position center_xy_from_pos1 = pos1 - TRANSLATE(vec_dir_X_plus.x * radius, vec_dir_X_plus.y * radius, vec_dir_X_plus.z * radius)
+  -- position center_xy_from_pos2 = pos2 - TRANSLATE(vec_dir_Y_plus.x * radius, vec_dir_Y_plus.y * radius, vec_dir_Y_plus.z * radius)
+
+  -- Tutaj potrzebne sa faktyczne operacje na wektorach/ramkach:
+  -- np. obliczenie wektora normalnego od punktu kontaktu do osi cylindra (prostopadly do kierunku podjazdu w plaszczyznie XY)
+  -- Dodanie tego wektora (o dlugosci Radius) do punktu kontaktu, zeby otrzymac punkt na osi cylindra.
+
+  -- Bardziej realistyczne (wymaga implementacji funkcji wektorowych lub uzycia dostepnych w Karel):
+  -- Obliczanie przeciecia plaszczyzn stycznych, wyznaczanie linii prostej (osi preta XY),
+  -- a nastepnie wykorzystanie pomiaru Z do wyznaczenia Z-owego punktu na tej osi.
+  -- To wykracza poza prosty przyklad kodu, ale taka jest matematyka.
+
+  -- Dla uproszczenia, PRZYKLADOWE BARDZO PROSTE OBLICZENIA XY (MOGACE BYC NIEDOKLADNE W REALU):
+  -- Usrednianie X z pos1 i Y z pos2 (NIEPOPRAWNE W OGOlNYM PRZYPADKU, TYLKO DLA IDEALNYCH OSI WORLD)
+  -- poz_srodka.x = pos1.x - radius * SIGN(vec_dir_X_plus.x); -- Updroszczenie: zakladam, ze vec_dir_X_plus ma tylko skladowa X
+  -- poz_srodka.y = pos2.y - radius * SIGN(vec_dir_Y_plus.y); -- Uproszczenie: zakladam, ze vec_dir_Y_plus ma tylko skladowa Y
+
+  -- Lepsze podejscie XY (koncepcyjnie):
+  -- Oblicz punkt na powierzchni preta, przesuniety od zarejestrowanej pozycji flanszy (pos1, pos2).
+  -- Ten przesuniecie to wektor od poczatku flanszy (TCP0) do punktu kontaktu na jej powierzchni.
+  -- Przyjmijmy dla prostoty, ze punkt kontaktu na flanszy jest zawsze np. w {x=R_flanszy, y=0, z=0} w ramce flanszy.
+  -- Punkt kontaktu_na_precie1 = pos1 * TRANSLATE(-R_flanszy, 0, 0) -- Transformacja wstecz o wektor od TCP0 do pkt styku na flanszy
+  -- Teraz punkt kontaktu_na_precie1 jest na powierzchni preta.
+  -- Od tego punktu idziemy w kierunku ODWROTNYM do wektora podejscia (vec_dir_X_plus) o odleglosc Radius, zrzutowane na XY.
+  -- Xc = kontakt_na_precie1.x - vec_dir_X_plus.x * radius / SQRT(vec_dir_X_plus.x*vec_dir_X_plus.x + vec_dir_X_plus.y*vec_dir_X_plus.y)
+  -- Yc = kontakt_na_precie1.y - vec_dir_X_plus.y * radius / SQRT(vec_dir_X_plus.x*vec_dir_X_plus.x + vec_dir_X_plus.y*vec_dir_X_plus.y)
+  -- Powtorz dla pos2 i vec_dir_Y_plus. Usrednij Xc i Yc.
+
+  -- Oblicz wspolrzedna Z z pos3 (podjazd -Z)
+  -- Zakladajac plaskie czolo pręta i pomiar od góry TCP0:
+  -- Punkt kontaktu na pręcie = pos3 * TRANSLATE(0, 0, -R_flanszy_Z) -- Jeśli kontakt jest pod flanszą
+  -- Zc = Punkt kontaktu na pręcie.z + radius -- Dodajemy promień, żeby dostać się do środka
+
+  -- Ostateczna pozycja srodka: {x = Xc_avg, y = Yc_avg, z = Zc, w=0, p=0, r=0} (orientacja srodka nie jest istotna)
+
+  -- W celu uproszczenia dla PRZYKLADU KODU, ZASTAPIMY OBLICZENIA PROSTYMI OPERACJAMI
+  -- ZAKLADAJAC ZE PODJAZD JEST OSIOWY W WORLD I KONTAKT JEST BEZPOSREDNIO OSIOWO OD FLANSZY:
+  -- TO MOCNE UPROSZCZENIE! Prawidlowa implementacja wymaga wektorowej matematyki 3D.
+
+  poz_srodka.x = pos_contact_X.x - radius
+  poz_srodka.y = pos_contact_Y.y - radius
+  poz_srodka.z = pos_contact_Z.z + radius -- Zakladajac podjazd od gory (Z-), srodek jest o R wyzej
+
+  -- Ustawienie WPR na 0,0,0 dla srodka
+  poz_srodka.w = 0.0
+  poz_srodka.p = 0.0
+  poz_srodka.r = 0.0
+
+  -- TUTAJ POWINIENES DODAC SPRAWDZENIE CZY PUNKTy pos1, pos2, pos3 SA ROZNE
+  -- I CZY OBLICZENIA SA GEOMETRYCZNIE MOZLIWE (np. punkty nie sa kolinearne w XY)
+  -- IF ... THEN status_kalkulacji = RNP_ERR; RETURN ENDIF
+
+  TPWRITE('Obliczono przyblizona pozycje srodka (uproszczone obliczenia).');
+
+END CalculateRodCenter -- Koniec procedury CalculateRodCenter

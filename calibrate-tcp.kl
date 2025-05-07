@@ -1,0 +1,27 @@
+PROGRAM basic_motion
+VAR
+    home_pos : XYZWPR
+    pick_pos : XYZWPR
+    place_pos : XYZWPR
+    status : INTEGER
+
+BEGIN
+
+    home_pos = TRANS(0, 0, 500, 0, 0, 0)
+    pick_pos = TRANS(100, 200, 300, 0, 0, 0)
+    place_pos = TRANS(-100, 250, 300, 0, 0, 0)
+
+    MOVE TO home_pos
+
+    MOVE TO pick_pos
+    SETDO(1, ON)
+    DELAY 1.0
+
+    MOVE TO place_pos
+    SETDO(1, OFF)
+    DELAY 1.0
+
+    MOVE TO home_pos
+    WRITE('Sekwencja wykonana poprawnie.')
+    
+END basic_motion
