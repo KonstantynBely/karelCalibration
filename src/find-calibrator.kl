@@ -5,10 +5,11 @@
 --              Wymaga 3 pomiarow z roznych kierunkow.
 --=============================================================================
 
-PROGRAM MeasureRodPoint
+PROGRAM MeasureCalibratorPoint
 
--- Deklaracja zmiennych
 VAR
+  -- Zmienna przechowująca startową pozycję bezpieczną
+  start_pos : POSITION  
   -- Zmienne na zarejestrowane pozycje kontaktu
   pos_contact_X : POSITION   -- Poz. kontaktu przy podjezdzie w kier. X+
   pos_contact_Y : POSITION   -- Poz. kontaktu przy podjezdzie w kier. Y+
@@ -56,12 +57,15 @@ VAR
 
 
 BEGIN -- Glowne cialo programu MeasureRodPoint
+  $UTOOL = 0;
 
+  $UFRAME[1] = JTRANSLATE(0,0,0); -- Ustaw UFRAME[1] na WORLD frame origin
+  $UFRAME_NUM[1] = 1;             -- Ustaw aktywny UFRAME dla grupy 1 na UFRAME[1] ($UFRAME_NUM to tablica dla grup ruchu)
   --=========================================================================
   -- Inicjalizacja zmiennych i parametrow
   --=========================================================================
   v_approach    = 10.0      -- Predkosc podjazdu 10 mm/s
-  dist_approach = 30.0      -- Probujemy przejechac 30 mm (wiecej niz 5 cm poczatkowe zblizenie + tolerancja)
+  dist_approach = 70.0      -- Probujemy przejechac 30 mm (wiecej niz 5 cm poczatkowe zblizenie + tolerancja)
   dist_retreat  = 100.0     -- Odjazd o 100 mm
   rod_diameter  = 20.0      -- Przykładowa średnica pręta 20 mm
 
@@ -79,13 +83,15 @@ BEGIN -- Glowne cialo programu MeasureRodPoint
   orient_vert_Z   = {x 0.0, y 0.0, z 0.0, w 0.0, p 0.0, r 0.0}   -- Przykladowa pozioma orientacja dla ruchu w -Z
 
   TPWRITE('--- Start programu pomiarowego ---');
-  TPWRITE('Ustaw robota reka ok. 5 cm od preta.');
+  TPWRITE('Ustaw robota manualnie ok. 5 cm od preta.');
   TPWRITE('Nacisnij CYCLE START...');
 
   -- Czekaj na start cyklu (wymagane, zeby uzytkownik ustawil robota)
   -- (W realnym programie mozna uzyc np. WAIT PRG_START lub czegos innego)
   -- TUTAJ PRZYKLADOWO ZAKLADAMY ZE PROGRAM STARTUJE PO USTWIENIU ROBOTA
-
+  WAIT UI[1]='ON'
+  DELAY 0.1
+  start_pos = CURPOS(axis_limit_mask, ovr_trv_mask , group_no)
   --=========================================================================
   -- Pomiar 1: Podjazd w kierunku +X
   --=========================================================================
@@ -202,7 +208,7 @@ BEGIN -- Glowne cialo programu MeasureRodPoint
      TPWRITE('Program pomiarowy zakonczony pomyslnie.');
   ENDIF
 
-END MeasureRodPoint -- Koniec glownego programu
+END MeasureCalibratorPoint -- Koniec glownego programu
 
 
 --=============================================================================
@@ -232,7 +238,7 @@ BEGIN
   status_procedury = RNP_OK -- Ustaw status poczatkowy na OK
 
   -- Pobierz aktualna pozycje flanszy (TO JEST PUNKT STARTOWY RUCHU)
-  GET_POS(0, start_pos_routine) -- TCP0
+  start_pos_routine = CURPOS(0,0); -- Pobierz aktualna pozycje TCP robota (CURPOS(v_mask=0, g_mask=0))
 
   -- Zapewnij poprawna orientacje przed ruchem
   -- MOVE TO start_pos_routine WITH docelowa_orientacja SPEED=v_approach -- Mozna dodac ruch do ustawienia orientacji
@@ -274,7 +280,7 @@ BEGIN
   -- Robot zatrzymal sie w tym miejscu
 
   -- Pobierz pozycje robota W MOMENCIE DETEKCJI KONTAKTU
-  GET_POS(0, poz_kontaktu) -- TCP0
+  poz_kontaktu = CURPOS(0,0); -- Pobierz aktualna pozycje TCP robota w momencie kontaktu
 
   TPWRITE('Kontakt wykryty na pozycji: ');
   TPWRITE(poz_kontaktu);
