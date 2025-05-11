@@ -1,27 +1,114 @@
-PROGRAM basic_motion
+PROGRAM AutoCalibrateTCP
+
+-- Zakładamy, że w INCLUDE masz:
+INCLUDE const_status
+INCLUDE const_reg
+
 VAR
-    home_pos : XYZWPR
-    pick_pos : XYZWPR
-    place_pos : XYZWPR
-    status : INTEGER
+  start_pose         : POSITION
+  contact_x1         : POSITION
+  contact_x2         : POSITION
+  contact_y1         : POSITION
+  contact_y2         : POSITION
+  contact_z          : POSITION
+
+  temp_pos           : POSITION
+  target_pos         : POSITION
+
+  rod_radius         : REAL := 10.0
+  z1                 : REAL := 20.0
+  z2                 : REAL := 80.0
+  delta_x1           : REAL
+  delta_x2           : REAL
+  delta_y1           : REAL
+  delta_y2           : REAL
+
+  theta_x_rad        : REAL
+  theta_y_rad        : REAL
+
+  result             : INTEGER
+  status             : INTEGER
+  error_flag         : BOOLEAN := FALSE
+
+  vec_dir_X          : POSITION
+  vec_dir_Y          : POSITION
+  vec_dir_Z          : POSITION
+  orient             : POSITION
 
 BEGIN
+  TPWRITE('--- START AUTOKALIBRACJI TCP ---');
 
-    home_pos = TRANS(0, 0, 500, 0, 0, 0)
-    pick_pos = TRANS(100, 200, 300, 0, 0, 0)
-    place_pos = TRANS(-100, 250, 300, 0, 0, 0)
+  -- Zapamiętaj pozycję początkową
+  start_pose := CURPOS(0, 0);
 
-    MOVE TO home_pos
+  -- Wektory i orientacja do kontaktu prostopadłego
+  vec_dir_X := {x 1.0, y 0.0, z 0.0, w 0.0, p 0.0, r 0.0};
+  vec_dir_Y := {x 0.0, y 1.0, z 0.0, w 0.0, p 0.0, r 0.0};
+  vec_dir_Z := {x 0.0, y 0.0, z -1.0, w 0.0, p 0.0, r 0.0};
+  orient := {x 0.0, y 0.0, z 0.0, w 0.0, p 90.0, r 0.0};
 
-    MOVE TO pick_pos
-    SETDO(1, ON)
-    DELAY 1.0
+  -- 1. PODJAZD NA Z1 W KIERUNKU +X
+  temp_pos := CURPOS(0,0) + TRANSLATE(vec_dir_X.x * 100.0, 0.0, -z1);
+  BuildPositionWithOrientation(temp_pos, orient, target_pos);
+  MoveUntilContact(target_pos, contact_x1, status);
+  IF status <> STATUS_CONTACT THEN GOTO Error; ENDIF;
 
-    MOVE TO place_pos
-    SETDO(1, OFF)
-    DELAY 1.0
+  -- 2. PODJAZD NA Z2 W KIERUNKU +X
+  temp_pos := CURPOS(0,0) + TRANSLATE(vec_dir_X.x * 100.0, 0.0, -z2);
+  BuildPositionWithOrientation(temp_pos, orient, target_pos);
+  MoveUntilContact(target_pos, contact_x2, status);
+  IF status <> STATUS_CONTACT THEN GOTO Error; ENDIF;
 
-    MOVE TO home_pos
-    WRITE('Sekwencja wykonana poprawnie.')
-    
-END basic_motion
+  -- 3. PODJAZD NA Z1 W KIERUNKU +Y
+  temp_pos := CURPOS(0,0) + TRANSLATE(0.0, vec_dir_Y.y * 100.0, -z1);
+  BuildPositionWithOrientation(temp_pos, orient, target_pos);
+  MoveUntilContact(target_pos, contact_y1, status);
+  IF status <> STATUS_CONTACT THEN GOTO Error; ENDIF;
+
+  -- 4. PODJAZD NA Z2 W KIERUNKU +Y
+  temp_pos := CURPOS(0,0) + TRANSLATE(0.0, vec_dir_Y.y * 100.0, -z2);
+  BuildPositionWithOrientation(temp_pos, orient, target_pos);
+  MoveUntilContact(target_pos, contact_y2, status);
+  IF status <> STATUS_CONTACT THEN GOTO Error; ENDIF;
+
+  -- 5. PODJAZD DO GÓRY W KIERUNKU -Z
+  temp_pos := CURPOS(0,0) + TRANSLATE(0.0, 0.0, -120.0);
+  BuildPositionWithOrientation(temp_pos, orient, target_pos);
+  MoveUntilContact(target_pos, contact_z, status);
+  IF status <> STATUS_CONTACT THEN GOTO Error; ENDIF;
+
+  -- OBLICZENIA: kąty rotacji
+  delta_x1 := contact_x1.x;
+  delta_x2 := contact_x2.x;
+  delta_y1 := contact_y1.y;
+  delta_y2 := contact_y2.y;
+
+  theta_y_rad := ATAN((delta_x2 - delta_x1) / (z2 - z1));
+  theta_x_rad := ATAN((delta_y2 - delta_y1) / (z2 - z1));
+
+  -- Długość narzędzia (przyjęta)
+  tool_len := contact_z.z + rod_radius;
+
+  -- WYZNACZ POZYCJĘ TCP WZGLĘDEM FLANSZY
+  SET_REAL_REG(1, RAD_TO_DEG(theta_x_rad), result); -- θx
+  SET_REAL_REG(2, RAD_TO_DEG(theta_y_rad), result); -- θy
+  SET_REAL_REG(3, tool_len, result);               -- Ztool
+
+  TPWRITE('Kalibracja zakonczona.');
+  TPWRITE('Theta X = ' + REAL_TO_STR(RAD_TO_DEG(theta_x_rad), 3, 2));
+  TPWRITE('Theta Y = ' + REAL_TO_STR(RAD_TO_DEG(theta_y_rad), 3, 2));
+  TPWRITE('Dlugosc narzedzia = ' + REAL_TO_STR(tool_len, 3, 2));
+
+  -- Powrót na początkową pozycję
+  BuildPositionWithOrientation(start_pose, orient, target_pos);
+  MoveLinearToPosition(target_pos, status);
+  RETURN;
+
+<LABEL> Error:
+  TPWRITE('Blad w trakcie kalibracji!');
+  error_flag := TRUE;
+  BuildPositionWithOrientation(start_pose, orient, target_pos);
+  MoveLinearToPosition(target_pos, status);
+  RETURN;
+
+END AutoCalibrateTCP
