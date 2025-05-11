@@ -1,0 +1,8 @@
+/PROG test123
+/ATTR
+OWNER       = MNEDITOR;
+COMMENT     = "";
+PROG_SIZE   = 0;
+/MN
+1: PR[1] = LPOS;
+/END

@@ -3,7 +3,7 @@
 -- Opis: Ujednolicone numery registrów pozycji etc.
 --=============================================================================
 CONST
-    TEMP_POS = 10;
-    CAL_POS = 20;
-    CONTACT_POS = 99;
+    TEMP_REG = 10;
+    CAL_REG = 20;
+    CONTACT_REG = 99;
     R_FLAG = 99;

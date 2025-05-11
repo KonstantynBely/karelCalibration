@@ -1,7 +1,7 @@
 /PROG  MV_L
 /MN
-  ! PR[10] - TEMP_POS
-  ! PR[99] - CONTACT_POS
+  ! PR[10] - TEMP_REG
+  ! PR[99] - CONTACT_REG
   ! Poczatkowo ustawione na INPROGRESS
   R[99] = 5 ;
 
@@ -16,7 +16,7 @@
   JMP LBL[100] ;
 
 LBL[999]
-  TPWRITE('Blad: PR[10] niepoprawny lub brak warunku.');
+  WRITE('Blad: PR[10] niepoprawny lub brak warunku.');
   R[99] = 999 ;
 
 LBL[100]

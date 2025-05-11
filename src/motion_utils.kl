@@ -1,6 +1,6 @@
 INCLUDE const-status
 
-ROUTINE MoveLinearToPosition(
+ROUTINE MvLnToPos(
     target_pos : XYZWPR;
     OUT status : INTEGER )
 
@@ -8,23 +8,23 @@ ROUTINE MoveLinearToPosition(
     result      : INTEGER;
     contact_val : INTEGER;
     flag        : INTEGER;
-    wait_time   : REAL := 0.0;
+    wait_time   : REAL = 0.0;
 
 BEGIN
-  status := STATUS_OK;
+  status = ST_OK;
 
   -- Sprawdź, czy pozycja nie jest zerowa (pusta)
   IF (target_pos.x = 0 AND target_pos.y = 0 AND target_pos.z = 0) THEN
-    TPWRITE('Blad: pusta pozycja docelowa!');
-    status := STATUS_NOPOS;
+    WRITE('Blad: pusta pozycja docelowa!');
+    status = ST_NOPOS;
     RETURN;
   ENDIF;
 
   -- Skopiuj pozycję do PR[10]
-  SET_POS_REG(TEMP_POS, target_pos, result);
+  SET_POS_REG(TEMP_REG, target_pos, result);
   IF result <> 0 THEN
-    TPWRITE('Blad: nie można zapisac PR[10]');
-    status := STATUS_NOPOS;
+    WRITE('Blad: nie można zapisac PR[10]');
+    status = ST_NOPOS;
     RETURN;
   ENDIF;
 
@@ -34,39 +34,39 @@ BEGIN
   -- Uruchom program TP: MV_L
   RUN_TASK('MV_L', result);
   IF result <> 0 THEN
-    TPWRITE('Blad: nie można uruchomic TP MV_L');
-    status := STATUS_MOVEFAIL;
+    WRITE('Blad: nie można uruchomic TP MV_L');
+    status = ST_MVFAIL;
     RETURN;
   ENDIF;
 
   GET_INT_REG(R_FLAG, flag);  
   -- Czekaj aż program TP się zakończy (max 20 sekund)
-  WHILE (flag = STATUS_INPROGRESS) AND (wait_time < 20.0) DO
+  WHILE (flag = ST_INPRG) AND (wait_time < 20.0) DO
     DELAY 0.1;
-    wait_time := wait_time + 0.1;
+    wait_time = wait_time + 0.1;
     GET_INT_REG(R_FLAG, flag);
   ENDWHILE;
 
   IF wait_time >= 20.0 THEN
-    TPWRITE('Blad: timeout oczekiwania na TP MV_L');
-    status := STATUS_MOVEFAIL;
+    WRITE('Blad: timeout oczekiwania na TP MV_L');
+    status = ST_MVFAIL;
     RETURN;
   ENDIF;
 
   -- Sprawdź wartość R[99] — czy ruch się powiódł
   GET_INT_REG(R_FLAG, contact_val);
-  IF contact_val <> STATUS_OK THEN
-    TPWRITE('Blad: ruch zakonczony bledem lub bez potwierdzenia.');
-    status := STATUS_ERROR;
+  IF contact_val <> ST_OK THEN
+    WRITE('Blad: ruch zakonczony bledem lub bez potwierdzenia.');
+    status = ST_ERR;
     RETURN;
   ENDIF;
 
-  TPWRITE('Ruch liniowy zakonczony poprawnie.');
-  status := STATUS_OK;
+  WRITE('Ruch liniowy zakonczony poprawnie.');
+  status = ST_OK;
 
-END MoveLinearToPosition
+END MvLnToPos
 
-ROUTINE MoveUntilContact(
+ROUTINE MvUntCon(
     target_pos  : XYZWPR;
     OUT contact_pos : XYZWPR;
     OUT status  : INTEGER )
@@ -75,23 +75,23 @@ ROUTINE MoveUntilContact(
     result        : INTEGER;
     tp_status     : INTEGER;
     flag          : INTEGER;
-    wait_time     : REAL := 0.0;
+    wait_time     : REAL = 0.0;
 
 BEGIN
-  status := STATUS_OK;
+  status = ST_OK;
 
   -- Walidacja pozycji
   IF (target_pos.x = 0 AND target_pos.y = 0 AND target_pos.z = 0) THEN
-    TPWRITE('Blad: pusta pozycja docelowa!');
-    status := STATUS_NOPOS;
+    WRITE('Blad: pusta pozycja docelowa!');
+    status = ST_NOPOS;
     RETURN;
   ENDIF;
 
   -- Ustaw PR[10] = pozycja docelowa
-  SET_POS_REG(TEMP_POS, target_pos, result);
+  SET_POS_REG(TEMP_REG, target_pos, result);
   IF result <> 0 THEN
-    TPWRITE('Blad: nie mozna zapisac PR[10]');
-    status := STATUS_NOPOS;
+    WRITE('Blad: nie mozna zapisac PR[10]');
+    status = ST_NOPOS;
     RETURN;
   ENDIF;
 
@@ -101,59 +101,59 @@ BEGIN
   -- Uruchom program TP do ruchu z detekcją kontaktu
   RUN_TASK('MV_TOUCH', result);
   IF result <> 0 THEN
-    TPWRITE('Blad: nie mozna uruchomic TP MV_TOUCH');
-    status := STATUS_MOVEFAIL;
+    WRITE('Blad: nie mozna uruchomic TP MV_TOUCH');
+    status = ST_MVFAIL;
     RETURN;
   ENDIF;
 
   GET_INT_REG(R_FLAG, flag);  
   -- Czekaj aż program TP się zakończy (max 20 sekund)
-  WHILE (flag = STATUS_INPROGRESS) AND (wait_time < 20.0) DO
+  WHILE (flag = ST_INPRG) AND (wait_time < 20.0) DO
     DELAY 0.1;
-    wait_time := wait_time + 0.1;
+    wait_time = wait_time + 0.1;
     GET_INT_REG(R_FLAG, flag);
   ENDWHILE;
 
   IF wait_time >= 20.0 THEN
-    TPWRITE('Blad: timeout oczekiwania na TP MV_TOUCH');
-    status := STATUS_MOVEFAIL;
+    WRITE('Blad: timeout oczekiwania na TP MV_TOUCH');
+    status = ST_MVFAIL;
     RETURN;
   ENDIF;
 
   -- Pobierz status wykonania z R[99]
   GET_INT_REG(R_FLAG, tp_status);
-  IF tp_status = STATUS_CONTACT THEN
+  IF tp_status = ST_CONTACT THEN
     -- Sukces – kontakt wykryty – pobierz PR[99]
-    GET_POS_REG(CONTACT_POS, contact_pos, result);
+    GET_POS_REG(CONTACT_REG, contact_pos, result);
     IF result <> 0 THEN
-      TPWRITE('Blad: nie mozna pobrac PR[99]');
-      status := STATUS_ERROR;
+      WRITE('Blad: nie mozna pobrac PR[99]');
+      status = ST_ERR;
       RETURN;
     ENDIF;
-    status := STATUS_CONTACT;
+    status = ST_CONTACT;
   ELSE
-    IF tp_status = STATUS_NOCONTACT THEN
-      TPWRITE('Brak kontaktu w zadanym zakresie.');
-      status := STATUS_NOCONTACT;
+    IF tp_status = ST_NOCONTACT THEN
+      WRITE('Brak kontaktu w zadanym zakresie.');
+      status = ST_NOCONTACT;
     ELSE
-      TPWRITE('Nieznany kod statusu z TP: ' + INT_TO_STR(tp_status));
-      status := STATUS_ERROR;
+      WRITE('Nieznany kod statusu z TP: ' + INT_TO_STR(tp_status));
+      status = ST_ERR;
     ENDIF;
   ENDIF;
 
-END MoveUntilContact
+END MvUntCon
 
-ROUTINE BuildPositionWithOrientation(
+ROUTINE BldPosWOr(
     base_pos    : XYZWPR;
     orient      : XYZWPR;
     OUT result_pos : XYZWPR )
 
 BEGIN
-  result_pos.x := base_pos.x;
-  result_pos.y := base_pos.y;
-  result_pos.z := base_pos.z;
+  result_pos.x = base_pos.x;
+  result_pos.y = base_pos.y;
+  result_pos.z = base_pos.z;
 
-  result_pos.w := orient.w;
-  result_pos.p := orient.p;
-  result_pos.r := orient.r;
-END BuildPositionWithOrientation
+  result_pos.w = orient.w;
+  result_pos.p = orient.p;
+  result_pos.r = orient.r;
+END BldPosWOr

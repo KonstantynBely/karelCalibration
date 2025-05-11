@@ -1,0 +1,403 @@
+--=============================================================================
+-- PROGRAM: MeasureRodPoint
+-- DESCRIPTION: Program do pomiaru pozycji punktu (preta) w przestrzeni
+--              za pomoca flanszy (TCP0) i czujnika dotyku na DI[1].
+--              Wymaga 3 pomiarow z roznych kierunkow.
+--=============================================================================
+
+PROGRAM FindCal
+
+-- %INCLUDE const_status
+-- %INCLUDE const_reg
+
+CONST
+    TEMP_REG = 10;
+    CAL_REG = 20;
+    CONTACT_REG = 99;
+    R_FLAG = 99;
+
+    ST_OK         = 0;
+    ST_CONTACT    = 1;
+    ST_NOPOS      = 2;
+    ST_NOCONTACT  = 3;
+    ST_MVFAIL     = 4;
+    ST_INPRG      = 5;
+    ST_ERR        = 999;
+
+VAR
+  start_pos,
+  pos_cnt_X,
+  pos_cnt_Y,
+  pos_cnt_Z,
+  pos_rod_ctr,
+  temp_pos,
+  start_mv_pos,
+  target_pos      : XYZWPR;
+
+  status          : INTEGER;
+  error_flag      : BOOLEAN;
+
+  -- Wektory kierunkow
+  dir_X,
+  dir_Y,
+  dir_Z : XYZWPR;
+
+  -- Orientacje flanszy
+  orient_X,
+  orient_Y,
+  orient_Z   : XYZWPR;
+
+  rod_diam    : REAL;
+  dist_appr  : REAL;
+  wait_time : REAL;
+
+  ROUTINE CalcRod FROM FindCal
+  ROUTINE MvLnToPos FROM FindCal
+  ROUTINE MvUntCon FROM FindCal
+  ROUTINE BldPosWOr FROM FindCal
+
+BEGIN
+  wait_time = 0.0;
+
+  $UTOOL = 0;
+
+  rod_diam = 20.0;
+  dist_appr = 100.0;
+
+  dir_X.X = 1.0; dir_X.Y = 0.0; dir_X.Z = 0.0; dir_X.W = 0.0; dir_X.P = 0.0; dir_X.R = 0.0;
+  dir_Y.X = 0.0; dir_Y.Y = 1.0; dir_Y.Z = 0.0; dir_Y.W = 0.0; dir_Y.P = 0.0; dir_Y.R = 0.0;
+  dir_Z.X = 0.0; dir_Z.Y = 0.0; dir_Z.Z = -1.0; dir_Z.W = 0.0; dir_Z.P = 0.0; dir_Z.R = 0.0;
+
+  orient_X.X = 0.0; orient_X.Y = 0.0; orient_X.Z = 0.0; orient_X.W = 0.0; orient_X.P = 90.0; orient_X.R = 0.0;
+  orient_Y.X = 0.0; orient_Y.Y = 0.0; orient_Y.Z = 0.0; orient_Y.W = -90.0; orient_Y.P = 90.0; orient_Y.R = 0.0;
+  orient_Z.X = 0.0; orient_Z.Y = 0.0; orient_Z.Z = 0.0; orient_Z.W = 180.0; orient_Z.P = 0.0; orient_Z.R = 0.0;
+
+
+  WRITE('--- Start pomiaru preta ---');
+
+  WHILE (UI[1] <> 'ON') AND (wait_time < 10.0) DO
+    DELAY 100
+    wait_time = wait_time + 0.1;
+  ENDWHILE;
+
+  IF wait_time >= 10.0 THEN
+    WRITE('Blad: timeout oczekiwania na UI[1].');
+    GOTO EndProgram;
+  ENDIF;
+  DELAY 0.1;
+  start_pos = CURPOS(0,0);
+
+  -- Prostowanie flanszy
+  BldPosWOr(start_pos, orient_X, temp_pos);
+  MvLnToPos(temp_pos, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad podczas ustawiania orientacji flanszy.');
+    GOTO EndProgram;
+  ENDIF;
+
+  -- Pomiar X
+  WRITE('Pomiar kierunek +X...');
+  
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_X.x * dist_appr,
+                                        dir_X.y * dist_appr,
+                                        dir_X.z * dist_appr);
+  BldPosWOr(temp_pos, orient_X, target_pos);                                  
+
+  MvUntCon(target_pos, pos_cnt_X, status);
+  IF status <> ST_CONTACT THEN
+    WRITE('Blad podczas pomiaru X. Status: ' + INT_TO_STR(status));
+    error_flag = TRUE;
+    GOTO EndProgram;
+  ENDIF;
+
+  -- Ruch przejściowy do pozycji start Y
+  WRITE('Ruch przejsciowy przed pomiarem Y...');
+
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_Y.x * dist_appr,
+                                        dir_Y.y * dist_appr * (-1),
+                                        dir_Y.z * dist_appr);
+  BldPosWOr(temp_pos, orient_Y, target_pos);  
+  MvLnToPos(target_pos, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad podczas przejazdu.');
+    GOTO EndProgram;
+  ENDIF;   
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_X.x * dist_appr + rod_diam/2,
+                                        dir_X.y * dist_appr,
+                                        dir_X.z * dist_appr);
+  BldPosWOr(temp_pos, orient_Y, target_pos);  
+  MvLnToPos(target_pos, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad podczas przejazdu.');
+    GOTO EndProgram;
+  ENDIF;     
+
+  -- Pomiar Y
+  WRITE('Pomiar kierunek +Y...');
+
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_Y.x * dist_appr,
+                                        dir_Y.y * dist_appr,
+                                        dir_Y.z * dist_appr);
+  BldPosWOr(temp_pos, orient_Y, target_pos);     
+
+  MvUntCon(target_pos, pos_cnt_Y, status);
+  IF status <> ST_CONTACT THEN
+    WRITE('Blad podczas pomiaru Y. Status: ' + INT_TO_STR(status));
+    error_flag = TRUE;
+    GOTO EndProgram;
+  ENDIF;
+
+  -- Ruch przejściowy do pozycji start Z
+  WRITE('Ruch przejsciowy przed pomiarem Z...');
+
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_Z.x * dist_appr,
+                                        dir_Z.y * dist_appr,
+                                        dir_Z.z * dist_appr * (-1));
+  BldPosWOr(temp_pos, orient_Z, target_pos);  
+  MvLnToPos(target_pos, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad podczas przejazdu.');
+    GOTO EndProgram;
+  ENDIF;   
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_Y.x * dist_appr,
+                                        dir_Y.y * dist_appr + rod_diam/2,
+                                        dir_Y.z * dist_appr);
+  BldPosWOr(temp_pos, orient_Z, target_pos);  
+  MvLnToPos(target_pos, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad podczas przejazdu.');
+    GOTO EndProgram;
+  ENDIF;     
+
+  -- Pomiar Z
+  WRITE('Pomiar kierunek -Z...');
+
+  start_mv_pos = CURPOS(0, 0);
+  temp_pos = start_mv_pos + TRANSLATE(dir_Z.x * dist_appr,
+                                        dir_Z.y * dist_appr,
+                                        dir_Z.z * dist_appr);
+  BldPosWOr(temp_pos, orient_Z, target_pos); 
+
+  MvUntCon(target_pos, pos_cnt_Z, status);
+  IF status <> ST_CONTACT THEN
+    WRITE('Blad podczas pomiaru Z. Status: ' + INT_TO_STR(status));
+    error_flag = TRUE;
+    GOTO EndProgram;
+  ENDIF;
+
+  -- Oblicz środek preta
+  WRITE('Obliczanie pozycji srodka preta...');
+  CalcRod(pos_cnt_X, pos_cnt_Y, pos_cnt_Z, rod_diam, pos_rod_ctr, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad obliczen srodka. Status: ' + INT_TO_STR(status));
+    error_flag = TRUE;
+    GOTO EndProgram;
+  ENDIF;
+
+  WRITE('srodek preta:');
+  WRITE('X=' + REAL_TO_STR(pos_rod_ctr.x,3,3) + ', Y=' + REAL_TO_STR(pos_rod_ctr.y,3,3) + ', Z=' + REAL_TO_STR(pos_rod_ctr.z,3,3));
+  
+  SET_POS_REG(CAL_REG, pos_rod_ctr, status);
+  IF status <> ST_OK THEN
+    WRITE('Blad: nie można zapisac PR[20]');
+    error_flag = TRUE;
+    GOTO EndProgram;
+  ENDIF;
+
+EndProgram::
+  IF error_flag THEN
+    WRITE('Program zakonczony z bledem.');
+  ELSE
+    WRITE('Pomiar zakonczony pomyslnie.');
+  ENDIF;
+
+END FindCal
+
+ROUTINE CalcRod(
+    pos_cnt_X  : XYZWPR;
+    pos_cnt_Y  : XYZWPR;
+    pos_cnt_Z  : XYZWPR;
+    diameter       : REAL;
+    OUT pos_center, XYZWPR;
+    OUT status, INTEGER )
+
+  VAR
+    radius : REAL;
+
+BEGIN
+  status = ST_OK;
+  radius = diameter / 2.0;
+
+  pos_cnt.x = pos_cnt_X.x + radius;
+  pos_cnt.y = pos_cnt_Y.y - radius;
+  pos_cnt.z = pos_cnt_Z.z - radius;
+
+  pos_cnt.w = 0.0;
+  pos_cnt.p = 0.0;
+  pos_cnt.r = 0.0;
+
+  WRITE('Obliczono pozycje srodka.');
+
+END CalcRod -- Koniec procedury CalculateRodCenter
+
+ROUTINE MvLnToPos(
+    target_pos : XYZWPR;
+    OUT status, INTEGER )
+
+  VAR
+    result      : INTEGER;
+    contact_val : INTEGER;
+    flag        : INTEGER;
+    wait_time   : REAL;
+
+BEGIN
+  wait_time = 0.0;
+  status = ST_OK;
+
+  -- Sprawdź, czy pozycja nie jest zerowa (pusta)
+  IF (target_pos.x = 0 AND target_pos.y = 0 AND target_pos.z = 0) THEN
+    WRITE('Blad: pusta pozycja docelowa!');
+    status = ST_NOPOS;
+    RETURN;
+  ENDIF;
+
+  -- Skopiuj pozycję do PR[10]
+  SET_POS_REG(TEMP_REG, target_pos, result);
+  IF result <> 0 THEN
+    WRITE('Blad: nie można zapisac PR[10]');
+    status = ST_NOPOS;
+    RETURN;
+  ENDIF;
+
+  -- Zresetuj rejestr R[99]
+  SET_INT_REG(R_FLAG, 0, result);
+
+  -- Uruchom program TP: MV_L
+  RUN_TASK('MV_L', result);
+  IF result <> 0 THEN
+    WRITE('Blad: nie można uruchomic TP MV_L');
+    status = ST_MVFAIL;
+    RETURN;
+  ENDIF;
+
+  GET_INT_REG(R_FLAG, flag);  
+  -- Czekaj aż program TP się zakończy (max 20 sekund)
+  WHILE (flag = ST_INPRG) AND (wait_time < 20.0) DO
+    DELAY 0.1;
+    wait_time = wait_time + 0.1;
+    GET_INT_REG(R_FLAG, flag);
+  ENDWHILE;
+
+  IF wait_time >= 20.0 THEN
+    WRITE('Blad: timeout oczekiwania na TP MV_L');
+    status = ST_MVFAIL;
+    RETURN;
+  ENDIF;
+
+  -- Sprawdź wartość R[99] — czy ruch się powiódł
+  GET_INT_REG(R_FLAG, contact_val);
+  IF contact_val <> ST_OK THEN
+    WRITE('Blad: ruch zakonczony bledem lub bez potwierdzenia.');
+    status = ST_ERR;
+    RETURN;
+  ENDIF;
+
+  WRITE('Ruch liniowy zakonczony poprawnie.');
+  status = ST_OK;
+
+END MvLnToPos
+
+ROUTINE MvUntCon(
+    target_pos  : XYZWPR;
+    OUT contact_pos, XYZWPR;
+    OUT status, INTEGER )
+  VAR
+    result        : INTEGER;
+    tp_status     : INTEGER;
+    flag          : INTEGER;
+    wait_time     : REAL;
+BEGIN
+  status = ST_OK;
+  wait_time = 0.0;
+
+  -- Walidacja pozycji
+  IF (target_pos.x = 0 AND target_pos.y = 0 AND target_pos.z = 0) THEN
+    WRITE('Blad: pusta pozycja docelowa!');
+    status = ST_NOPOS;
+    RETURN;
+  ENDIF;
+
+  -- Ustaw PR[10] = pozycja docelowa
+  SET_POS_REG(TEMP_REG, target_pos, result);
+  IF result <> 0 THEN
+    WRITE('Blad: nie mozna zapisac PR[10]');
+    status = ST_NOPOS;
+    RETURN;
+  ENDIF;
+
+  -- Zresetuj R[99]
+  SET_INT_REG(R_FLAG, 0, result);
+
+  -- Uruchom program TP do ruchu z detekcją kontaktu
+  RUN_TASK('MV_TOUCH', result);
+  IF result <> 0 THEN
+    WRITE('Blad: nie mozna uruchomic TP MV_TOUCH');
+    status = ST_MVFAIL;
+    RETURN;
+  ENDIF;
+
+  GET_INT_REG(R_FLAG, flag);  
+  -- Czekaj aż program TP się zakończy (max 20 sekund)
+  WHILE (flag = ST_INPRG) AND (wait_time < 20.0) DO
+    DELAY 0.1;
+    wait_time = wait_time + 0.1;
+    GET_INT_REG(R_FLAG, flag);
+  ENDWHILE;
+
+  IF wait_time >= 20.0 THEN
+    WRITE('Blad: timeout oczekiwania na TP MV_TOUCH');
+    status = ST_MVFAIL;
+    RETURN;
+  ENDIF;
+
+  -- Pobierz status wykonania z R[99]
+  GET_INT_REG(R_FLAG, tp_status);
+  IF tp_status = ST_CONTACT THEN
+    -- Sukces – kontakt wykryty – pobierz PR[99]
+    GET_POS_REG(CONTACT_REG, contact_pos, result);
+    IF result <> 0 THEN
+      WRITE('Blad: nie mozna pobrac PR[99]');
+      status = ST_ERR;
+      RETURN;
+    ENDIF;
+    status = ST_CONTACT;
+  ELSE
+    IF tp_status = ST_NOCONTACT THEN
+      WRITE('Brak kontaktu w zadanym zakresie.');
+      status = ST_NOCONTACT;
+    ELSE
+      WRITE('Nieznany kod statusu z TP: ' + INT_TO_STR(tp_status));
+      status = ST_ERR;
+    ENDIF;
+  ENDIF;
+END MvUntCon
+
+ROUTINE BldPosWOr(
+    base_pos    : XYZWPR;
+    orient      : XYZWPR;
+    OUT result_pos, XYZWPR )
+BEGIN
+  result_pos.x = base_pos.x;
+  result_pos.y = base_pos.y;
+  result_pos.z = base_pos.z;
+
+  result_pos.w = orient.w;
+  result_pos.p = orient.p;
+  result_pos.r = orient.r;
+END BldPosWOr

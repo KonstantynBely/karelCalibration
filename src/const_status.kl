@@ -4,10 +4,10 @@
 --=============================================================================
 
 CONST
-  STATUS_OK         = 0;
-  STATUS_CONTACT    = 1;
-  STATUS_NOPOS      = 2;
-  STATUS_NOCONTACT  = 3;
-  STATUS_MOVEFAIL   = 4;
-  STATUS_INPROGRESS = 5;
-  STATUS_ERROR      = 999;
+  ST_OK         = 0;
+  ST_CONTACT    = 1;
+  ST_NOPOS      = 2;
+  ST_NOCONTACT  = 3;
+  ST_MVFAIL   = 4;
+  ST_INPRG = 5;
+  ST_ERR      = 999;
