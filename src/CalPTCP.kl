@@ -1,0 +1,158 @@
+PROGRAM CalPTCP
+
+VAR
+  def_pos  : XYZWPR
+  start_pos: XYZWPR
+  temp_pos: XYZWPR
+  YZ_pos_Z1_s: XYZWPR
+  YZ_pos_Z1_t: XYZWPR
+  YZ_pos_Z2_s: XYZWPR
+  YZ_pos_Z2_t: XYZWPR
+  XZ_pos_Z1_s: XYZWPR
+  XZ_pos_Z1_t: XYZWPR
+  XZ_pos_Z2_s: XYZWPR
+  XZ_pos_Z2_t: XYZWPR
+  cal_pos  : XYZWPR
+  rod_diam : REAL
+  status   : INTEGER
+  tool_length : REAL
+  dist_appr : REAL
+  dist_over : REAL
+  z1       : REAL
+  z2       : REAL
+
+BEGIN
+  rod_diam = 20.0
+  tool_length = 150.0
+  dist_appr = 100.0
+  dist_over = 50.0
+
+
+  z1 = 50.0
+  z2 = 30.0
+
+  cal_pos = GET_POS_REG(99, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[99]', CR)
+    ABORT
+  ENDIF
+
+  def_pos = GET_POS_REG(10, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[10]', CR)
+    ABORT
+  ENDIF
+
+  start_pos = cal_pos
+  start_pos.x = cal_pos.x - tool_length - dist_appr
+  start_pos.z = cal_pos.z - 30
+  start_pos.w = -90
+  start_pos.p = -90
+  start_pos.r = -90
+
+  SET_POS_REG(20, start_pos, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[20]', CR)
+    ABORT
+  ENDIF
+
+  temp_pos = start_pos
+  temp_pos.y = start_pos.y - rod_diam / 2 - 100
+
+  SET_POS_REG(21, temp_pos, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[21]', CR)
+    ABORT
+  ENDIF
+
+  YZ_pos_Z2_s.x = cal_pos.x - tool_length + z2
+  YZ_pos_Z2_s.y = cal_pos.y - rod_diam / 2 - dist_appr
+  YZ_pos_Z2_s.z = cal_pos.z - 30
+  YZ_pos_Z2_s.w = -90
+  YZ_pos_Z2_s.p = -90
+  YZ_pos_Z2_s.r = -90
+
+  SET_POS_REG(22, YZ_pos_Z2_s, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[22]', CR)
+    ABORT
+  ENDIF
+
+  YZ_pos_Z2_t = YZ_pos_Z2_s
+  YZ_pos_Z2_t.y = cal_pos.y + dist_over
+
+  SET_POS_REG(23, YZ_pos_Z2_t, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[23]', CR)
+    ABORT
+  ENDIF
+
+  YZ_pos_Z1_s.x = cal_pos.x - tool_length + z1
+  YZ_pos_Z1_s.y = cal_pos.y - rod_diam / 2 - dist_appr
+  YZ_pos_Z1_s.z = cal_pos.z - 30
+  YZ_pos_Z1_s.w = -90
+  YZ_pos_Z1_s.p = -90
+  YZ_pos_Z1_s.r = -90
+
+  SET_POS_REG(24, YZ_pos_Z1_s, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[24]', CR)
+    ABORT
+  ENDIF
+
+  YZ_pos_Z1_t = YZ_pos_Z1_s
+  YZ_pos_Z1_t.y = cal_pos.y + dist_over
+
+  SET_POS_REG(25, YZ_pos_Z1_t, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[25]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z2_s.x = cal_pos.x - tool_length + z2
+  XZ_pos_Z2_s.y = cal_pos.y - rod_diam / 2 - dist_appr
+  XZ_pos_Z2_s.z = cal_pos.z - 30
+  XZ_pos_Z2_s.w = -90
+  XZ_pos_Z2_s.p = 0
+  XZ_pos_Z2_s.r = -90
+
+  SET_POS_REG(26, XZ_pos_Z2_s, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[26]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z2_t = XZ_pos_Z2_s
+  XZ_pos_Z2_t.y = cal_pos.y + dist_over
+
+  SET_POS_REG(27, XZ_pos_Z2_t, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[27]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z1_s.x = cal_pos.x - tool_length + z1
+  XZ_pos_Z1_s.y = cal_pos.y - rod_diam / 2 - dist_appr
+  XZ_pos_Z1_s.z = cal_pos.z - 30
+  XZ_pos_Z1_s.w = -90
+  XZ_pos_Z1_s.p = 0
+  XZ_pos_Z1_s.r = -90
+
+  SET_POS_REG(28, XZ_pos_Z1_s, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[28]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z1_t = XZ_pos_Z1_s
+  XZ_pos_Z1_t.y = cal_pos.y + dist_over
+
+  SET_POS_REG(29, XZ_pos_Z1_t, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[29]', CR)
+    ABORT
+  ENDIF
+
+  WRITE('Pozycje punktow do pomiaru TCP obliczone w rejestrach PR[20-29]', CR)
+
+END CalPTCP
