@@ -1,0 +1,112 @@
+PROGRAM CalPR
+
+VAR
+    def_pos,
+    start_pos,
+    X_prb_pos,
+    trans_Y,
+    Y_start,
+    Y_prb_pos,
+    trans_Z,
+    Z_start,
+    Z_prb_pos : XYZWPR
+
+    rod_diam,
+    dist_appr,
+    go_dist : REAL
+
+    status : INTEGER
+
+BEGIN
+    rod_diam = 20.0
+    dist_appr = 100.0
+    go_dist = 120.0
+
+    def_pos = GET_POS_REG(10, status)
+    IF status <> 0 THEN
+        WRITE('Błąd odczytu PR[10], kod: ', status, CR)
+        ABORT
+    ENDIF
+
+    start_pos = def_pos
+    start_pos.w = 0
+    start_pos.p = 90
+    start_pos.r = 0
+
+    SET_POS_REG(11, start_pos, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[11]', CR)
+        ABORT
+    ENDIF
+
+    X_prb_pos = start_pos
+    X_prb_pos.x = start_pos.x + go_dist 
+
+    SET_POS_REG(12, X_prb_pos, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[12]', CR)
+        ABORT
+    ENDIF
+
+    trans_Y = start_pos
+    trans_Y.y = start_pos.y - rod_diam / 2 - dist_appr
+    trans_Y.w = -90
+    trans_Y.p = 90
+    trans_Y.r = 0
+
+    SET_POS_REG(13, trans_Y, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[13]', CR)
+        ABORT
+    ENDIF
+
+    Y_start = trans_Y
+    Y_start.x = trans_Y.x + dist_appr + rod_diam / 2
+
+    SET_POS_REG(14, Y_start, status)   
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[14]', CR)
+        ABORT
+    ENDIF
+
+    Y_prb_pos = Y_start
+    Y_prb_pos.y = Y_start.y + go_dist
+
+    SET_POS_REG(15, Y_prb_pos, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[15]', CR)
+        ABORT
+    ENDIF
+
+    trans_Z = Y_start
+    trans_Z.z = Y_start.z - dist_appr
+    trans_Z.w = 180
+    trans_Z.p = 0
+    trans_Z.r = 0
+
+    SET_POS_REG(16, trans_Z, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[16]', CR)
+        ABORT
+    ENDIF
+
+    Z_start = trans_Z
+    Z_start.y = trans_Z.y + rod_diam / 2 + dist_appr
+
+    SET_POS_REG(17, Z_start, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[17]', CR)
+        ABORT
+    ENDIF
+
+    Z_prb_pos = Z_start
+    Z_prb_pos.z = Z_start.z - go_dist
+
+    SET_POS_REG(18, Z_prb_pos, status)
+    IF status <> 0 THEN
+        WRITE('Błąd zapisu do PR[18]', CR)
+        ABORT  
+    ENDIF
+    WRITE('Zapisano PR[10] - PR[18]', CR)
+
+END CalPR

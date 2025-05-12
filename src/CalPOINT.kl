@@ -1,0 +1,48 @@
+PROGRAM CalPOINT
+
+VAR
+  pr_x     : XYZWPR
+  pr_y     : XYZWPR
+  pr_z     : XYZWPR
+  cal_pos  : XYZWPR
+  rod_diam : REAL
+  status   : INTEGER
+
+BEGIN
+  rod_diam = 20.0
+
+  pr_x = GET_POS_REG(21, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[21]', CR)
+    ABORT
+  ENDIF
+
+  pr_y = GET_POS_REG(22, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[22]', CR)
+    ABORT
+  ENDIF
+
+  pr_z = GET_POS_REG(23, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[23]', CR)
+    ABORT
+  ENDIF
+
+  cal_pos.x = pr_x.x + rod_diam / 2.0
+  cal_pos.y = pr_y.y - rod_diam / 2.0
+  cal_pos.z = pr_z.z - rod_diam / 2.0
+
+  cal_pos.w = 0 
+  cal_pos.p = 0
+  cal_pos.r = 0
+
+  SET_POS_REG(99, cal_pos, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[99]', CR)
+    ABORT
+  ENDIF
+
+  WRITE('Pozycja punktu pomiarowego zapisana do PR[99]', CR)
+
+END CalPOINT
