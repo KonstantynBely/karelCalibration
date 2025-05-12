@@ -1,0 +1,18 @@
+PROGRAM TCP_1
+
+VAR
+  tcp : XYZWPR
+  status : INTEGER
+  entry : INTEGER
+BEGIN
+  tcp.x = 123.4
+  tcp.y = 0.0
+  tcp.z = 87.6
+  tcp.w = 0.0
+  tcp.p = 90.0
+  tcp.r = 0.0
+
+
+  SET_VAR(entry, '*SYSTEM*', '$UTOOL[9]', tcp, status)
+  SET_VAR(entry, '*SYSTEM*', '$MNUTOOLNUM[1]', 9, status)
+END TCP_1
