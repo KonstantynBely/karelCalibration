@@ -1,18 +1,125 @@
 PROGRAM TCP_1
 
 VAR
-  tcp : XYZWPR
+  YZ_pos_Z1 : XYZWPR
+  YZ_pos_Z2 : XYZWPR
+  XZ_pos_Z1 : XYZWPR
+  XZ_pos_Z2 : XYZWPR
+
+  cal_pos : XYZWPR
+  ref_pos : XYZWPR
+
+  deltaX2 : REAL
+  deltaX1 : REAL
+  deltaY2 : REAL
+  deltaY1 : REAL
+  deltaX : REAL 
+  deltaY : REAL
+  deltaZ : REAL
+
+  alfa : REAL
+  beta : REAL
+
+  angle_rad : REAL
+
+  TCP_ideal : XYZWPR
+  TCP_1 : XYZWPR
+  TCP_2 : XYZWPR
+
+  R : ARRAY[1:3,1:3] OF REAL
+
+  cosA, sinA, cosB, sinB : REAL
+
+  rod_diam : REAL
   status : INTEGER
-  entry : INTEGER
 BEGIN
-  tcp.x = 123.4
-  tcp.y = 0.0
-  tcp.z = 87.6
-  tcp.w = 0.0
-  tcp.p = 90.0
-  tcp.r = 0.0
+  TCP_ideal.x = 0
+  TCP_ideal.y = 0.0
+  TCP_ideal.z = 150.0
+  TCP_ideal.w = 0.0
+  TCP_ideal.p = 0.0
+  TCP_ideal.r = 0.0
 
+  rod_diam = 20.0
+  deltaZ = 20.0
 
-  SET_VAR(entry, '*SYSTEM*', '$UTOOL[9]', tcp, status)
-  SET_VAR(entry, '*SYSTEM*', '$MNUTOOLNUM[1]', 9, status)
+  cal_pos = GET_POS_REG(99, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[99]', CR)
+    ABORT
+  ENDIF
+
+  ref_pos = cal_pos
+  ref_pos.y = cal_pos.y - rod_diam / 2.0
+
+  YZ_pos_Z2 = GET_POS_REG(31, status) 
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[31]', CR)
+    ABORT
+  ENDIF
+
+  YZ_pos_Z1 = GET_POS_REG(32, status) 
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[32]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z2 = GET_POS_REG(33, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[33]', CR)
+    ABORT
+  ENDIF
+
+  XZ_pos_Z1 = GET_POS_REG(34, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[34]', CR)
+    ABORT
+  ENDIF
+
+  deltaX2 = XZ_pos_Z2.y - ref_pos.y
+  deltaX1 = XZ_pos_Z1.y - ref_pos.y
+
+  deltaY2 = YZ_pos_Z2.y - ref_pos.y
+  deltaY1 = YZ_pos_Z1.y - ref_pos.y
+
+  deltaX = deltaX2 - deltaX1
+  deltaY = deltaY2 - deltaY1
+
+  angle_rad = deltaX / deltaZ
+
+  IF TAN(angle_rad) <> 0.0 THEN
+    beta = 1.0 / TAN(angle_rad)
+  ELSE
+    beta = 0.0
+  ENDIF  
+
+  angle_rad = deltaY / deltaZ
+
+  IF TAN(angle_rad) <> 0.0 THEN
+    alfa = 1.0 / TAN(angle_rad)
+  ELSE
+    alfa = 0.0
+  ENDIF
+
+  sinA = SIN(alfa)
+  cosA = COS(alfa)
+  sinB = SIN(beta)
+  cosB = COS(beta)
+
+  R[1,1] = cosB
+  R[1,2] = 0.0
+  R[1,3] = sinB
+
+  R[2,1] = sinA * sinB
+  R[2,2] = cosA
+  R[2,3] = -sinA * cosB
+
+  R[3,1] = -cosA * sinB
+  R[3,2] = sinA
+  R[3,3] = cosA * cosB
+
+  TCP_1.x = TCP_ideal.z * sinB
+  TCP_1.y = 0.0 - TCP_ideal.z * sinA * sinB
+  TCP_1.z = TCP_ideal.z * cosA * cosB
+
 END TCP_1
