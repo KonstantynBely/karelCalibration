@@ -1,9 +1,10 @@
 PROGRAM TCP_1
 
 VAR
-  tcp : XYZWPR
-  status : INTEGER
-  entry : INTEGER
+  YZ_pos_Z1: XYZWPR
+  YZ_pos_Z2: XYZWPR
+  XZ_pos_Z1: XYZWPR
+  XZ_pos_Z2: XYZWPR
 BEGIN
   tcp.x = 123.4
   tcp.y = 0.0

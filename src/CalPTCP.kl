@@ -12,6 +12,7 @@ VAR
   XZ_pos_Z1_t: XYZWPR
   XZ_pos_Z2_s: XYZWPR
   XZ_pos_Z2_t: XYZWPR
+  deltaZ : XYZWPR
   cal_pos  : XYZWPR
   rod_diam : REAL
   status   : INTEGER
@@ -150,6 +151,19 @@ BEGIN
   SET_POS_REG(29, XZ_pos_Z1_t, status)
   IF status <> 0 THEN
     WRITE('Błąd zapisu do PR[29]', CR)
+    ABORT
+  ENDIF
+
+  deltaZ = cal_pos
+  deltaZ.x = cal_pos.x + dist_appr
+  deltaZ.z = cal_pos.z - 30
+  deltaZ.w = -90
+  deltaZ.p = -90
+  deltaZ.r = -90
+
+  SET_POS_REG(30, deltaZ, status)
+  IF status <> 0 THEN
+    WRITE('Błąd zapisu do PR[30]', CR)
     ABORT
   ENDIF
 
