@@ -1,13 +1,15 @@
-PROGRAM TCP_1
+PROGRAM TCP_2
 
 VAR
   YZ_pos_Z1 : XYZWPR
   YZ_pos_Z2 : XYZWPR
   XZ_pos_Z1 : XYZWPR
   XZ_pos_Z2 : XYZWPR
+  Z_pos : XYZWPR
 
   cal_pos : XYZWPR
   ref_pos : XYZWPR
+  touch_pos : XYZWPR
 
   deltaX2 : REAL
   deltaX1 : REAL
@@ -17,8 +19,7 @@ VAR
   deltaY : REAL
   deltaZ : REAL
 
-  dX : REAL
-  dY : REAL
+  dZ : REAL
 
   alfa : REAL
   beta : REAL
@@ -28,13 +29,10 @@ VAR
   angle_rad : REAL
 
   TCP_ideal : XYZWPR
-  TCP1 : XYZWPR
+  TCP : XYZWPR
   TCP2 : XYZWPR
 
   cosA, sinA, cosB, sinB : REAL
-
-  x0,x1,x2,y0,y1,y2 : REAL
-  numerator, denominator : REAL
 
   rod_diam : REAL
   status : INTEGER
@@ -58,6 +56,9 @@ BEGIN
   ref_pos = cal_pos
   ref_pos.y = cal_pos.y - rod_diam / 2.0
 
+  touch_pos = cal_pos
+  touch_pos.x = cal_pos.x - rod_diam / 2.0
+
   YZ_pos_Z2 = GET_POS_REG(31, status) 
   IF status <> 0 THEN
     WRITE('Błąd odczytu PR[31]', CR)
@@ -79,6 +80,18 @@ BEGIN
   XZ_pos_Z1 = GET_POS_REG(34, status)
   IF status <> 0 THEN
     WRITE('Błąd odczytu PR[34]', CR)
+    ABORT
+  ENDIF
+
+  Z_pos = GET_POS_REG(35, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[35]', CR)
+    ABORT
+  ENDIF
+
+  TCP2 = GET_POS_REG(51, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[51]', CR)
     ABORT
   ENDIF
 
@@ -115,57 +128,17 @@ BEGIN
   sinB = SIN(beta)
   cosB = COS(beta)
 
-  TCP1.x = TCP_ideal.z * sinB
-  TCP1.y = 0.0 - TCP_ideal.z * sinA * sinB
-  TCP1.z = TCP_ideal.z * cosA * cosB
-  TCP1.w = 0.0
-  TCP1.p = beta_deg
-  TCP1.r = alfa_deg
+  dZ = touch_pos.x - Z_pos.x  
 
-  x0 = ref_pos.y
-  y0 = ref_pos.x
+  TCP = TCP2
+  TCP.x = TCP2.x + (TCP_ideal.z + dZ) * sinB
+  TCP.y = TCP2.y - (TCP_ideal.z + dZ) * sinA * cosB
+  TCP.z = TCP2.z + (TCP_ideal.z + dZ) * cosA * cosB  
 
-  x1 = XZ_pos_Z2.y
-  y1 = XZ_pos_Z2.x
-
-  x2 = x1 + TCP1.x
-  y2 = y1 + TCP1.z
-
-  numerator = ABS((x2 - x1)*(y1 - y0) - (x1 - x0)*(y2 - y1))
-  denominator = SQRT((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
-
-  IF denominator <> 0.0 THEN
-    dX = (numerator / denominator) - (rod_diam * sinB * COS((3.1415926 - beta) / 2.0))
-  ELSE
-    dX = 0.0
-  ENDIF
-
-  x1 = YZ_pos_Z2.y
-  y1 = YZ_pos_Z2.x
-
-  x2 = x1 + TCP1.y
-  y2 = y1 + TCP1.z
-
-  numerator = ABS((x2 - x1)*(y1 - y0) - (x1 - x0)*(y2 - y1))
-  denominator = SQRT((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
-
-  IF denominator <> 0.0 THEN
-    dY = (numerator / denominator) - (rod_diam * sinA * COS((3.1415926 - alfa) / 2.0))
-  ELSE
-    dY = 0.0
-  ENDIF
-
-  TCP2.x = dX * cosB + TCP_ideal.z * sinB
-  TCP2.y = dX * sinA * sinB + dY * cosA - TCP_ideal.z * sinA * cosB
-  TCP2.z = 0.0 - dX * cosA * sinB + dY * sinA + TCP_ideal.z * cosA * cosB
-  TCP2.w = TCP1.w
-  TCP2.p = TCP1.p
-  TCP2.r = TCP1.r
-
-  SET_POS_REG(51, TCP2, status)
+  SET_POS_REG(98, TCP, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[51]', CR)
+    WRITE('Błąd zapisu do PR[98]', CR)
     ABORT
   ENDIF
 
-END TCP_1
+END TCP_2
