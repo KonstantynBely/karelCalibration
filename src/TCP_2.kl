@@ -49,7 +49,7 @@ BEGIN
 
   cal_pos = GET_POS_REG(99, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[99]', CR)
+    WRITE('Blad odczytu PR[99]', CR)
     ABORT
   ENDIF
 
@@ -61,37 +61,37 @@ BEGIN
 
   YZ_pos_Z2 = GET_POS_REG(31, status) 
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[31]', CR)
+    WRITE('Blad odczytu PR[31]', CR)
     ABORT
   ENDIF
 
   YZ_pos_Z1 = GET_POS_REG(32, status) 
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[32]', CR)
+    WRITE('Blad odczytu PR[32]', CR)
     ABORT
   ENDIF
 
   XZ_pos_Z2 = GET_POS_REG(33, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[33]', CR)
+    WRITE('Blad odczytu PR[33]', CR)
     ABORT
   ENDIF
 
   XZ_pos_Z1 = GET_POS_REG(34, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[34]', CR)
+    WRITE('Blad odczytu PR[34]', CR)
     ABORT
   ENDIF
 
   Z_pos = GET_POS_REG(35, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[35]', CR)
+    WRITE('Blad odczytu PR[35]', CR)
     ABORT
   ENDIF
 
   TCP2 = GET_POS_REG(51, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[51]', CR)
+    WRITE('Blad odczytu PR[51]', CR)
     ABORT
   ENDIF
 
@@ -137,7 +137,7 @@ BEGIN
 
   SET_POS_REG(98, TCP, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[98]', CR)
+    WRITE('Blad zapisu do PR[98]', CR)
     ABORT
   ENDIF
 

@@ -34,13 +34,13 @@ BEGIN
 
   cal_pos = GET_POS_REG(99, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[99]', CR)
+    WRITE('Blad odczytu PR[99]', CR)
     ABORT
   ENDIF
 
   def_pos = GET_POS_REG(10, status)
   IF status <> 0 THEN
-    WRITE('Błąd odczytu PR[10]', CR)
+    WRITE('Blad odczytu PR[10]', CR)
     ABORT
   ENDIF
 
@@ -53,7 +53,7 @@ BEGIN
 
   SET_POS_REG(20, start_pos, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[20]', CR)
+    WRITE('Blad zapisu do PR[20]', CR)
     ABORT
   ENDIF
 
@@ -62,7 +62,7 @@ BEGIN
 
   SET_POS_REG(21, temp_pos, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[21]', CR)
+    WRITE('Blad zapisu do PR[21]', CR)
     ABORT
   ENDIF
 
@@ -75,7 +75,7 @@ BEGIN
 
   SET_POS_REG(22, YZ_pos_Z2_s, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[22]', CR)
+    WRITE('Blad zapisu do PR[22]', CR)
     ABORT
   ENDIF
 
@@ -84,7 +84,7 @@ BEGIN
 
   SET_POS_REG(23, YZ_pos_Z2_t, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[23]', CR)
+    WRITE('Blad zapisu do PR[23]', CR)
     ABORT
   ENDIF
 
@@ -97,7 +97,7 @@ BEGIN
 
   SET_POS_REG(24, YZ_pos_Z1_s, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[24]', CR)
+    WRITE('Blad zapisu do PR[24]', CR)
     ABORT
   ENDIF
 
@@ -106,7 +106,7 @@ BEGIN
 
   SET_POS_REG(25, YZ_pos_Z1_t, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[25]', CR)
+    WRITE('Blad zapisu do PR[25]', CR)
     ABORT
   ENDIF
 
@@ -119,7 +119,7 @@ BEGIN
 
   SET_POS_REG(26, XZ_pos_Z2_s, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[26]', CR)
+    WRITE('Blad zapisu do PR[26]', CR)
     ABORT
   ENDIF
 
@@ -128,7 +128,7 @@ BEGIN
 
   SET_POS_REG(27, XZ_pos_Z2_t, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[27]', CR)
+    WRITE('Blad zapisu do PR[27]', CR)
     ABORT
   ENDIF
 
@@ -141,7 +141,7 @@ BEGIN
 
   SET_POS_REG(28, XZ_pos_Z1_s, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[28]', CR)
+    WRITE('Blad zapisu do PR[28]', CR)
     ABORT
   ENDIF
 
@@ -150,7 +150,7 @@ BEGIN
 
   SET_POS_REG(29, XZ_pos_Z1_t, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[29]', CR)
+    WRITE('Blad zapisu do PR[29]', CR)
     ABORT
   ENDIF
 
@@ -163,7 +163,7 @@ BEGIN
 
   SET_POS_REG(30, deltaZ, status)
   IF status <> 0 THEN
-    WRITE('Błąd zapisu do PR[30]', CR)
+    WRITE('Blad zapisu do PR[30]', CR)
     ABORT
   ENDIF
 
