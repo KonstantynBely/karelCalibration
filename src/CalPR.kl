@@ -24,7 +24,7 @@ BEGIN
 
     def_pos = GET_POS_REG(10, status)
     IF status <> 0 THEN
-        WRITE('Błąd odczytu PR[10], kod: ', status, CR)
+        WRITE('Blad odczytu PR[10], kod: ', STATUS, CR)
         ABORT
     ENDIF
 
@@ -35,7 +35,7 @@ BEGIN
 
     SET_POS_REG(11, start_pos, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[11]', CR)
+        WRITE('Blad zapisu do PR[11]', CR)
         ABORT
     ENDIF
 
@@ -44,7 +44,7 @@ BEGIN
 
     SET_POS_REG(12, X_prb_pos, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[12]', CR)
+        WRITE('Blad zapisu do PR[12]', CR)
         ABORT
     ENDIF
 
@@ -56,7 +56,7 @@ BEGIN
 
     SET_POS_REG(13, trans_Y, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[13]', CR)
+        WRITE('Blad zapisu do PR[13]', CR)
         ABORT
     ENDIF
 
@@ -65,7 +65,7 @@ BEGIN
 
     SET_POS_REG(14, Y_start, status)   
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[14]', CR)
+        WRITE('Blad zapisu do PR[14]', CR)
         ABORT
     ENDIF
 
@@ -74,19 +74,19 @@ BEGIN
 
     SET_POS_REG(15, Y_prb_pos, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[15]', CR)
+        WRITE('Blad zapisu do PR[15]', CR)
         ABORT
     ENDIF
 
     trans_Z = Y_start
-    trans_Z.z = Y_start.z - dist_appr
+    trans_Z.z = Y_start.z + dist_appr
     trans_Z.w = 180
     trans_Z.p = 0
     trans_Z.r = 0
 
     SET_POS_REG(16, trans_Z, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[16]', CR)
+        WRITE('Blad zapisu do PR[16]', CR)
         ABORT
     ENDIF
 
@@ -95,7 +95,7 @@ BEGIN
 
     SET_POS_REG(17, Z_start, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[17]', CR)
+        WRITE('Blad zapisu do PR[17]', CR)
         ABORT
     ENDIF
 
@@ -104,7 +104,7 @@ BEGIN
 
     SET_POS_REG(18, Z_prb_pos, status)
     IF status <> 0 THEN
-        WRITE('Błąd zapisu do PR[18]', CR)
+        WRITE('Blad zapisu do PR[18]', CR)
         ABORT  
     ENDIF
     WRITE('Zapisano PR[10] - PR[18]', CR)

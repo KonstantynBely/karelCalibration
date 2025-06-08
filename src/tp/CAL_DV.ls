@@ -18,8 +18,8 @@ PROTECT     = READ_WRITE;
 
   5:  J PR[11] 25% FINE ;
   6:  SKIP CONDITION DI[1]=ON ;               
-  7:  L PR[12] 10mm/sec FINE Skip,LBL[101] ;     
-  8:  JMP LBL[999] ;                                   
+  7:  L PR[12] 10mm/sec FINE Skip,LBL[999] ;     
+  8:  JMP LBL[101] ;                                   
   9:  LBL[101] ;
  10:  PR[21] = LPOS ;                           
  11:  J PR[11] 25% FINE ;                 
