@@ -1,0 +1,7 @@
+tb_cart 1           -- cartesian 1. cycle priority 2. path priority
+tb_jnt 1            -- joint 1. cycle priority 2. path priority
+payload 5           -- max payload
+angle 0             -- mount angle
+j1_range 1          -- J1 range setting
+brake_type 2        -- brake type setting
+ENDOFL              -- end of the file

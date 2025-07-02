@@ -1,0 +1,33 @@
+/PROG  PRO_MOV2 
+/ATTR
+OWNER       = MNEDITOR;
+COMMENT     = "SimPRO Internal for .MoveTo"
+PROG_SIZE   = 913;
+CREATE      = DATE 25-05-27  TIME 18:23:40;
+MODIFIED      = DATE 25-05-27  TIME 18:23:40;
+FILE_NAME   = ;
+VERSION    = 0;
+LINE_COUNT  = 13;
+MEMORY_SIZE = 1197;
+PROTECT     = READ_WRITE;
+TCD:  STACK_SIZE    = 0,
+      TASK_PRIORITY = 50,
+      TIME_SLICE    = 0,
+      BUSY_LAMP_OFF = 0, 
+      ABORT_REQUEST = 0,
+      PAUSE_REQUEST = 0;
+DEFAULT_GROUP   = 1,*,*,*,*,*,*,* ;
+CONTROL_CODE    = 00000000 00000000;
+/MN
+1: UTOOL_NUM= 1 ;
+2: UFRAME_NUM= 0 ;
+3: J P[1] 100% FINE ;
+/POS
+P[1]{
+   GP1:
+	UF : 0, UT : 1,		CONFIG : 'N U T, 0, 0, 0',
+	X = 484.919  mm,	Y = 0.000  mm,	Z = 104.520  mm,
+	W = -180.000 deg,	P = -90.000 deg,	R = 0.000 deg
+};
+
+/END

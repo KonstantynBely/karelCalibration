@@ -1,0 +1,16 @@
+ERRMOT.LS      Robot Name ROBOT 27-MAY-25 18:35     
+
+1" 27-MAY-25 18:31 " MOTN-018 Position not reachable                   " DATA     0   3   0    0   0        0              " STOP.G                        00100110" 
+2" 27-MAY-25 18:28 " JOG -013 Stroke limit (G:1 A:20 Hex)              " " WARN                          00000000" 
+3" 27-MAY-25 18:28 " JOG -008 Turn on TP to jog                        " " WARN                          00000000" 
+4" 27-MAY-25 18:28 " JOG -009 Hold deadman to jog                      " " WARN                          00000000" 
+5" 27-MAY-25 18:28 " JOG -008 Turn on TP to jog                        " " WARN                          00000000" 
+6" 27-MAY-25 18:28 " JOG -009 Hold deadman to jog                      " " WARN                          00000000" 
+7" 27-MAY-25 18:26 " MCTL-003 system is in error status                " MCTL-003 system is in error status                " WARN                          00000000" 
+8" 27-MAY-25 18:25 " MOTN-018 Position not reachable                   " DATA     0   3   0    0   0        0              " STOP.G                        00100110" 
+9" 27-MAY-25 18:24 " MOTN-023 In singularity                           " DATA     0   3   0    0   0        0              "                               00100100" 
+10" 27-MAY-25 18:24 " MCTL-003 system is in error status                " MCTL-003 system is in error status                " WARN                          00000000" 
+11" 27-MAY-25 18:24 " MCTL-003 system is in error status                " MCTL-003 system is in error status                " WARN                          00000000" 
+12" 27-MAY-25 18:24 " MOTN-018 Position not reachable                   " DATA     0   3   0    0   0        0              " STOP.G                        00100110" 
+13" 27-MAY-25 18:23 " MOTN-018 Position not reachable                   " DATA     0   3   0    0   0        0              " STOP.G                        00100110" 
+14" 27-MAY-25 18:23 " MOTN-023 In singularity                           " DATA     0   3   0    0   0        0              " STOP.G                        00100110" 

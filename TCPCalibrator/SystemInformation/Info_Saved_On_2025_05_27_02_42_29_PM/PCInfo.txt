@@ -1,0 +1,66 @@
+﻿=======
+General
+=======
+Computer Name = LAPTOP-U9NQDGEH
+Computer Manufacturer = ASUSTeK COMPUTER INC.
+Computer Model = Vivobook_ASUSLaptop M7400QE_M7400QE
+Computer System Type = x64-based PC
+===============
+Processor
+===============
+CPU Name = AMD Ryzen 9 5900HX with Radeon Graphics        
+Max Clock Speed = 3301
+Number of Cores = 8
+Address Width = 64
+Processor Version = [not reported]
+================
+Operating System
+================
+OS = Microsoft Windows 11 Pro
+Version = 6.2.9200.0
+Service Pack = 0.0
+OS Platform = Win32NT
+Installed UI Culture = Polish (Poland)
+===============
+Display Adapter
+===============
+Adapter Name = NVIDIA GeForce RTX 3050 Ti Laptop GPU
+Adapter RAM = 4293918720
+Video Processor = NVIDIA GeForce RTX 3050 Ti Laptop GPU
+Video Mode Description = [not reported]
+Twips Per Pixel = 15
+Driver Version = 32.0.15.6607
+Driver Date = 20241020000000.000000-000
+===============
+OpenGL
+===============
+Version = 4.6
+Performance Improvement = True
+Depth Buffer Bit = 24
+Stencil Buffer Bit = 8
+Max Elements Vertices = 536870911
+Max Elements Indices = 536870911
+=========
+PC Memory
+=========
+Available Physical Memory = 7865081856
+Available Virtual Memory = 3232780288
+Total Physical Memory = 16541569024
+Total Virtual Memory = 4294836224
+======================
+FANUC Product Versions
+======================
+Robot Neighborhood 8.1314.04.05 
+Robot Server 8.1314.04.05 
+Virtual Robot Controller V6.31 (Rev.F) 
+Virtual Robot Controller V6.40 64076 
+Virtual Robot Controller V7.20 7.2033.45.02 
+Virtual Robot Controller V7.30 7.3059.36.02 
+Virtual Robot Controller V7.40 7.40112.22.04 
+Virtual Robot Controller V7.50 7.50122.23.08 
+Virtual Robot Controller V7.70 7.7077.36.07 
+Virtual Robot Controller V8.10 8.1079.11.05 
+Virtual Robot Controller V8.13 8.1314.04.07 
+Vision Controls V7.70 7.7077.36.04 
+Vision Controls V8.10 8.1314.04.02 
+ROBOGUIDE V8.1079 (Rev.E) 
