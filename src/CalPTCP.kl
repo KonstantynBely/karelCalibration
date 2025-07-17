@@ -47,9 +47,9 @@ BEGIN
   start_pos = cal_pos
   start_pos.x = cal_pos.x - tool_length - dist_appr
   start_pos.z = cal_pos.z - 30
-  start_pos.w = -90
-  start_pos.p = -90
-  start_pos.r = -90
+  start_pos.w = 0
+  start_pos.p = 90
+  start_pos.r = 0
 
   SET_POS_REG(20, start_pos, status)
   IF status <> 0 THEN
@@ -66,12 +66,13 @@ BEGIN
     ABORT
   ENDIF
 
+  YZ_pos_Z2_s = start_pos
   YZ_pos_Z2_s.x = cal_pos.x - tool_length + z2
   YZ_pos_Z2_s.y = cal_pos.y - rod_diam / 2 - dist_appr
   YZ_pos_Z2_s.z = cal_pos.z - 30
-  YZ_pos_Z2_s.w = -90
-  YZ_pos_Z2_s.p = -90
-  YZ_pos_Z2_s.r = -90
+  YZ_pos_Z2_s.w = 0
+  YZ_pos_Z2_s.p = 90
+  YZ_pos_Z2_s.r = 0
 
   SET_POS_REG(22, YZ_pos_Z2_s, status)
   IF status <> 0 THEN
@@ -88,12 +89,13 @@ BEGIN
     ABORT
   ENDIF
 
+  YZ_pos_Z1_s = start_pos
   YZ_pos_Z1_s.x = cal_pos.x - tool_length + z1
   YZ_pos_Z1_s.y = cal_pos.y - rod_diam / 2 - dist_appr
   YZ_pos_Z1_s.z = cal_pos.z - 30
-  YZ_pos_Z1_s.w = -90
-  YZ_pos_Z1_s.p = -90
-  YZ_pos_Z1_s.r = -90
+  YZ_pos_Z1_s.w = 0
+  YZ_pos_Z1_s.p = 90
+  YZ_pos_Z1_s.r = 0
 
   SET_POS_REG(24, YZ_pos_Z1_s, status)
   IF status <> 0 THEN
@@ -109,13 +111,14 @@ BEGIN
     WRITE('Blad zapisu do PR[25]', CR)
     ABORT
   ENDIF
-
+ 
+  XZ_pos_Z2_s = start_pos
   XZ_pos_Z2_s.x = cal_pos.x - tool_length + z2
   XZ_pos_Z2_s.y = cal_pos.y - rod_diam / 2 - dist_appr
   XZ_pos_Z2_s.z = cal_pos.z - 30
-  XZ_pos_Z2_s.w = -90
+  XZ_pos_Z2_s.w = 90
   XZ_pos_Z2_s.p = 0
-  XZ_pos_Z2_s.r = -90
+  XZ_pos_Z2_s.r = 90
 
   SET_POS_REG(26, XZ_pos_Z2_s, status)
   IF status <> 0 THEN
@@ -132,12 +135,13 @@ BEGIN
     ABORT
   ENDIF
 
+  XZ_pos_Z1_s = start_pos
   XZ_pos_Z1_s.x = cal_pos.x - tool_length + z1
   XZ_pos_Z1_s.y = cal_pos.y - rod_diam / 2 - dist_appr
   XZ_pos_Z1_s.z = cal_pos.z - 30
-  XZ_pos_Z1_s.w = -90
+  XZ_pos_Z1_s.w = 90
   XZ_pos_Z1_s.p = 0
-  XZ_pos_Z1_s.r = -90
+  XZ_pos_Z1_s.r = 90
 
   SET_POS_REG(28, XZ_pos_Z1_s, status)
   IF status <> 0 THEN
@@ -157,9 +161,9 @@ BEGIN
   deltaZ = cal_pos
   deltaZ.x = cal_pos.x + dist_appr
   deltaZ.z = cal_pos.z - 30
-  deltaZ.w = -90
-  deltaZ.p = -90
-  deltaZ.r = -90
+  deltaZ.w = 0
+  deltaZ.p = 90
+  deltaZ.r = 0
 
   SET_POS_REG(30, deltaZ, status)
   IF status <> 0 THEN

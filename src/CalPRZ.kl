@@ -1,0 +1,46 @@
+PROGRAM CalPRZ
+
+VAR
+    def_pos,
+    start_pos,
+    Z_start,
+    Z_prb_pos : XYZWPR
+
+    rod_diam,
+    dist_appr,
+    go_dist : REAL
+
+    status : INTEGER
+
+BEGIN
+    rod_diam = 20.0
+    dist_appr = 100
+    go_dist = 120
+
+    def_pos = GET_POS_REG(10, status)
+    IF status <> 0 THEN
+        WRITE('Blad odczytu PR[10], kod: ', STATUS, CR)
+        ABORT
+    ENDIF
+
+    start_pos = def_pos
+    start_pos.w = 180
+    start_pos.p = 0
+    start_pos.r = 0
+
+    SET_POS_REG(11, start_pos, status)
+    IF status <> 0 THEN
+        WRITE('Blad zapisu do PR[11]', CR)
+        ABORT
+    ENDIF
+
+    Z_prb_pos = start_pos
+    Z_prb_pos.z = start_pos.Z - go_dist 
+
+    SET_POS_REG(12, Z_prb_pos, status)
+    IF status <> 0 THEN
+        WRITE('Blad zapisu do PR[12]', CR)
+        ABORT
+    ENDIF
+
+END CalPRZ

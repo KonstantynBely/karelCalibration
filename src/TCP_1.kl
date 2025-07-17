@@ -17,6 +17,8 @@ VAR
   deltaY : REAL
   deltaZ : REAL
 
+  tcp_pos    : POSITION
+
   dX : REAL
   dY : REAL
 
@@ -82,6 +84,12 @@ BEGIN
     ABORT
   ENDIF
 
+  TCP2 = GET_POS_REG(51, status)
+  IF status <> 0 THEN
+    WRITE('Blad odczytu PR[34]', CR)
+    ABORT
+  ENDIF
+
   deltaX2 = XZ_pos_Z2.y - ref_pos.y
   deltaX1 = XZ_pos_Z1.y - ref_pos.y
 
@@ -92,6 +100,15 @@ BEGIN
   deltaY = deltaY2 - deltaY1
 
   angle_rad = deltaX / deltaZ
+  WRITE('deltaX = ', deltaX, CR)
+  WRITE('deltaY = ', deltaY, CR)
+
+  WRITE('beta angle = ', angle_rad, CR)
+  IF angle_rad <= 0.00001 THEN
+   IF angle_rad >= -0.00001 THEN
+      angle_rad = 0.0
+   ENDIF
+  ENDIF
 
   IF TAN(angle_rad) <> 0.0 THEN
     beta = 1.0 / TAN(angle_rad)
@@ -101,6 +118,13 @@ BEGIN
 
   angle_rad = deltaY / deltaZ
 
+  WRITE('alfa angle = ', angle_rad, CR)
+  IF angle_rad <= 0.00001 THEN
+   IF angle_rad >= -0.00001 THEN
+      angle_rad = 0.0
+   ENDIF
+  ENDIF
+
   IF TAN(angle_rad) <> 0.0 THEN
     alfa = 1.0 / TAN(angle_rad)
   ELSE
@@ -109,11 +133,13 @@ BEGIN
 
   alfa_deg = alfa * 180.0 / 3.1415926
   beta_deg = beta * 180.0 / 3.1415926
+  WRITE('alfa = ', alfa, CR)
+  WRITE('beta = ', beta, CR)
 
-  sinA = SIN(alfa)
   cosA = COS(alfa)
   sinB = SIN(beta)
   cosB = COS(beta)
+  sinA = SIN(alfa)
 
   TCP1.x = TCP_ideal.z * sinB
   TCP1.y = 0.0 - TCP_ideal.z * sinA * sinB
@@ -161,6 +187,7 @@ BEGIN
   TCP2.w = TCP1.w
   TCP2.p = TCP1.p
   TCP2.r = TCP1.r
+
 
   SET_POS_REG(51, TCP2, status)
   IF status <> 0 THEN

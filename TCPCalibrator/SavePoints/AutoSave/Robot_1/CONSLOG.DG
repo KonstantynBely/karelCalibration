@@ -1,44 +1,44 @@
 [FUDUMMY] Using fromimg.bin file size of 33554432 for FROM size
 Memory Allocation Address for retained CMOS = 40500000
 Loading ROS task DLLs
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\SYIN.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\KSMON.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\SYNTITP.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\NTSERV.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\OSPPSERV.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\OSPPCONS.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\NTPORT.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\ERLOG.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MMMEMO.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MMMPTC.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\VMMAIN.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\VMPVAR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\VMUTIL.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\FRSY.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\DOSFILE2.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\CHND.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\CHIF.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\SYTIMQUE.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\PMGR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\PGPX.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\APAX.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\APAMGR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MGMMGR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MPPLAN.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MIINTR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MFFLTR.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\STPMPT.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\STSRIF.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\OSTCHP.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\OSTKEY.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\TPMAIN.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\WDVD.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\WDWM.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\WDKY.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\MJOG.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\IOSCAN.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\SYSHELL.DLL
-Loading D:\Applications\Fanuc\Shared\Off Line\FRVRC\V7.70\bin\DRASKER.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\KSMON.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYNTITP.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\NTSERV.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSPPSERV.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSPPCONS.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\NTPORT.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\ERLOG.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MMMEMO.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MMMPTC.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMMAIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMPVAR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMUTIL.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\FRSY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\DOSFILE2.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\CHND.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\CHIF.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYTIMQUE.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\PMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\PGPX.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\APAX.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\APAMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MGMMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MPPLAN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MIINTR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MFFLTR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\STPMPT.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\STSRIF.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSTCHP.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSTKEY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\TPMAIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDVD.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDWM.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDKY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MJOG.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\IOSCAN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYSHELL.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\DRASKER.DLL
 [ntinit] Current locale is C
 [ntinit] Set locale to English_United States.1252
 Switching states: old = STARTUP   new = STARTUP 
@@ -56,11 +56,11 @@ main PCB version 4
  
 [DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
 [ksinitsk] syin continues
-Updated $MC_PATH = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibrator\Robot_1\MC
+Updated $MC_PATH = c:\git\KARELC~1\TCPCAL~1\robot_1\mc
 Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
-Updated $UD1_PATH to = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibrator\Robot_1\UD1
+Updated $UD1_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\UD1
 Updated $UD2_PATH to = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibrator\Robot_1\UD2
-[syinit] bootrom time: 203259 ms
+[syinit] bootrom time: 199694 ms
 [syinit] ** COLD START **
 [syinit] System Version V7.7077        2/6/2013
 [ERLOG] Waiting for UIF to start up
@@ -73,13 +73,13 @@ Updated $UD2_PATH to = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibra
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
 [sycfgmen] cfgmenu_p 0x406F758C
-[syinisb0] tpid check ltp = 0x6BD4F8, tpid = 49
+[syinisb0] tpid check ltp = 0x62C22B8, tpid = 49
 [NTSYIN_STEP] Startup Step #1
 VMGR for R-J3iC V7.20
 [vmshadow_periodic] Normal power shutdown state = 0
 [vminit_loadctx] Loaded FRB:\S-SYSTEM.PRV only
 [vminit_loadctx] Loaded FRB:\S-INTERN.PRV only
-[vminit_loadctx] Done Loading Time = 29729us
+[vminit_loadctx] Done Loading Time = 18816us
 [NTSYIN_STEP] Startup Step #2
 [ntspfload] Skipping \RPCLIB.DLL because it is already loaded
 [ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
@@ -100,9 +100,9 @@ Web Enhancements installed
 [syinisb0] Legacy 2, tpid = 49
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
-[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30896452
+[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30889980
 [dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 219 Time 0ms
-[dpimage_restctx] Dictionaries loaded pool_avail = 30051704
+[dpimage_restctx] Dictionaries loaded pool_avail = 30045232
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
 [NTSYIN_STEP] Startup Step #4
@@ -126,12 +126,12 @@ Web Enhancements installed
 [NTFRCPY] Did not load \VSMO.DLL
 [ntspfload] Skipping \VXLIB.DLL because it is already loaded
 [NTFRCPY] Did not load \YBOX.DLL
-[SYSINISB0] spspload reference time 44355 ms, This Time 224ms
+[SYSINISB0] spspload reference time 44355 ms, This Time 132ms
 [vminit_loadctx] Loading all files
-[vminit_loadctx] Done Loading Time = 26283us
+[vminit_loadctx] Done Loading Time = 17895us
 [Syin] Mobo start 0xFFFFFFFF
 [NTSYIN_STEP] Startup Step #5
-[SYINISB)] total time 734
+[SYINISB)] total time 230
 [NTSYIN_STEP] Startup Step #6
 [NTSYIN_STEP] Startup Step #7
 [SYINISUB] Saving user device MC:
@@ -201,7 +201,7 @@ sswrkset ****rspaceg_p is 40626978
 [vlog] oschggrp(115, 4, 0) 0x00000000
 [vtrn] wake up
 [vtrn] oschggrp(136, 4, 0) 0x00000000
-[vtrn] VTRN_P: $0927AEEC
+[vtrn] VTRN_P: $08CB4208
 
 WEB Server starting
 Web Enhancements installed
@@ -221,8 +221,8 @@ Web Enhancements installed
 [NTSYIN_STEP] Startup Step #33
 [DEBUG] Entering moinit
 [lcmainsp] size of $SERV_REC is 3616
-[modaq] create XYZ named pipe hPipe = 5B8
-[sfmdest] null_flg_p:8EBAB54
+[modaq] create XYZ named pipe hPipe = 63C
+[sfmdest] null_flg_p:88F3E70
 [pmgr]shakehand px01, px_starting=126
 [pmgr]shakehand px02, px_starting=124
 [pmgr]shakehand px03, px_starting=120
@@ -230,7 +230,7 @@ Web Enhancements installed
 [pmgr]shakehand px05, px_starting=96
 [pmgr]shakehand px06, px_starting=64
 [pmgr]shakehand px07, px_starting=0
-[miinit][1] posted init PKT <781FF44> to task<72> (0)
+[miinit][1] posted init PKT <725700C> to task<72> (0)
 [mpinit] initialize mb_fp
 [mpinit] after mpdyinit
 [mpinit] ossndpkt <0>
@@ -242,7 +242,7 @@ Web Enhancements installed
 [nectkini] finish wake up  stat = 0
 [moinit] done
 [miinit] done 
-[ostksock_create] Socket 1532 binding to IP port # 60004
+[ostksock_create] Socket 1612 binding to IP port # 60004
 [ostksock_create] T-X IP address <001.001.001.011>
 [mfinidsp] wait for SCRDY
 [mfinidsp] start ITP
@@ -250,7 +250,7 @@ Web Enhancements installed
 [mfinidsp] check FSSB open
 [mfinidsp] waiting for SSTB...
 [mfinidsp] all SSTB become 1
-[syinisub] TICK_OFFSET 611B034 to 0
+[syinisub] TICK_OFFSET 84CCEC to 0
 [NTSYIN_STEP] Startup Step #34
 [NTSYIN_STEP] Startup Step #35
 [syinit] waiting for EVF_ENB_PWF...
@@ -281,8 +281,8 @@ Ready to run SHELL
 [syinit] end
 [syinisub.c] spmk2tsk(HTTC), status = $0
 [RDM] Robot Discovery Method V6.2003 @0x2FE01000
-[RDM]: Binding to udp port number 60008
-[RDM] Robot Discovery Method ready on port 60008
+[RDM]: Binding to udp port number 60007
+[RDM] Robot Discovery Method ready on port 60007
 [DNS Server] init err FFFFFFFF
 [PRXY] Proxy Server Starting
 [PRXY] HTTP Proxy Server ready for connections on 8080
@@ -293,7 +293,7 @@ WEB Server starting
 [HTTC]: Binding to tcp port number 4080
 [symonutl] Getting data (3EA, 0)
 [symonutl] Fail to get mac from I2C (1)
-SYINISUB TOTAL TIME 1753
+SYINISUB TOTAL TIME 346
 [SYINISUB] restored user device MC:
 [NTSYIN_STEP] Startup Step #40
 [TPSPART] Found KAREL ATMSKCHG 200
@@ -301,10 +301,10 @@ SYINISUB TOTAL TIME 1753
 [TPSPART] Found KAREL ATWAITRL 931
 [TPSPART] Found KAREL ATPRSCRN 932
 [TPSPART] Found KAREL ATPASWRD 935
-[TPKSINIT] dname -K943- not found devstat = 0 cfg $8BE4F94
+[TPKSINIT] dname -K943- not found devstat = 0 cfg $861E2CC
 [TPSPART] Found KAREL ATCELLIO 955
-[TPKSINIT] dname -K972- not found devstat = 0 cfg $8BE4D08
-[TPKSINIT] dname -K973- not found devstat = 0 cfg $8BE4BEC
+[TPKSINIT] dname -K972- not found devstat = 0 cfg $861E040
+[TPKSINIT] dname -K973- not found devstat = 0 cfg $861DF24
 [TPSPART] Found KAREL ATSOFTPA 992
 [FTP] getservbyname failed
 [FTP] getservbyname failed
@@ -320,12 +320,12 @@ spcmd completed successfully.
 [ntsuperv] Sync state change from 0 to 1
 [ntsuperv] Sync state change from 1 to 0
 
-SMON(main)> xyzrate 61=>laptop-u9nqdgeh:39020
+SMON(main)> xyzrate 61=>laptop-3jv248ms:30348
 spcmd time 0 
 spcmd completed successfully.
 
 
-SMON(main)> tpdisc 0=>laptop-u9nqdgeh:39020
+SMON(main)> tpdisc 0=>laptop-3jv248ms:30348
 [ostkdisc] F_CANCL packet sent
 [ostkdisc] TP is disconnected
 [ostchp] TP is disconnected
@@ -339,7 +339,7 @@ spcmd completed successfully.
 SMON(main)> tpconn 0
 [dpsetlng] setting cur lang to DEFAULT     
 [sytp_disc] resetting CGTPFLAG_TPDISC
-spcmd time 20 
+spcmd time 0 
 spcmd completed successfully.
 [wdwmclng]
 [ostkdisc] connecting to tpid 51
@@ -350,20 +350,338 @@ spcmd completed successfully.
 [ostksock_startPPP] F_SHUTDOWN packet sent
 [PMON] Connecting to <127.000.000.001:60005>
 [pmon] client is iPendant
-[ostkey] recevied iPendant socket 1748 from PMON
-[PMON] Sent iPendant socket 1748 to TKEY
+[ostkey] recevied iPendant socket 1688 from PMON
+[PMON] Sent iPendant socket 1688 to TKEY
 [TXPROC] version of iPendant V8.2014
 [TXPROC] core version of iPendant V8.2014
 SYST-039 Operation mode T2 Selected                                            
 R E S E T                                                                     
-MOTN-018 Position not reachable                                                
-INTP-105 (~MOVET2~, 1) Run request failed                                    
-MCTL-003 system is in error status                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+[dvnewmd] Set needs_update program
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-040 Operation mode AUTO Selected                                          
+[PMON] Disconnecting from <127.000.000.001:60005>
+[pmon] iPendant connection closed
+R E S E T                                                                     
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 1 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 946 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 11 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+[dvnewmd] Set needs_update program
+
+SMON(main)> copy virt:\output\calprxy.pc md: over =>33030144:694973
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+Copy time 67 
+
+SMON(main)> copy virt:\output\calprxy.pc md: over =>33030144:694973
+Copy time 2 
+
+SMON(main)> copy virt:\output\calprz.pc md: over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy virt:\output\test_xy.ls md: over =>33030144:694973
+Copy time 4 
+
+SMON(main)> copy md:test_xy.tp virt:\output\test_xy.tp over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy virt:\output\test_z.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 2 
+
+SMON(main)> copy md:test_z.tp virt:\output\test_z.tp over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 1 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 933 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 13 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+[PMON] Connecting to <127.000.000.001:60005>
+[pmon] client is iPendant
+[ostkey] recevied iPendant socket 1808 from PMON
+[PMON] Sent iPendant socket 1808 to TKEY
+[TXPROC] version of iPendant V8.2014
+[TXPROC] core version of iPendant V8.2014
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\test_xy.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 5 
+
+SMON(main)> copy md:test_xy.tp virt:\output\test_xy.tp over =>33030144:694973
+Copy time 3 
+TPIF-107 FWD/BWD is disabled                                                   
+TPIF-107 FWD/BWD is disabled                                                   
+TPIF-107 FWD/BWD is disabled                                                   
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+TPIF-107 FWD/BWD is disabled                                                   
+
+SMON(main)> copy virt:\output\test_z.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 3 
+
+SMON(main)> copy md:test_z.tp virt:\output\test_z.tp over =>33030144:694973
+Copy time 3 
+SYST-179 SHIFT-RESET Released                                                  
+SRVO-171 MotorSpd lim/DVC(G:1 A:4)                                             
+MOTN-023 In singularity                                                        
+SRVO-171 MotorSpd lim/DVC(G:1 A:4)                                             
+
+SMON(main)> copy virt:\output\cal_dv_xy.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 10 
+
+SMON(main)> copy md:cal_dv_xy.tp virt:\output\cal_dv_xy.tp over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy virt:\output\cal_dv_xy.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 16 
+
+SMON(main)> copy md:cal_dv_xy.tp virt:\output\cal_dv_xy.tp over =>33030144:694973
+Copy time 3 
+TPIF-107 FWD/BWD is disabled                                                   
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+TPIF-107 FWD/BWD is disabled                                                   
+SYST-179 SHIFT-RESET Released                                                  
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\cal_dv_xy.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 7 
+
+SMON(main)> copy md:cal_dv_xy.tp virt:\output\cal_dv_xy.tp over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 921 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 12 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
 R E S E T                                                                     
 SYST-178 SHIFT-RESET Pressed                                                   
 SYST-179 SHIFT-RESET Released                                                  
 
-SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-u9nqdgeh:39020
+SMON(main)> copy virt:\output\cal_dv_z.ls md: over =>33030144:694973
+[dvnewmd] Set needs_update program
+Copy time 5 
+
+SMON(main)> copy md:cal_dv_z.tp virt:\output\cal_dv_z.tp over =>33030144:694973
+Copy time 3 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
 Copy time 0 
 
-SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-u9nqdgeh:39020
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 954 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 11 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+SYST-179 SHIFT-RESET Released                                                  
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+[dvnewmd] Set needs_update program
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+R E S E T                                                                     
+MOTN-017 Limit error (G:1, A:10 Hex)                                           
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\calptcp.pc md: over =>33030144:694973
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+Copy time 78 
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+Copy time 6 
+
+SMON(main)> copy virt:\output\tcp_2.pc md: over =>33030144:694973
+Copy time 5 
+
+SMON(main)> copy virt:\output\cal_tcp.ls md: over =>33030144:694973
+Copy time 18 
+
+SMON(main)> copy md:cal_tcp.tp virt:\output\cal_tcp.tp over =>33030144:694973
+Copy time 4 
+INTP-311 (CAL_TCP, 7) Uninitialized data is used                             
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+INTP-311 (CAL_TCP, 7) Uninitialized data is used                             
+SYST-179 SHIFT-RESET Released                                                  
+
+SMON(main)> copy virt:\output\calptcp.pc md: over =>33030144:694973
+Copy time 4 
+R E S E T                                                                     
+[mjotok] Illegal linear jogging
+[mjotok] Illegal linear jogging
+[mjotok] Illegal linear jogging
+[mjotok] Illegal linear jogging
+INTP-322 (TCP_1, 113) Invalid arg val for builtin                            
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+Copy time 4 
+R E S E T                                                                     
+INTP-322 (TCP_1, 114) Invalid arg val for builtin                            
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 935 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 12 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+Copy time 69 
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+R E S E T                                                                     
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+INTP-322 (TCP_1, 112) Invalid arg val for builtin                            
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+Copy time 4 
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+SYST-179 SHIFT-RESET Released                                                  
+INTP-322 (TCP_1, 116) Invalid arg val for builtin                            
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+Copy time 4 
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+INTP-311 (CAL_TCP, 39) Uninitialized data is used                            
+SYST-179 SHIFT-RESET Released                                                  
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>33030144:694973
+Copy time 4 
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+INTP-311 (CAL_TCP, 39) Uninitialized data is used                            
+SYST-179 SHIFT-RESET Released                                                  
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+INTP-311 (CAL_TCP, 39) Uninitialized data is used                            
+SYST-179 SHIFT-RESET Released                                                  
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 974 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+spcmd time 12 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:30348
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:30348
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:30348

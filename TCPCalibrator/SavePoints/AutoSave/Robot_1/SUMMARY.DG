@@ -3,7 +3,7 @@
 F Number: F00000    
 VERSION : HandlingTool         
 $VERSION: V7.7077        2/6/2013
-DATE:     08-JUN-25 13:44 
+DATE:     18-JUL-25 00:05 
 
 VERSION INFORMATION::
 SOFTWARE:              ID:
@@ -296,12 +296,12 @@ MEMORY USAGE::
 
 MEMORY DETAIL (MAIN):
 Pools        TOTAL     AVAILABLE      LARGEST
-TPP          700.0KB     689.5KB     689.5KB
-PERM        2040.0KB     798.8KB     798.1KB
+TPP          700.0KB     688.4KB     688.4KB
+PERM        2040.0KB     796.4KB     795.2KB
 SYSTEM          .0KB       0.0KB       0.0KB
 SHADOW      6296.4KB    6095.7KB      32.0KB
-TEMP       32709.0KB   19394.8KB   19312.3KB
-FROM       31857.0KB   27193.0KB        .0KB
+TEMP       32709.0KB   19265.9KB   19080.0KB
+FROM       31857.0KB   27194.0KB        .0KB
 HARDWARE
 FROM      32MB
 DRAM      32MB
@@ -315,11 +315,11 @@ SRAM       2MB
 
 TASK STATES:
 
-1      PNLINST status = ABORTED
+1      CAL_TCP PAUSED @ 39 in CAL_TCP of CAL_TCP
 
 ******  History Data  ******
-Routine depth: 0  Routine: PNLINST                             
-Line:   223       Program: PNLINST                               Type: PC    
+Routine depth: 0  Routine: CAL_TCP                             
+Line:    39       Program: CAL_TCP                               Type: TP    
 
 2       PSCOLD status = ABORTED
 
@@ -345,17 +345,17 @@ Line:  1076       Program: ATSHELL                               Type: PC
 Routine depth: 0  Routine: SWIMSET                             
 Line:   348       Program: SWIMSET                               Type: PC    
 
-6         TEST PAUSED @ 12 in TEST of TEST
+6     PRO_MOV2 status = ABORTED
 
 ******  History Data  ******
-Routine depth: 0  Routine: TEST                                
-Line:    12       Program: TEST                                  Type: TP    
+Routine depth: 0  Routine: PRO_MOV2                            
+Line:     1       Program: PRO_MOV2                              Type: TP    
 
-7     ~MOVET2~ status = ABORTED
+7      TEST_XY status = ABORTED
 
 ******  History Data  ******
-Routine depth: 0  Routine: ~MOVET2~                            
-Line:     1       Program: ~MOVET2~                              Type: TP    
+Routine depth: 0  Routine: TEST_XY                             
+Line:     1       Program: TEST_XY                               Type: TP    
 
 
 </PRE><H2><A NAME="4">I/O status information</A></H2>
@@ -929,32 +929,32 @@ CURRENT ROBOT POSITION::
 Group #:  1
  
 CURRENT JOINT POSITION:
-Joint   1:     12.55
-Joint   2:     59.91
-Joint   3:    -80.03
-Joint   4:    -12.84
-Joint   5:     80.23
-Joint   6:    270.55
+Joint   1:     -6.19
+Joint   2:     48.61
+Joint   3:    -97.62
+Joint   4:   -173.76
+Joint   5:    -97.57
+Joint   6:       .82
 
 Frame #:  0  Tool #:  0
 CURRENT USER FRAME POSITION:
-X:    532.73
-Y:    100.69
-Z:   -151.83
-W:    -90.05
-P:      1.65
-R:    -90.09
-CFG: F U T, 0, 0, 1
+X:    410.04
+Y:    -35.77
+Z:   -128.75
+W:       .00
+P:     90.00
+R:      0.00
+CFG: N U T, 0, 0, 0
 
 Tool #:  0
 CURRENT WORLD POSITION:
-X:    532.73
-Y:    100.69
-Z:   -151.83
-W:    -90.05
-P:      1.65
-R:    -90.09
-CFG: F U T, 0, 0, 1
+X:    410.04
+Y:    -35.77
+Z:   -128.75
+W:       .00
+P:     90.00
+R:      0.00
+CFG: N U T, 0, 0, 0
 
 </PRE><H2><A NAME="8">Ethernet Configuration Information</A></H2>
 <PRE><A HREF="#TOP">[TOP]</A><P>

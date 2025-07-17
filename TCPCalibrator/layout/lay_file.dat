@@ -1,11 +1,13 @@
 #
-# Layout Info File : Sun Jun 08 13:52:29 2025
+# Layout Info File : Thu Jul 17 20:52:48 2025
 #
 LayInfo V1.0 Ascii
-6	5
+8	7
 
 1	Workcell
 2	Workcell2
 3	Workcell
 4	Workcell
 5	Workcell
+6	Workcell
+7	Workcell

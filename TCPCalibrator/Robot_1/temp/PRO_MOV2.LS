@@ -3,8 +3,8 @@
 OWNER       = MNEDITOR;
 COMMENT     = "SimPRO Internal for .MoveTo"
 PROG_SIZE   = 913;
-CREATE      = DATE 25-05-27  TIME 18:23:40;
-MODIFIED      = DATE 25-05-27  TIME 18:23:40;
+CREATE      = DATE 25-07-18  TIME 00:20:47;
+MODIFIED      = DATE 25-07-18  TIME 00:20:47;
 FILE_NAME   = ;
 VERSION    = 0;
 LINE_COUNT  = 13;
@@ -19,15 +19,16 @@ TCD:  STACK_SIZE    = 0,
 DEFAULT_GROUP   = 1,*,*,*,*,*,*,* ;
 CONTROL_CODE    = 00000000 00000000;
 /MN
-1: UTOOL_NUM= 1 ;
+1: UTOOL_NUM= 5 ;
 2: UFRAME_NUM= 0 ;
 3: J P[1] 100% FINE ;
 /POS
 P[1]{
    GP1:
-	UF : 0, UT : 1,		CONFIG : 'N U T, 0, 0, 0',
-	X = 484.919  mm,	Y = 0.000  mm,	Z = 104.520  mm,
-	W = -180.000 deg,	P = -90.000 deg,	R = 0.000 deg
+	UF : 0, UT : 5,
+	J1 = -43.937 deg, J2 = 55.411 deg, J3 = -78.683 deg, 
+	J4 = 0.000 deg, J5 = -81.876 deg, J6 = -7.906 deg
+	
 };
 
 /END
