@@ -3,7 +3,7 @@
 F Number: F00000    
 VERSION : HandlingTool         
 $VERSION: V7.7077        2/6/2013
-DATE:     18-JUL-25 00:05 
+DATE:     19-JUL-25 13:38 
 
 VERSION INFORMATION::
 SOFTWARE:              ID:
@@ -296,12 +296,12 @@ MEMORY USAGE::
 
 MEMORY DETAIL (MAIN):
 Pools        TOTAL     AVAILABLE      LARGEST
-TPP          700.0KB     688.4KB     688.4KB
-PERM        2040.0KB     796.4KB     795.2KB
+TPP          700.0KB     688.2KB     688.2KB
+PERM        2040.0KB     798.7KB     797.5KB
 SYSTEM          .0KB       0.0KB       0.0KB
 SHADOW      6296.4KB    6095.7KB      32.0KB
-TEMP       32709.0KB   19265.9KB   19080.0KB
-FROM       31857.0KB   27194.0KB        .0KB
+TEMP       32709.0KB   19272.6KB   19120.9KB
+FROM       31857.0KB   27193.0KB        .0KB
 HARDWARE
 FROM      32MB
 DRAM      32MB
@@ -315,11 +315,11 @@ SRAM       2MB
 
 TASK STATES:
 
-1      CAL_TCP PAUSED @ 39 in CAL_TCP of CAL_TCP
+1      PNLINST status = ABORTED
 
 ******  History Data  ******
-Routine depth: 0  Routine: CAL_TCP                             
-Line:    39       Program: CAL_TCP                               Type: TP    
+Routine depth: 0  Routine: PNLINST                             
+Line:   223       Program: PNLINST                               Type: PC    
 
 2       PSCOLD status = ABORTED
 
@@ -345,18 +345,13 @@ Line:  1076       Program: ATSHELL                               Type: PC
 Routine depth: 0  Routine: SWIMSET                             
 Line:   348       Program: SWIMSET                               Type: PC    
 
-6     PRO_MOV2 status = ABORTED
+6      CAL_TCP status = ABORTED
 
 ******  History Data  ******
-Routine depth: 0  Routine: PRO_MOV2                            
-Line:     1       Program: PRO_MOV2                              Type: TP    
+Routine depth: 0  Routine: CAL_TCP                             
+Line:     1       Program: CAL_TCP                               Type: TP    
 
-7      TEST_XY status = ABORTED
-
-******  History Data  ******
-Routine depth: 0  Routine: TEST_XY                             
-Line:     1       Program: TEST_XY                               Type: TP    
-
+7              status = ABORTED
 
 </PRE><H2><A NAME="4">I/O status information</A></H2>
 <PRE><A HREF="#TOP"></A><P>
@@ -690,7 +685,7 @@ UI[  18] OFF
 UO[   1] OFF   
 UO[   2]  ON   
 UO[   3] OFF   
-UO[   4]  ON   
+UO[   4] OFF   
 UO[   5] OFF   
 UO[   6] OFF   
 UO[   7] OFF   
@@ -760,7 +755,7 @@ UI[  18] OFF
 UO[   1] OFF   
 UO[   2]  ON   
 UO[   3] OFF   
-UO[   4]  ON   
+UO[   4] OFF   
 UO[   5] OFF   
 UO[   6] OFF   
 UO[   7] OFF   
@@ -929,29 +924,29 @@ CURRENT ROBOT POSITION::
 Group #:  1
  
 CURRENT JOINT POSITION:
-Joint   1:     -6.19
-Joint   2:     48.61
-Joint   3:    -97.62
-Joint   4:   -173.76
-Joint   5:    -97.57
-Joint   6:       .82
+Joint   1:     16.92
+Joint   2:     85.68
+Joint   3:   -129.88
+Joint   4:    102.92
+Joint   5:   -100.58
+Joint   6:    -38.68
 
-Frame #:  0  Tool #:  0
+Frame #:  0  Tool #:  1
 CURRENT USER FRAME POSITION:
-X:    410.04
-Y:    -35.77
-Z:   -128.75
-W:       .00
+X:    415.99
+Y:   -125.87
+Z:   -331.05
+W:     56.44
 P:     90.00
 R:      0.00
 CFG: N U T, 0, 0, 0
 
-Tool #:  0
+Tool #:  1
 CURRENT WORLD POSITION:
-X:    410.04
-Y:    -35.77
-Z:   -128.75
-W:       .00
+X:    415.99
+Y:   -125.87
+Z:   -331.05
+W:     56.44
 P:     90.00
 R:      0.00
 CFG: N U T, 0, 0, 0

@@ -1,0 +1,478 @@
+[FUDUMMY] Using fromimg.bin file size of 33554432 for FROM size
+Memory Allocation Address for retained CMOS = 40500000
+Loading ROS task DLLs
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\KSMON.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYNTITP.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\NTSERV.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSPPSERV.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSPPCONS.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\NTPORT.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\ERLOG.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MMMEMO.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MMMPTC.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMMAIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMPVAR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\VMUTIL.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\FRSY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\DOSFILE2.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\CHND.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\CHIF.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYTIMQUE.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\PMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\PGPX.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\APAX.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\APAMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MGMMGR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MPPLAN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MIINTR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MFFLTR.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\STPMPT.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\STSRIF.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSTCHP.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\OSTKEY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\TPMAIN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDVD.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDWM.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\WDKY.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\MJOG.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\IOSCAN.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYSHELL.DLL
+Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\DRASKER.DLL
+[ntinit] Current locale is C
+[ntinit] Set locale to English_United States.1252
+Switching states: old = STARTUP   new = STARTUP 
+[NTINIT] Frequency 10000000, Ticks/ms 10000 BusClock 40000000
+[IEWTQ] Count = 0 add to head/tail task: 199  cnt: 24  pri: 10
+[osppc] Virtual Clock timer device resolution discovery suceeded, min res: 1 ms
+[NTPORT] Ready for connections at 9100
+[NTPORT] Ready for connections at 9101
+[NTPORT] Ready for connections at 9102
+[NTPORT] Ready for connections at 9103
+[OSSERV] VIRTUAL not doing multi-processing service
+main bus clock 40
+main PCB version 4
+[ostkinit] TPWDOG_CHK $0
+ 
+[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
+[ksinitsk] syin continues
+Updated $MC_PATH = c:\git\KARELC~1\TCPCAL~1\robot_1\mc
+Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
+Updated $UD1_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\UD1
+Updated $UD2_PATH to = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibrator\Robot_1\UD2
+[syinit] bootrom time: 406900 ms
+[syinit] ** COLD START **
+[syinit] System Version V7.7077        2/6/2013
+[ERLOG] Waiting for UIF to start up
+[syinisb0]VIRTUAL case,setting master_p->initializing to FALSE
+[ostkinit] ID $31 type 1D baud 31 version I
+[ostkinit] TP Baud Rate 19200
+[ostkinit] TPWDOG_CHK+2 $1000
+[syinit] ** COLD START **
+[dpinit] setting cur lang to NULL
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[sycfgmen] cfgmenu_p 0x406F758C
+[syinisb0] tpid check ltp = 0x62B1EF0, tpid = 49
+[NTSYIN_STEP] Startup Step #1
+VMGR for R-J3iC V7.20
+[vmshadow_periodic] Normal power shutdown state = 0
+[vminit_loadctx] Loaded FRB:\S-SYSTEM.PRV only
+[vminit_loadctx] Loaded FRB:\S-INTERN.PRV only
+[vminit_loadctx] Done Loading Time = 18925us
+[NTSYIN_STEP] Startup Step #2
+[ntspfload] Skipping \RPCLIB.DLL because it is already loaded
+[ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \TMILIB.DLL
+[NTSYIN_STEP] Startup Step #3
+[TX] Start
+[PMON] PC Monitor Task
+[rpcm] create TCP/IP RPC service
+[svctcp_create] RPCMAIN Server ready for connections on 3002
+[rpcm] call softparts to register service
+[rpcdaqs] register RPCDAQS service
+[rpcm] wait for connection
+[syinit] spmk2tsk(HTCG), status = $0
+CGTP WEB Server starting
+Web Enhancements installed
+[HTCG]: Binding to tcp port number 3080
+[HTTPD] ready for connections
+[syinisb0] Legacy 2, tpid = 49
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30896096
+[dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 219 Time 0ms
+[dpimage_restctx] Dictionaries loaded pool_avail = 30051348
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[NTSYIN_STEP] Startup Step #4
+[SYINISB0] Loading main system softparts please wait ...
+[NTFRCPY] Did not load \DCSTSK.DLL
+[ntspfload] Skipping \HCLIB.DLL because it is already loaded
+[ntspfload] Skipping \KCLIB.DLL because it is already loaded
+[ntspfload] Skipping \SFMNLIB.DLL because it is already loaded
+[ntspfload] Skipping \SMLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTLB.DLL because it is already loaded
+[NTFRCPY] Did not load \SMUSB.DLL
+[ntspfload] Skipping \TKLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \TPATBTSK.DLL
+[ntspfload] Skipping \TPEXTDIO.DLL because it is already loaded
+[ntspfload] Skipping \TPGUI.DLL because it is already loaded
+[NTFRCPY] Did not load \UECK.DLL
+[ntspfload] Skipping \VASCLIB.DLL because it is already loaded
+[ntspfload] Skipping \VDLIB.DLL because it is already loaded
+[ntspfload] Skipping \VIPL.DLL because it is already loaded
+[ntspfload] Skipping \VLLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \VSMO.DLL
+[ntspfload] Skipping \VXLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \YBOX.DLL
+[SYSINISB0] spspload reference time 44355 ms, This Time 127ms
+[vminit_loadctx] Loading all files
+[vminit_loadctx] Done Loading Time = 18460us
+[Syin] Mobo start 0xFFFFFFFF
+[NTSYIN_STEP] Startup Step #5
+[SYINISB)] total time 225
+[NTSYIN_STEP] Startup Step #6
+[NTSYIN_STEP] Startup Step #7
+[SYINISUB] Saving user device MC:
+[SNPX] Client_Type 1, Port 18245
+[SNPX] Client_Type 2, Port 60008
+[syporti]pkt send to TLNT fails 10C
+[NTSYIN_STEP] Startup Step #8
+[NTSYIN_STEP] Startup Step #9
+[syinit] : calling iosetup
+[ripini] Initializing
+[ripini] SID_RIPSERV task start status = 0x380001
+[NTSYIN_STEP] Startup Step #10
+[NTSYIN_STEP] Startup Step #11
+[mmiage_init] TP DRAM Imaging system startup
+MEMO for R-J3iC Version V7.50 Rev-0
+[syinisub] Memory manager started
+[NTSYIN_STEP] Startup Step #12
+[NTSYIN_STEP] Startup Step #13
+[NTSYIN_STEP] Startup Step #14
+[NTSYIN_STEP] Startup Step #15
+[NTSYIN_STEP] Startup Step #16
+[NTSYIN_STEP] Startup Step #17
+[syinit] mosetvpr status <0>
+[NTSYIN_STEP] Startup Step #18
+[SMTPXML] SMTP option not loaded
+[NTSYIN_STEP] Startup Step #19
+[ERLOG] continue stat = 0x0
+[NTSYIN_STEP] Startup Step #20
+[syinisub] VMGR called to register program with MEMO
+[NTSYIN_STEP] Startup Step #21
+[NTSYIN_STEP] Startup Step #22
+[NTSYIN_STEP] Startup Step #23
+[NTSYIN_STEP] Startup Step #24
+[NTSYIN_STEP] Startup Step #25
+[NTSYIN_STEP] Startup Step #26
+[sytimque]: trigger loaded 0
+[CHND] Low Priority Condition Handler started.
+[CHND] init done. starting scanning
+[tpmains_start] executing legacy mode case
+[SKMG] Socket Messaging Interface V5.22 @0x2F3012F0
+[TELNET] start
+[TELNET] debug address 2FD11FEC
+[TELNET] Ethernet event flag received.
+[NTSYIN_STEP] Startup Step #27
+sswrkset ****rspaceg_p is 40626978
+[sswrkset] no cd installed
+[sswrkset] no cd installed
+[sswrkset] no cd installed
+[sswrkset] no cd installed
+[sswrkset] cp installed and enabled = 1
+[SYINIT] OCTK started 380001
+[NTSYIN_STEP] Startup Step #28
+[NTSYIN_STEP] Startup Step #29
+[NTSYIN_STEP] Startup Step #30
+"COLD1 for V7.70P/36 (FD V7.70.07)"
+"MENU for V7.70P/36 (FD V7.70.07)"
+"MENU complete"
+[SPRUNCMDF] status = 380001; "RUNTSK SID_YBOX" : COLD1.COM
+[vxmn] wake up
+[vcam] wake up
+[vexe] wake up
+[vxmn] oschggrp(114, 4, 0) 0x00000000
+[vcam] oschggrp(111, 4, 0) 0x00000000
+[vexe] oschggrp(113, 4, 0) 0x00000000
+[vdat] wake up
+[vdat] oschggrp(112, 4, 0) 0x00000000
+[vlog] oschggrp(115, 4, 0) 0x00000000
+[vtrn] wake up
+[vtrn] oschggrp(136, 4, 0) 0x00000000
+[vtrn] VTRN_P: $08C48430
+
+WEB Server starting
+Web Enhancements installed
+[HTTP]: Binding to tcp port number 80
+[HTTPD] ready for connections
+[vdat] num_run 2, runtime_size 1380, image_size 322167
+[ASBN] started
+[spruncmdf] +++ no abort
+"COLD1 complete"
+[NTSYIN_STEP] Startup Step #31
+[NTSYIN_STEP] Startup Step #32
+[SYINISUB] restored user device MC:
+[FTP] FTP Interface V5.10
+[FTP] FTP debug addr = 2F91B880
+[FTP] Ethernet event flag received.
+[SYINISUB] Saving user device MC:
+[NTSYIN_STEP] Startup Step #33
+[DEBUG] Entering moinit
+[lcmainsp] size of $SERV_REC is 3616
+[modaq] create XYZ named pipe hPipe = 62C
+[sfmdest] null_flg_p:8888098
+[pmgr]shakehand px01, px_starting=126
+[pmgr]shakehand px02, px_starting=124
+[pmgr]shakehand px03, px_starting=120
+[pmgr]shakehand px04, px_starting=112
+[pmgr]shakehand px05, px_starting=96
+[pmgr]shakehand px06, px_starting=64
+[pmgr]shakehand px07, px_starting=0
+[miinit][1] posted init PKT <71EE00C> to task<72> (0)
+[mpinit] initialize mb_fp
+[mpinit] after mpdyinit
+[mpinit] ossndpkt <0>
+[mpinit] done mpinit
+[mfinit] start
+[mfinit]abc_olympic_enb[1] = FALSE
+  [load_safety_param(MAIN)]load_address:0x11FE8000, size:0xA5DC
+[tbjtkini] finish wake up stat = 0
+[nectkini] finish wake up  stat = 0
+[moinit] done
+[miinit] done 
+[ostksock_create] Socket 1524 binding to IP port # 60004
+[ostksock_create] T-X IP address <001.001.001.011>
+[mfinidsp] wait for SCRDY
+[mfinidsp] start ITP
+[mfinidsp] disable FSSB ATR init
+[mfinidsp] check FSSB open
+[mfinidsp] waiting for SSTB...
+[mfinidsp] all SSTB become 1
+[syinisub] TICK_OFFSET 6B23F4 to 0
+[NTSYIN_STEP] Startup Step #34
+[NTSYIN_STEP] Startup Step #35
+[syinit] waiting for EVF_ENB_PWF...
+[syinit] osconflg(EVF_ENB_PWF) $16A
+[SYINISUB] VIRTUAL not waiting on EVF_ENB_PWF
+[syinit] oswaiflg(EVF_ENB_PWF) $16A
+[syinit] oswaiflg(EVF_ENB_PWF) failed, status = $16A
+[NTSYIN_STEP] Startup Step #36
+[NTSYIN_STEP] Startup Step #37
+R E S E T                                                                     
+[syinit] syrset(), status = $0
+[syinisub] VIRTUAL not waiting for servo on
+INTP-127 Power fail detected                                                   
+SRVO-012 Power failure recovery                                                
+[NTSYIN_STEP] Startup Step #38
+[syinisub] Starting C shell 0x0
+[Shxsp] Ref positions in use
+[Shxsp] Initialize extension
+[syinisub]starting shell $0
+[NTSYIN_STEP] Startup Step #39
+"COLD2 for V7.70P/36 (FD V7.70.07)"
+"COLD2 complete"
+[syinisub] Ready to run ATSHELL
+Ready to run SHELL
+[syinisub] Start Karel shell 0x0
+[SYINISUB] restored user device MC:
+[syinit] Setting VMGR for in-line calls
+[syinit] end
+[syinisub.c] spmk2tsk(HTTC), status = $0
+[RDM] Robot Discovery Method V6.2003 @0x2FE01000
+[RDM]: Binding to udp port number 60008
+[RDM] Robot Discovery Method ready on port 60008
+[DNS Server] init err FFFFFFFF
+[PRXY] Proxy Server Starting
+[PRXY] HTTP Proxy Server ready for connections on 8080
+[PXPMON] PMON Proxy Server ready for connections on 50005
+[PXRPCM] RPCM Proxy Server ready for connections on 60009
+[PXTLNT] rosip not initialized
+WEB Server starting
+[HTTC]: Binding to tcp port number 4080
+[symonutl] Getting data (3EA, 0)
+[symonutl] Fail to get mac from I2C (1)
+SYINISUB TOTAL TIME 358
+[SYINISUB] restored user device MC:
+[NTSYIN_STEP] Startup Step #40
+[TPSPART] Found KAREL ATMSKCHG 200
+[TPSPART] Found KAREL ATPRGADJ 930
+[TPSPART] Found KAREL ATWAITRL 931
+[TPSPART] Found KAREL ATPRSCRN 932
+[TPSPART] Found KAREL ATPASWRD 935
+[TPKSINIT] dname -K943- not found devstat = 0 cfg $85B24D8
+[TPSPART] Found KAREL ATCELLIO 955
+[TPKSINIT] dname -K972- not found devstat = 0 cfg $85B224C
+[TPKSINIT] dname -K973- not found devstat = 0 cfg $85B2130
+[TPSPART] Found KAREL ATSOFTPA 992
+[FTP] getservbyname failed
+[FTP] getservbyname failed
+[NTSYIN_STEP] Startup Step #41
+[osppc] Tick time changed -1200
+[NTSYIN_STEP] Startup Step #42
+[PMON] Connecting to <127.000.000.001:5182>
+R E S E T                                                                     
+
+SMON(main)> xyzrate 61
+spcmd time 0 
+spcmd completed successfully.
+[ntsuperv] Sync state change from 0 to 1
+[ntsuperv] Sync state change from 1 to 0
+
+SMON(main)> xyzrate 61=>laptop-3jv248ms:13960
+spcmd time 0 
+spcmd completed successfully.
+
+
+SMON(main)> copy virt:\output\cal_tcp.ls md: over =>37224448:878185
+[dvnewmd] Set needs_update program
+Copy time 24 
+
+SMON(main)> copy md:cal_tcp.tp virt:\output\cal_tcp.tp over =>37224448:878185
+Copy time 3 
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\tcp_2.pc md: over =>37224448:878185
+Copy time 3 
+
+SMON(main)> tpdisc 0=>laptop-3jv248ms:13960
+[ostkdisc] F_CANCL packet sent
+[ostkdisc] TP is disconnected
+[ostchp] TP is disconnected
+[ostchp] Executing tpmulti_constop mode 1
+[tpaccn] disconnect current TP
+[sytp_disc] setting CGTPFLAG_TPDISC
+spcmd time 411 
+spcmd completed successfully.
+
+
+SMON(main)> tpconn 0
+[dpsetlng] setting cur lang to DEFAULT     
+[sytp_disc] resetting CGTPFLAG_TPDISC
+spcmd time 1 
+spcmd completed successfully.
+[wdwmclng]
+[ostkdisc] connecting to tpid 51
+[ostkdisc] Sending COLD msg to P1
+[ostkdisc] TP is connected
+   CHINESE OK
+[ostchp] TP is connected in graphic mode
+[ostksock_startPPP] F_SHUTDOWN packet sent
+[PMON] Connecting to <127.000.000.001:60005>
+[pmon] client is iPendant
+[ostkey] recevied iPendant socket 1740 from PMON
+[PMON] Sent iPendant socket 1740 to TKEY
+[TXPROC] version of iPendant V8.2014
+[TXPROC] core version of iPendant V8.2014
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+MOTN-018 Position not reachable                                                
+MOTN-018 Position not reachable                                                
+JOG -008 Turn on TP to jog                                                     
+JOG -009 Hold deadman to jog                                                   
+JOG -008 Turn on TP to jog                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-040 Operation mode AUTO Selected                                          
+JOG -009 Hold deadman to jog                                                   
+JOG -008 Turn on TP to jog                                                     
+JOG -007 Press shift key to jog                                                
+R E S E T                                                                     
+JOG -009 Hold deadman to jog                                                   
+JOG -008 Turn on TP to jog                                                     
+JOG -010 Jog pressed before shift                                              
+JOG -008 Turn on TP to jog                                                     
+JOG -010 Jog pressed before shift                                              
+SYST-039 Operation mode T2 Selected                                            
+R E S E T                                                                     
+JOG -010 Jog pressed before shift                                              
+JOG -010 Jog pressed before shift                                              
+MOTN-018 Position not reachable                                                
+MOTN-017 Limit error (G:1, A:10 Hex)                                           
+MOTN-017 Limit error (G:1, A:8 Hex)                                            
+MOTN-017 Limit error (G:1, A:8 Hex)                                            
+MOTN-018 Position not reachable                                                
+MOTN-018 Position not reachable                                                
+MOTN-017 Limit error (G:1, A:8 Hex)                                            
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+SYST-179 SHIFT-RESET Released                                                  
+
+SMON(main)> copy virt:\output\calptcp.pc md: over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\calprxy.pc md: over =>37224448:878185
+Copy time 3 
+
+SMON(main)> copy virt:\output\calprz.pc md: over =>37224448:878185
+Copy time 2 
+
+SMON(main)> copy virt:\output\test_xy.ls md: over =>37224448:878185
+Copy time 5 
+
+SMON(main)> copy md:test_xy.tp virt:\output\test_xy.tp over =>37224448:878185
+Copy time 3 
+
+SMON(main)> copy virt:\output\test_z.ls md: over =>37224448:878185
+[dvnewmd] Set needs_update program
+Copy time 9 
+
+SMON(main)> copy md:test_z.tp virt:\output\test_z.tp over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\cal_dv_xy.ls md: over =>37224448:878185
+[dvnewmd] Set needs_update program
+Copy time 7 
+
+SMON(main)> copy md:cal_dv_xy.tp virt:\output\cal_dv_xy.tp over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\cal_dv_z.ls md: over =>37224448:878185
+[dvnewmd] Set needs_update program
+Copy time 5 
+
+SMON(main)> copy md:cal_dv_z.tp virt:\output\cal_dv_z.tp over =>37224448:878185
+Copy time 3 
+
+SMON(main)> copy virt:\output\calptcp.pc md: over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
+Copy time 5 
+
+SMON(main)> copy virt:\output\tcp_2.pc md: over =>37224448:878185
+Copy time 4 
+
+SMON(main)> copy virt:\output\cal_tcp.ls md: over =>37224448:878185
+Copy time 19 
+
+SMON(main)> copy md:cal_tcp.tp virt:\output\cal_tcp.tp over =>37224448:878185
+Copy time 3 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:13960
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:13960
+Copy time 966 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
+spcmd time 12 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
+[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
+End of directory
+[SMON] error 0x002A0014
+R E S E T                                                                     
+SYST-178 SHIFT-RESET Pressed                                                   
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:13960
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:13960
