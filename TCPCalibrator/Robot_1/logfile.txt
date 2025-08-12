@@ -1,4 +1,3 @@
-[FUDUMMY] Using fromimg.bin file size of 33554432 for FROM size
 Memory Allocation Address for retained CMOS = 40500000
 Loading ROS task DLLs
 Loading C:\Program Files (x86)\FANUC\Shared\Off Line\FRVRC\V7.70\bin\SYIN.DLL
@@ -54,37 +53,536 @@ main bus clock 40
 main PCB version 4
 [ostkinit] TPWDOG_CHK $0
  
-[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
+[DSFL] No cache/B:\OS st=255
+[DSFL] No cache/B:\OS st=255
+[DSFL] No cache/B:\OS st=255
+[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (0) dfdevtbl@0x2D836511
 [ksinitsk] syin continues
-Updated $MC_PATH = c:\git\KARELC~1\TCPCAL~1\robot_1\mc
+Updated $MC_PATH = C:\Git\KARELC~1\TCPCAL~1\Robot_1\mc
 Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
-Updated $UD1_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\UD1
-Updated $UD2_PATH to = C:\Users\konst\OneDrive\Dokumenty\My Workcells\TCPCalibrator\Robot_1\UD2
-[syinit] bootrom time: 406900 ms
-[syinit] ** COLD START **
-[syinit] System Version V7.7077        2/6/2013
+Updated $UD1_PATH to = 
+Updated $UD2_PATH to = 
+[syinit] bootrom time: 399809 ms
+[syinit] ** INITIAL START **
+[syinit] System Version V7.70107      10/3/2018
 [ERLOG] Waiting for UIF to start up
 [syinisb0]VIRTUAL case,setting master_p->initializing to FALSE
+[DSFL] Fat type check Failed: 0x100006
 [ostkinit] ID $31 type 1D baud 31 version I
 [ostkinit] TP Baud Rate 19200
+[NTPORT] accept connection
+[syinit] ** INITIAL START **
 [ostkinit] TPWDOG_CHK+2 $1000
-[syinit] ** COLD START **
 [dpinit] setting cur lang to NULL
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
+[SYINISB0] Delete MEMO, VMGR, and DICT files ... 
+[sycfgmen] alloc cfgmenu_t @ 0x406F758C
 [sycfgmen] cfgmenu_p 0x406F758C
-[syinisb0] tpid check ltp = 0x62B1EF0, tpid = 49
+[syinisb0] tpid check ltp = 0x6191A50, tpid = 49
 [NTSYIN_STEP] Startup Step #1
 VMGR for R-J3iC V7.20
 [vmshadow_periodic] Normal power shutdown state = 0
-[vminit_loadctx] Loaded FRB:\S-SYSTEM.PRV only
-[vminit_loadctx] Loaded FRB:\S-INTERN.PRV only
-[vminit_loadctx] Done Loading Time = 18925us
+[vminit_loadctx] Loading all files
+[vminit_loadctx] Done Loading Time = 6212us
 [NTSYIN_STEP] Startup Step #2
+[syinisb0] $device set to PATH:
+BMON =config\\
+[syinisb0] running @MED:autoinit.com
+[SPRUNCMDF] status = 2000E; "ADDUPLOG MED:\00\TEMP\TEMP_MEMORY_STAT.DG" : FRS:\UPDTLOG.LS
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "DEL MED:\00\TEMP\TEMP_MEMORY_STAT.DG" : FRS:\UPDTLOG.LS
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "  FRCOPY MED:\core6\DCSVRFY.BIN FRS:DCSVRFY.BIN" : MED:\00\TEMP\FRSDT\*.DT
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "  FRCOPY MED:\core6\DCSDEFS.BIN FRS:DCSDEFS.BIN" : MED:\00\TEMP\FRSDT\*.DT
+[spruncmdf] +++ no abort
+[sycopsys] running @MED:init1
+"init1.com for V7.70P/53 (FD V7.70.07)"
+"Checking Language"
+"Checking Tool"
+"Checking Robot Library"
+"Checking H521 (English Dictionary) "
+"Checking H510 (Kernel + Basic S/W) "
+"Checking CMSP (Common softpanel) "
+"Checking J517 (Program Adjust) "
+"Checking J539 (KAREL Run-Time Env) "
+"Checking PRST (Program Status) "
+"Checking CLIO (Cell I/O) "
+"Checking MASK (Group Mask Exchange) "
+"Checking J542 (I/O Interconnect 2) "
+"Checking J520 (TCP Auto Set) "
+"Checking CNRE (Control Reliable) "
+"Checking MDSW (Mode Switch) "
+"Checking R651 (FRL Params) "
+"Checking H930 (Robot Servo Code) "
+"Checking J507 (Print Function) "
+"Checking J510 (Incr Instruction) "
+"Checking J513 (Hour Meter) "
+"Checking J514 (Position Registers) "
+"Checking J516 (FCTN Menu Save) "
+"Checking R645 (Common shell) "
+"Checking SEND (PC Send Macros) "
+"Checking R631 (Data Acquisition) "
+"Checking J503 (MACROs, Skip/Offset) "
+"Checking J505 (Program Shift) "
+"Checking SMLB (Shift and Mirror Lib) "
+"Checking SHLB (Shift Library) "
+"Checking J506 (Mirror Shift) "
+"Checking J509 (Tool Offset) "
+"Checking J616 (Background Editing) "
+"Checking J604 (Enhanced User Frame) "
+"Checking UFRM (User Frame) "
+"Checking J716 (FTP Interface) "
+"Checking HTCP (TCP/IP Interface) "
+"Checking HOCO (Host Communications) "
+"Checking FRDM (RDM Robot Discovery) "
+"Checking TELN (Telnet Interface) "
+"Checking HTTP (Web Server) "
+"Checking TMIL (TMILIB Interface) "
+"Checking J650 (KAREL Cmd. Language) "
+"Checking EIOC (Ext. DIO Config) "
+"Checking TPAC (TP Menu Accounting) "
+"Checking CGTP (iPendant) "
+"Checking TPTX (TPTX) "
+"Checking IGUI (iPendant Grid Display) "
+"Checking IPGS (iPendant Setup) "
+"Checking ESET (External DI BWD) "
+"Checking J627 (High-Speed Skip) "
+"Checking J628 (Condition Monitor) "
+"Checking OPLG (LogBook(System)) "
+"Checking R637 (Motion logger) "
+"Checking DCSU (Dual Check Safety UIF) "
+"Checking J545 (Automatic Backup) "
+"Checking SNBA (SNPX basic) "
+"Checking LCHK (License Checker) "
+"Checking UECK (Unexcepted motn Check) "
+"Checking H550 (Analog I/O) "
+"Checking J600 (Multi-Tasking) "
+"Checking ATUP (Auto Software Update) "
+"Checking J554 (Mixed logic) "
+"Checking J515 (Prog Num Selection) "
+"Checking R542 (Extended Error Log) "
+"Checking AAVM (AA Vision Mastering) "
+"Checking VCOR (Vision Core) "
+"Checking FVRC (Virtual Robot) "
+"Checking R626 (Web Svr Enhancements) "
+"Checking VIPL (Vision Library) "
+"Checking CSXC (Vision SP CSXC) "
+"Checking VCAM (Camera I/F) "
+"Checking CVVF (Vision Shift Tool) "
+"Checking SPVC (Soft Parts in VCCM) "
+"Checking MCSP (MechStop Protection) "
+"Checking RSCH (Diagnostic log) "
+"Checking MDCO (Motion Diag. Core) "
+"Checking R663 (Constant Path) "
+"Checking R507 (Ascii Upload) "
+"Checking MHCR (MH Core) "
+"Checking R696 (Extended User Frames) "
+"Checking J541 (Password Protection) "
+"Checking J609 (Space Check) "
+"Checking ETSS (SSPC error text) "
+"Checking J770 (IntelligentTP PC I/F) "
+"Checking R641 (PC Interface) "
+"Checking R636 (Socket Messaging) "
+"Checking J775 (YELLOW BOX) "
+"Checking PRXY (HTTP Proxy Svr) "
+"Checking IPNL (istdpnl) "
+"Checking R553 (HMI Device (SNPX)) "
+"Checking R680 (Enhanced T1 Mode) "
+"Checking J885 (JPN ARCPSU PRM) "
+"Checking R666 (Arc Advisor) "
+"Checking R528 (Disp 2nd analog port) "
+"Checking TCPE (TCPP Extention) "
+"Checking H809 (LR Mate 200iC) "
+"Checking OLSP (OLPC Support files) "
+"Checking J523 (Cycle Time Priority) "
+"Checking CMSC (Common shell core) "
+"Checking H552 (HandlingTool) "
+"Checking STYL (Common style select) "
+"Checking SRSR (Robot Service Request) "
+"Checking ORSR (Enhanced Rob Serv Req) "
+"Checking RLCM (Robot Library Setup) "
+"Checking CTOP (Cycle time Opt.) "
+"Configuration is Valid"
+"Default Language is ENGLISH
+"Copying System Files"
+"Copying H521 (English Dictionary) "
+"Copying H510 (Kernel + Basic S/W) "
+[spflload] Ignore 'FRSY-008 file already exists' frcopy PRODUCT\H510\ROBINIT.PC FRS:ROBINIT.PC
+"Copying CMSP (Common softpanel) "
+"Copying J517 (Program Adjust) "
+"Copying J539 (KAREL Run-Time Env) "
+"Copying PRST (Program Status) "
+"Copying CLIO (Cell I/O) "
+"Copying MASK (Group Mask Exchange) "
+"Copying J542 (I/O Interconnect 2) "
+"Copying J520 (TCP Auto Set) "
+"Copying CNRE (Control Reliable) "
+"Copying MDSW (Mode Switch) "
+"Copying R651 (FRL Params) "
+"Copying H930 (Robot Servo Code) "
+"Copying J507 (Print Function) "
+"Copying J510 (Incr Instruction) "
+"Copying J513 (Hour Meter) "
+"Copying J514 (Position Registers) "
+"Copying J516 (FCTN Menu Save) "
+"Copying R645 (Common shell) "
+"Copying SEND (PC Send Macros) "
+"Copying R631 (Data Acquisition) "
+"Copying J503 (MACROs, Skip/Offset) "
+"Copying J505 (Program Shift) "
+"Copying SMLB (Shift and Mirror Lib) "
+"Copying SHLB (Shift Library) "
+"Copying J506 (Mirror Shift) "
+"Copying J509 (Tool Offset) "
+"Copying J616 (Background Editing) "
+"Copying J604 (Enhanced User Frame) "
+"Copying UFRM (User Frame) "
+"Copying J716 (FTP Interface) "
+"Copying HTCP (TCP/IP Interface) "
+"Copying HOCO (Host Communications) "
+"Copying FRDM (RDM Robot Discovery) "
+"Copying TELN (Telnet Interface) "
+"Copying HTTP (Web Server) "
+"Copying TMIL (TMILIB Interface) "
+"Copying J650 (KAREL Cmd. Language) "
+"Copying EIOC (Ext. DIO Config) "
+"Copying TPAC (TP Menu Accounting) "
+"Copying CGTP (iPendant) "
+"Copying TPTX (TPTX) "
+"Copying IGUI (iPendant Grid Display) "
+"Copying IPGS (iPendant Setup) "
+"Copying ESET (External DI BWD) "
+"Copying J627 (High-Speed Skip) "
+"Copying J628 (Condition Monitor) "
+"Copying OPLG (LogBook(System)) "
+"Copying R637 (Motion logger) "
+"Copying DCSU (Dual Check Safety UIF) "
+"Copying J545 (Automatic Backup) "
+"Copying SNBA (SNPX basic) "
+"Copying LCHK (License Checker) "
+"Copying UECK (Unexcepted motn Check) "
+"Copying H550 (Analog I/O) "
+"Copying J600 (Multi-Tasking) "
+"Copying ATUP (Auto Software Update) "
+"Copying J554 (Mixed logic) "
+"Copying J515 (Prog Num Selection) "
+"Copying R542 (Extended Error Log) "
+"Copying AAVM (AA Vision Mastering) "
+"Copying VCOR (Vision Core) "
+"Copying FVRC (Virtual Robot) "
+"Copying R626 (Web Svr Enhancements) "
+"Copying VIPL (Vision Library) "
+"Copying CSXC (Vision SP CSXC) "
+"Copying VCAM (Camera I/F) "
+"Copying CVVF (Vision Shift Tool) "
+"Copying SPVC (Soft Parts in VCCM) "
+"Copying MCSP (MechStop Protection) "
+"Copying RSCH (Diagnostic log) "
+"Copying MDCO (Motion Diag. Core) "
+"Copying R663 (Constant Path) "
+"Copying R507 (Ascii Upload) "
+"Copying MHCR (MH Core) "
+"Copying R696 (Extended User Frames) "
+"Copying J541 (Password Protection) "
+"Copying J609 (Space Check) "
+"Copying ETSS (SSPC error text) "
+"Copying J770 (IntelligentTP PC I/F) "
+"Copying R641 (PC Interface) "
+"Copying R636 (Socket Messaging) "
+"Copying J775 (YELLOW BOX) "
+"Copying PRXY (HTTP Proxy Svr) "
+"Copying IPNL (istdpnl) "
+"Copying R553 (HMI Device (SNPX)) "
+"Copying R680 (Enhanced T1 Mode) "
+"Copying J885 (JPN ARCPSU PRM) "
+"Copying R666 (Arc Advisor) "
+"Copying R528 (Disp 2nd analog port) "
+"Copying TCPE (TCPP Extention) "
+"Copying H809 (LR Mate 200iC) "
+"Copying OLSP (OLPC Support files) "
+"Copying J523 (Cycle Time Priority) "
+"Copying CMSC (Common shell core) "
+"Copying H552 (HandlingTool) "
+"Copying STYL (Common style select) "
+"Copying SRSR (Robot Service Request) "
+"Copying ORSR (Enhanced Rob Serv Req) "
+"Copying RLCM (Robot Library Setup) "
+"Copying CTOP (Cycle time Opt.) "
+"init1cus.com complete"
+"init1.com complete"
+" Media check Passes..."
+[DSFL] Fat type check Failed: 0x100006
 [ntspfload] Skipping \RPCLIB.DLL because it is already loaded
 [ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
 [NTFRCPY] Did not load \TMILIB.DLL
 [NTSYIN_STEP] Startup Step #3
+[dpimage_restctx] Loading  dictionaries pool_avail = 32387364
+[dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 0 Time 0ms
+[dpimage_restctx] Dictionaries loaded pool_avail = 32387364
+[NTSYIN_STEP] Startup Step #4
+[SYINISB0] Loading main system softparts please wait ...
+[osppc] Timer sync timeout! tid: 187
+[ntspfload] Skipping \SFMNLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \SMUSB.DLL
+[ntspfload] Skipping \SMLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTLB.DLL because it is already loaded
+[ntspfload] Skipping \HCLIB.DLL because it is already loaded
+[ntspfload] Skipping \KCLIB.DLL because it is already loaded
+[ntspfload] Skipping \TPEXTDIO.DLL because it is already loaded
+[ntspfload] Skipping \TPGUI.DLL because it is already loaded
+[NTFRCPY] Did not load \DCSTSK.DLL
+[NTFRCPY] Did not load \UECK.DLL
+[ntspfload] Skipping \VDLIB.DLL because it is already loaded
+[ntspfload] Skipping \VLLIB.DLL because it is already loaded
+[ntspfload] Skipping \VXLIB.DLL because it is already loaded
+[ntspfload] Skipping \VASCLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \VSMO.DLL
+[ntspfload] Skipping \VIPL.DLL because it is already loaded
+[NTFRCPY] Did not load \YBOX.DLL
+[SYSINISB0] spspload reference time 44355 ms, This Time 5163ms
+[NTSYIN_STEP] Startup Step #5
+[SYINISB)] total time 10203
+[osppc] Timer sync timeout! tid: 34
+[NTSYIN_STEP] Startup Step #6
+[NTSYIN_STEP] Startup Step #7
+[SYINISUB] Saving user device PATH:
+Updated $CUSTO_PATH to = 
+[syinisub] RTC 5B0C8AFB 5B0C8AFB check1 0 0 
+[SYINISUB] RTC not initialzed -- RESETTING to 0
+[NTSYIN_STEP] Startup Step #8
+[NTSYIN_STEP] Startup Step #9
+[syinit] : calling iosetup
+[iospcall] Error !!!! stat:100006 fc:A0001 idx:5
+[NTSYIN_STEP] Startup Step #10
+[NTSYIN_STEP] Startup Step #11
+syinit - mmmakmem size = $AF000, stat = $0
+[syinisub] Memory manager started
+MEMO for R-J3iC Version V7.50 Rev-0
+[NTSYIN_STEP] Startup Step #12
+[NTSYIN_STEP] Startup Step #13
+[NTSYIN_STEP] Startup Step #14
+"init2.com for V7.70P/53 (FD V7.70.07)"
+"Loading H510 (Kernel + Basic S/W, Part I) "
+[VMLOAD] NO SAVE VAR =$FAST_CLOCK not loaded
+[VMLOAD] NO SAVE VAR =$FILE_MAXSEC not loaded
+[vmiloadf] $GROUP created by PRODUCT\H510\SYSDEF.SV
+[VMLOAD] NO SAVE VAR =$NULL_CYCLE not loaded
+[VMLOAD] NO SAVE VAR =$STARTUP_DBG not loaded
+[VMLOAD] NO SAVE VAR =$SYS_CONFIG not loaded
+[VMLOAD] NO SAVE VAR =$TICK_RATE not loaded
+[VMLOAD] NO SAVE VAR =VPR not loaded
+"Loading J517 (Program Adjust, Part I) "
+"Loading J539 (KAREL Run-Time Env, Part I) "
+"Loading CLIO (Cell I/O, Part I) "
+"Loading CNRE (Control Reliable, Part I) "
+"Loading MDSW (Mode Switch, Part I) "
+"Loading J513 (Hour Meter, Part I) "
+"Loading R631 (Data Acquisition, Part I) "
+"Loading J503 (MACROs, Skip/Offset, Part I) "
+"Loading J616 (Background Editing, Part I) "
+"Loading UFRM (User Frame, Part I) "
+"Loading J716 (FTP Interface, Part I) "
+"Loading HOCO (Host Communications, Part I) "
+"Loading FRDM (RDM Robot Discovery, Part I) "
+"Loading TELN (Telnet Interface, Part I) "
+"Loading HTTP (Web Server, Part I) "
+"Loading TPTX (TPTX, Part I) "
+"Loading ESET (External DI BWD, Part I) "
+"Loading J627 (High-Speed Skip, Part I) "
+"Loading J628 (Condition Monitor, Part I) "
+"Loading OPLG (LogBook(System), Part I) "
+"Loading R637 (Motion logger, Part I) "
+"Loading DCSU (Dual Check Safety UIF, Part I) "
+"Loading J545 (Automatic Backup, Part I) "
+"Loading SNBA (SNPX basic, Part I) "
+"Loading LCHK (License Checker, Part I) "
+"Loading UECK (Unexcepted motn Check, Part I) "
+"Loading J554 (Mixed logic, Part I) "
+"Loading J515 (Prog Num Selection, Part I) "
+"Loading R542 (Extended Error Log, Part I) "
+"Loading AAVM (AA Vision Mastering, Part I) "
+"Loading VCOR (Vision Core, Part I) "
+"Loading FVRC (Virtual Robot, Part I) "
+"Loading R626 (Web Svr Enhancements, Part I) "
+"Loading MCSP (MechStop Protection, Part I) "
+"Loading RSCH (Diagnostic log, Part I) "
+"Loading MDCO (Motion Diag. Core, Part I) "
+"Loading R663 (Constant Path, Part I) "
+"Loading R507 (Ascii Upload, Part I) "
+"Loading MHCR (MH Core, Part I) "
+"Loading J609 (Space Check, Part I) "
+"Loading J775 (YELLOW BOX, Part I) "
+"Loading PRXY (HTTP Proxy Svr, Part I) "
+"Loading R680 (Enhanced T1 Mode, Part I) "
+"Loading R666 (Arc Advisor, Part I) "
+"Loading TCPE (TCPP Extention, Part I) "
+"Loading J523 (Cycle Time Priority, Part I) "
+"Loading CMSC (Common shell core, Part I) "
+"Loading STYL (Common style select, Part I) "
+"Loading ORSR (Enhanced Rob Serv Req, Part I) "
+"Loading CTOP (Cycle time Opt., Part I) "
+"Loading H510 (Kernel + Basic S/W, Part II) "
+[PGPCLOAD] Creating system variable $UMR from PATH:PRODUCT\H510\TPCTRLMN.PC!!
+"Loading CMSP (Common softpanel, Part II) "
+"Loading J517 (Program Adjust, Part II) "
+"Loading J539 (KAREL Run-Time Env, Part II) "
+"Loading PRST (Program Status, Part II) "
+"Loading CLIO (Cell I/O, Part II) "
+"Loading MASK (Group Mask Exchange, Part II) "
+"Loading J520 (TCP Auto Set, Part II) "
+"Loading CNRE (Control Reliable, Part II) "
+"Loading R651 (FRL Params, Part II) "
+"Loading J507 (Print Function, Part II) "
+"Loading J510 (Incr Instruction, Part II) "
+"Loading J513 (Hour Meter, Part II) "
+"Loading J514 (Position Registers, Part II) "
+"Loading J516 (FCTN Menu Save, Part II) "
+"Loading SEND (PC Send Macros, Part II) "
+"Loading R631 (Data Acquisition, Part II) "
+"Loading J503 (MACROs, Skip/Offset, Part II) "
+"Loading J505 (Program Shift, Part II) "
+"Loading SHLB (Shift Library, Part II) "
+"Loading J506 (Mirror Shift, Part II) "
+"Loading J509 (Tool Offset, Part II) "
+"Loading J604 (Enhanced User Frame, Part II) "
+"Loading J716 (FTP Interface, Part II) "
+"Loading HTCP (TCP/IP Interface, Part II) "
+"Loading HOCO (Host Communications, Part II) "
+"Loading TELN (Telnet Interface, Part II) "
+"Loading HTTP (Web Server, Part II) "
+"Loading J650 (KAREL Cmd. Language, Part II) "
+"Loading CGTP (iPendant, Part II) "
+"Loading TPTX (TPTX, Part II) "
+"Loading IPGS (iPendant Setup, Part II) "
+"Loading J627 (High-Speed Skip, Part II) "
+"Loading J628 (Condition Monitor, Part II) "
+"Loading OPLG (LogBook(System), Part II) "
+"Loading DCSU (Dual Check Safety UIF, Part II) "
+"Loading J545 (Automatic Backup, Part II) "
+"Loading LCHK (License Checker, Part II) "
+"Loading H550 (Analog I/O, Part II) "
+"Loading J600 (Multi-Tasking, Part II) "
+"Loading J554 (Mixed logic, Part II) "
+"Loading R542 (Extended Error Log, Part II) "
+"Loading AAVM (AA Vision Mastering, Part II) "
+"Loading VCOR (Vision Core, Part II) "
+"Loading FVRC (Virtual Robot, Part II) "
+"Loading R626 (Web Svr Enhancements, Part II) "
+"Loading VIPL (Vision Library, Part II) "
+"Loading VCAM (Camera I/F, Part II) "
+"Loading MDCO (Motion Diag. Core, Part II) "
+"Loading R663 (Constant Path, Part II) "
+"Loading R507 (Ascii Upload, Part II) "
+"Loading MHCR (MH Core, Part II) "
+"Loading J609 (Space Check, Part II) "
+"Loading ETSS (SSPC error text, Part II) "
+"Loading R641 (PC Interface, Part II) "
+"Loading R636 (Socket Messaging, Part II) "
+"Loading J775 (YELLOW BOX, Part II) "
+"Loading PRXY (HTTP Proxy Svr, Part II) "
+"Loading IPNL (istdpnl, Part II) "
+"Loading J885 (JPN ARCPSU PRM, Part II) "
+"Loading R666 (Arc Advisor, Part II) "
+"Loading H809 (LR Mate 200iC, Part II) "
+"Loading J523 (Cycle Time Priority, Part II) "
+"Loading CMSC (Common shell core, Part II) "
+"Loading H552 (HandlingTool, Part II) "
+"Loading STYL (Common style select, Part II) "
+"Loading SRSR (Robot Service Request, Part II) "
+"init2cus.com complete"
+"init2.com complete"
+[NTSYIN_STEP] Startup Step #15
+[NTSYIN_STEP] Startup Step #16
+[NTSYIN_STEP] Startup Step #17
+[syinit] mosetvpr status <0>
+[NTSYIN_STEP] Startup Step #18
+[NTSYIN_STEP] Startup Step #19
+[ERLOG] continue stat = 0x0
+[NTSYIN_STEP] Startup Step #20
+[syinisub] VMGR called to register program with MEMO
+sizeof(DCS_SRAM_PRM_T):0x428, DCS_SRAM_PRM_SIZE:0x1000
+sizeof(DCS_FROM_PRM_T):0xA5DC, DCS_FROM_PRM_SIZE:0xC000
+sizeof(DCS_WORK_T):0x2CF78, DCS_WORK_SIZE:0x30000
+file creation OK:5183472
+file creation OK:5183472
+  [load_safety_param(MAIN)]load_address:0x11FE8000, size:0xA5DC
+[NTSYIN_STEP] Startup Step #21
+[NTSYIN_STEP] Startup Step #22
+[NTSYIN_STEP] Startup Step #23
+[NTSYIN_STEP] Startup Step #24
+[NTSYIN_STEP] Startup Step #25
+[NTSYIN_STEP] Startup Step #26
+[sytimque]: trigger loaded 0
+[NTSYIN_STEP] Startup Step #27
+[CHND] init done. starting scanning
+[NTSYIN_STEP] Startup Step #28
+[NTSYIN_STEP] Startup Step #29
+[NTSYIN_STEP] Startup Step #30
+[NTSYIN_STEP] Startup Step #31
+[NTSYIN_STEP] Startup Step #32
+[sysinisub] Disabling dictionary cache Temp = 1FF13E4
+[syrestart] Restart = 1
+[vminit_restart] Saving variable context
+[SYRESTART] switching modes from 0 to 1
+[pal_reset] Restarting system
+Switching states: old = STARTUP   new = RESTART 
+Tick            Avg: 1.532 ms, Min: 0.000 ms, Max: 5011.874 ms, ticks: 9011
+Execution times Avg: 0.002 ms, Min: 0.000 ms, Max: 0.017 ms
+Switching states: old = RESTART   new = STARTUP 
+[NTINIT] Frequency 10000000, Ticks/ms 10000 BusClock 40000000
+[IEWTQ] Count = 0 add to head/tail task: 199  cnt: 24  pri: 10
+[osppc] Virtual Clock timer device resolution discovery suceeded, min res: 1 ms
+[NTPORT] Ready for connections at 9100
+[NTPORT] Ready for connections at 9101
+[NTPORT] Ready for connections at 9102
+[NTPORT] Ready for connections at 9103
+[OSSERV] VIRTUAL not doing multi-processing service
+main bus clock 40
+main PCB version 4
+[ostkinit] TPWDOG_CHK $0
+ 
+[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
+[ksinitsk] syin continues
+Updated $MC_PATH = C:\Git\KARELC~1\TCPCAL~1\Robot_1\mc
+Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
+Updated $UD1_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\ud1
+Updated $UD2_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\ud2
+[syinit] bootrom time: 413677 ms
+[syinit] ** CONTROLLED START **
+[syinit] System Version V7.70107      10/3/2018
+[ERLOG] Waiting for UIF to start up
+[syinisb0]VIRTUAL case,setting master_p->initializing to FALSE
+[ostkinit] ID $31 type 1D baud 31 version I
+[ostkinit] TP Baud Rate 19200
+[NTPORT] accept connection
+[syinit] ** CONTROLLED START **
+[dpinit] setting cur lang to NULL
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[sycfgmen] cfgmenu_p 0x406F758C
+[ostkinit] TPWDOG_CHK+2 $1000
+[syinisb0] tpid check ltp = 0x6191A50, tpid = 49
+[NTSYIN_STEP] Startup Step #33
+VMGR for R-J3iC V7.20
+[vmshadow_periodic] Normal power shutdown state = 0
+[vminit_loadctx] Loaded FRB:\S-SYSTEM.IRV only
+[vminit_loadctx] Done Loading Time = 13059us
+[NTSYIN_STEP] Startup Step #34
+[ntspfload] Skipping \CETX.DLL because it is already loaded
+[ntspfload] Skipping \DVHTTP.DLL because it is already loaded
+[ntspfload] Skipping \HTTPD.DLL because it is already loaded
+[ntspfload] Skipping \PMON.DLL because it is already loaded
+[ntspfload] Skipping \RPCLIB.DLL because it is already loaded
+[ntspfload] Skipping \RPCM.DLL because it is already loaded
+[ntspfload] Skipping \RPCMAINS.DLL because it is already loaded
+[ntspfload] Skipping \RPCDAQS.DLL because it is already loaded
+[ntspfload] Skipping \SFDIAGTP.DLL because it is already loaded
+[ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \TMILIB.DLL
+[ntspfload] Skipping \TPTX.DLL because it is already loaded
+[NTSYIN_STEP] Startup Step #35
 [TX] Start
 [PMON] PC Monitor Task
 [rpcm] create TCP/IP RPC service
@@ -100,73 +598,2018 @@ Web Enhancements installed
 [syinisb0] Legacy 2, tpid = 49
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
-[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30896096
+[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30853720
 [dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 219 Time 0ms
-[dpimage_restctx] Dictionaries loaded pool_avail = 30051348
+[dpimage_restctx] Dictionaries loaded pool_avail = 30012644
 [dpsetlng] setting cur lang to DEFAULT     
 [tppascon_config] wait for EVB_SPINITDONE
-[NTSYIN_STEP] Startup Step #4
+[NTSYIN_STEP] Startup Step #36
 [SYINISB0] Loading main system softparts please wait ...
+[ntspfload] Skipping \ASBN.DLL because it is already loaded
+[ntspfload] Skipping \BGLG.DLL because it is already loaded
+[ntspfload] Skipping \BINASC.DLL because it is already loaded
+[ntspfload] Skipping \CFMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \COMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPTPMAIN.DLL because it is already loaded
+[ntspfload] Skipping \CRCRC.DLL because it is already loaded
+[ntspfload] Skipping \CSXC.DLL because it is already loaded
+[ntspfload] Skipping \DAQSP.DLL because it is already loaded
+[ntspfload] Skipping \DAQTSKSP.DLL because it is already loaded
 [NTFRCPY] Did not load \DCSTSK.DLL
+[ntspfload] Skipping \DVFORM.DLL because it is already loaded
+[ntspfload] Skipping \DVHTT2.DLL because it is already loaded
+[ntspfload] Skipping \DVNEWMD.DLL because it is already loaded
+[ntspfload] Skipping \ERRSEV.DLL because it is already loaded
+[ntspfload] Skipping \FTP.DLL because it is already loaded
+[ntspfload] Skipping \GENLINK.DLL because it is already loaded
+[ntspfload] Skipping \GLOFILE.DLL because it is already loaded
 [ntspfload] Skipping \HCLIB.DLL because it is already loaded
+[ntspfload] Skipping \HCOM.DLL because it is already loaded
+[ntspfload] Skipping \IPGENSET.DLL because it is already loaded
+[ntspfload] Skipping \KCL.DLL because it is already loaded
 [ntspfload] Skipping \KCLIB.DLL because it is already loaded
+[ntspfload] Skipping \LCMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \LGSP.DLL because it is already loaded
+[ntspfload] Skipping \LUSAT2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSLSMN.DLL because it is already loaded
+[ntspfload] Skipping \LUSMN2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSPS2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSWBIAS.DLL because it is already loaded
+[ntspfload] Skipping \MKSP.DLL because it is already loaded
+[ntspfload] Skipping \MNTBLSP.DLL because it is already loaded
+[ntspfload] Skipping \MODAQ.DLL because it is already loaded
+[ntspfload] Skipping \MR.DLL because it is already loaded
+[ntspfload] Skipping \NE.DLL because it is already loaded
+[ntspfload] Skipping \NECALC.DLL because it is already loaded
+[ntspfload] Skipping \NTMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \OTCASE.DLL because it is already loaded
+[ntspfload] Skipping \OTTASK.DLL because it is already loaded
+[ntspfload] Skipping \PBDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PBIOBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBIOSETU.DLL because it is already loaded
+[ntspfload] Skipping \PBMARRY.DLL because it is already loaded
+[ntspfload] Skipping \PBMBYNAM.DLL because it is already loaded
+[ntspfload] Skipping \PBMCORE.DLL because it is already loaded
+[ntspfload] Skipping \PBMERRS.DLL because it is already loaded
+[ntspfload] Skipping \PBMFDEV.DLL because it is already loaded
+[ntspfload] Skipping \PBMFLBT.DLL because it is already loaded
+[ntspfload] Skipping \PBMKCLOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMMEMO.DLL because it is already loaded
+[ntspfload] Skipping \PBMMIR.DLL because it is already loaded
+[ntspfload] Skipping \PBMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \PBMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \PBMPATH.DLL because it is already loaded
+[ntspfload] Skipping \PBMQMGR.DLL because it is already loaded
+[ntspfload] Skipping \PBMREGOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMSTRNG.DLL because it is already loaded
+[ntspfload] Skipping \PBMTIME.DLL because it is already loaded
+[ntspfload] Skipping \PBMTPE.DLL because it is already loaded
+[ntspfload] Skipping \PBMUIF.DLL because it is already loaded
+[ntspfload] Skipping \PBMVECTR.DLL because it is already loaded
+[ntspfload] Skipping \PBPC.DLL because it is already loaded
+[ntspfload] Skipping \PBSWGBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBXML.DLL because it is already loaded
+[ntspfload] Skipping \PGDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PGSETUP.DLL because it is already loaded
+[ntspfload] Skipping \PIMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \POMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \PROXY.DLL because it is already loaded
+[ntspfload] Skipping \RDGNTASK.DLL because it is already loaded
+[ntspfload] Skipping \RDM.DLL because it is already loaded
+[ntspfload] Skipping \RFLR2C.DLL because it is already loaded
+[ntspfload] Skipping \SCP.DLL because it is already loaded
+[ntspfload] Skipping \SFAPMHND.DLL because it is already loaded
+[ntspfload] Skipping \SFATBCK.DLL because it is already loaded
+[ntspfload] Skipping \SFCNTREL.DLL because it is already loaded
+[ntspfload] Skipping \SFDRYRN.DLL because it is already loaded
+[ntspfload] Skipping \SFEXHIST.DLL because it is already loaded
+[ntspfload] Skipping \SFEXTSET.DLL because it is already loaded
+[ntspfload] Skipping \SFIOLNK.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSLC2.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSTD.DLL because it is already loaded
+[ntspfload] Skipping \SFKAREL.DLL because it is already loaded
+[ntspfload] Skipping \SFMACC.DLL because it is already loaded
+[ntspfload] Skipping \SFMAIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMAPPL.DLL because it is already loaded
+[ntspfload] Skipping \SFMARTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMCALL.DLL because it is already loaded
+[ntspfload] Skipping \SFMCLB.DLL because it is already loaded
+[ntspfload] Skipping \SFMCTRLS.DLL because it is already loaded
+[ntspfload] Skipping \SFMDEST.DLL because it is already loaded
+[ntspfload] Skipping \SFMDIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMIF.DLL because it is already loaded
+[ntspfload] Skipping \SFMINC.DLL because it is already loaded
+[ntspfload] Skipping \SFMJUMP.DLL because it is already loaded
+[ntspfload] Skipping \SFMLOGIC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMACRO.DLL because it is already loaded
+[ntspfload] Skipping \SFMMISC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMIX.DLL because it is already loaded
+[ntspfload] Skipping \SFMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \SFMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \SFMNFOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNHM.DLL because it is already loaded
 [ntspfload] Skipping \SFMNLIB.DLL because it is already loaded
+[ntspfload] Skipping \SFMNMIR.DLL because it is already loaded
+[ntspfload] Skipping \SFMNOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNSFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMOFST.DLL because it is already loaded
+[ntspfload] Skipping \SFMPCTL.DLL because it is already loaded
+[ntspfload] Skipping \SFMPITM.DLL because it is already loaded
+[ntspfload] Skipping \SFMPREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMPTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMQSKP.DLL because it is already loaded
+[ntspfload] Skipping \SFMREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMSKIP.DLL because it is already loaded
+[ntspfload] Skipping \SFMSREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMTIME.DLL because it is already loaded
+[ntspfload] Skipping \SFMTOFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWAIT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWHEN.DLL because it is already loaded
+[ntspfload] Skipping \SFOVSL.DLL because it is already loaded
+[ntspfload] Skipping \SFPSMMR.DLL because it is already loaded
+[ntspfload] Skipping \SFRDIAG.DLL because it is already loaded
+[ntspfload] Skipping \SFREFPOS.DLL because it is already loaded
+[ntspfload] Skipping \SFTHRIO2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALRM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPCMN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDATA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDCS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFIL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFILS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPGUI.DLL because it is already loaded
+[ntspfload] Skipping \SFTPJGM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPKY2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPMFTN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPPOSN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSOP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSRVO.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTUP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYSV.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTCH2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTSTC.DLL because it is already loaded
+[ntspfload] Skipping \SFTPUTIL.DLL because it is already loaded
+[ntspfload] Skipping \SFVCCM.DLL because it is already loaded
+[ntspfload] Skipping \SFVRGR.DLL because it is already loaded
+[ntspfload] Skipping \SFVSHIF.DLL because it is already loaded
+[ntspfload] Skipping \SFVTRN.DLL because it is already loaded
+[ntspfload] Skipping \SMACC.DLL because it is already loaded
+[ntspfload] Skipping \SMBASVAR.DLL because it is already loaded
+[ntspfload] Skipping \SMC.DLL because it is already loaded
+[ntspfload] Skipping \SMENET.DLL because it is already loaded
+[ntspfload] Skipping \SMEVO.DLL because it is already loaded
+[ntspfload] Skipping \SMJ.DLL because it is already loaded
 [ntspfload] Skipping \SMLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTASK.DLL because it is already loaded
 [ntspfload] Skipping \SMTLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTPLIB.DLL because it is already loaded
 [NTFRCPY] Did not load \SMUSB.DLL
+[ntspfload] Skipping \SNPX.DLL because it is already loaded
+[ntspfload] Skipping \SSSSPACE.DLL because it is already loaded
+[ntspfload] Skipping \SYOPINSP.DLL because it is already loaded
+[ntspfload] Skipping \SYPNS.DLL because it is already loaded
+[ntspfload] Skipping \SYRSR.DLL because it is already loaded
+[ntspfload] Skipping \SYSHXSP.DLL because it is already loaded
+[ntspfload] Skipping \TBC.DLL because it is already loaded
+[ntspfload] Skipping \TBJ.DLL because it is already loaded
+[ntspfload] Skipping \TBTASKSP.DLL because it is already loaded
+[ntspfload] Skipping \TCPMSG.DLL because it is already loaded
+[ntspfload] Skipping \TELNET.DLL because it is already loaded
 [ntspfload] Skipping \TKLIB.DLL because it is already loaded
-[NTFRCPY] Did not load \TPATBTSK.DLL
+[ntspfload] Skipping \TPACCN.DLL because it is already loaded
+[ntspfload] Skipping \TPANAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPATBTSK.DLL because it is already loaded
+[ntspfload] Skipping \TPAXLM.DLL because it is already loaded
+[ntspfload] Skipping \TPCHOV.DLL because it is already loaded
+[ntspfload] Skipping \TPCOOR.DLL because it is already loaded
+[ntspfload] Skipping \TPDAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDIGIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDMEM.DLL because it is already loaded
 [ntspfload] Skipping \TPEXTDIO.DLL because it is already loaded
+[ntspfload] Skipping \TPFMEM.DLL because it is already loaded
+[ntspfload] Skipping \TPFRAME.DLL because it is already loaded
+[ntspfload] Skipping \TPGRPIO.DLL because it is already loaded
 [ntspfload] Skipping \TPGUI.DLL because it is already loaded
+[ntspfload] Skipping \TPHCCOMM.DLL because it is already loaded
+[ntspfload] Skipping \TPHCHTMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPGMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPPMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPRMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCRPHS.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTAMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTCMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHINTS.DLL because it is already loaded
+[ntspfload] Skipping \TPKM909.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1200.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1201.DLL because it is already loaded
+[ntspfload] Skipping \TPKS930.DLL because it is already loaded
+[ntspfload] Skipping \TPKS931.DLL because it is already loaded
+[ntspfload] Skipping \TPKS932.DLL because it is already loaded
+[ntspfload] Skipping \TPKS935.DLL because it is already loaded
+[ntspfload] Skipping \TPKS936.DLL because it is already loaded
+[ntspfload] Skipping \TPKS943.DLL because it is already loaded
+[ntspfload] Skipping \TPKS955.DLL because it is already loaded
+[ntspfload] Skipping \TPKS962.DLL because it is already loaded
+[ntspfload] Skipping \TPKS972.DLL because it is already loaded
+[ntspfload] Skipping \TPKS973.DLL because it is already loaded
+[ntspfload] Skipping \TPKS992.DLL because it is already loaded
+[ntspfload] Skipping \TPMASCAL.DLL because it is already loaded
+[ntspfload] Skipping \TPOPLG.DLL because it is already loaded
+[ntspfload] Skipping \TPOTREL.DLL because it is already loaded
+[ntspfload] Skipping \TPPASCFG.DLL because it is already loaded
+[ntspfload] Skipping \TPPRTFTN.DLL because it is already loaded
+[ntspfload] Skipping \TPROBIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSAVE.DLL because it is already loaded
+[ntspfload] Skipping \TPSETGEN.DLL because it is already loaded
+[ntspfload] Skipping \TPSFTY.DLL because it is already loaded
+[ntspfload] Skipping \TPSOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSPRINT.DLL because it is already loaded
+[ntspfload] Skipping \TPTSTRUN.DLL because it is already loaded
+[ntspfload] Skipping \TPUOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER2.DLL because it is already loaded
+[ntspfload] Skipping \TPVERSN.DLL because it is already loaded
+[ntspfload] Skipping \TPVEXE.DLL because it is already loaded
 [NTFRCPY] Did not load \UECK.DLL
 [ntspfload] Skipping \VASCLIB.DLL because it is already loaded
+[ntspfload] Skipping \VCAM.DLL because it is already loaded
+[ntspfload] Skipping \VCVT.DLL because it is already loaded
+[ntspfload] Skipping \VDAT.DLL because it is already loaded
 [ntspfload] Skipping \VDLIB.DLL because it is already loaded
+[ntspfload] Skipping \VEXE.DLL because it is already loaded
+[ntspfload] Skipping \VGPM.DLL because it is already loaded
 [ntspfload] Skipping \VIPL.DLL because it is already loaded
 [ntspfload] Skipping \VLLIB.DLL because it is already loaded
+[ntspfload] Skipping \VLOG.DLL because it is already loaded
+[ntspfload] Skipping \VSFT.DLL because it is already loaded
 [NTFRCPY] Did not load \VSMO.DLL
+[ntspfload] Skipping \VTRN.DLL because it is already loaded
 [ntspfload] Skipping \VXLIB.DLL because it is already loaded
+[ntspfload] Skipping \VXMN.DLL because it is already loaded
+[ntspfload] Skipping \WEBEXEC.DLL because it is already loaded
 [NTFRCPY] Did not load \YBOX.DLL
-[SYSINISB0] spspload reference time 44355 ms, This Time 127ms
+[SYSINISB0] spspload reference time 44355 ms, This Time 1701ms
 [vminit_loadctx] Loading all files
-[vminit_loadctx] Done Loading Time = 18460us
+[vminit_loadctx] Done Loading Time = 17556us
 [Syin] Mobo start 0xFFFFFFFF
-[NTSYIN_STEP] Startup Step #5
-[SYINISB)] total time 225
-[NTSYIN_STEP] Startup Step #6
-[NTSYIN_STEP] Startup Step #7
+[NTSYIN_STEP] Startup Step #37
+[SYINISB)] total time 2175
+[NTSYIN_STEP] Startup Step #38
+[NTSYIN_STEP] Startup Step #39
+[SYINISUB] Saving user device PATH:
+[syporti]pkt send to TLNT fails 10C
+[NTSYIN_STEP] Startup Step #40
+[ostksock_create] Socket 1576 binding to IP port # 60004
+[ostksock_create] T-X IP address <001.001.001.011>
+[NTSYIN_STEP] Startup Step #41
+[syinit] : calling iosetup
+[ripini] Initializing
+[ripini] SID_RIPSERV task start status = 0x380001
+[NTSYIN_STEP] Startup Step #42
+[NTSYIN_STEP] Startup Step #43
+[syinisub] Memory manager started
+[mmiage_init] TP DRAM Imaging system startup
+MEMO for R-J3iC Version V7.50 Rev-0
+[NTSYIN_STEP] Startup Step #44
+[NTSYIN_STEP] Startup Step #45
+[NTSYIN_STEP] Startup Step #46
+[NTSYIN_STEP] Startup Step #47
+[syinit] mosetvpr status #2<0>
+
+[syinisub] status after vmgetvar #2 = $0
+[NTSYIN_STEP] Startup Step #48
+[NTSYIN_STEP] Startup Step #49
+[syinit] mosetvpr status <0>
+[NTSYIN_STEP] Startup Step #50
+[SMTPXML] SMTP option not loaded
+[NTSYIN_STEP] Startup Step #51
+[ERLOG] continue stat = 0x0
+[NTSYIN_STEP] Startup Step #52
+[syinisub] VMGR called to register program with MEMO
+[NTSYIN_STEP] Startup Step #53
+[NTSYIN_STEP] Startup Step #54
+[NTSYIN_STEP] Startup Step #55
+[NTSYIN_STEP] Startup Step #56
+[NTSYIN_STEP] Startup Step #57
+[NTSYIN_STEP] Startup Step #58
+[sytimque]: trigger loaded 0
+[CHND] Low Priority Condition Handler started.
+[CHND] init done. starting scanning
+[tpmains_start] executing legacy mode case
+[NTSYIN_STEP] Startup Step #59
+[SYINIT] OCTK started 380001
+[NTSYIN_STEP] Startup Step #60
+[NTSYIN_STEP] Startup Step #61
+[sycgtp] LED time = 0 ms
+[sycgtp] EXT time = 0 ms
+[NTSYIN_STEP] Startup Step #62
+"CONTROL1 for V7.70P/53 (FD V7.70.07)"
+"MENU for V7.70P/53 (FD V7.70.07)"
+"MENU complete"
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:swilib.PRV backed up to FRB:swilib.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:swilib.PRV backed up to FRB:swilib.VBK
+[vmimage_bakfile] FRB:swimset.PRV backed up to FRB:swimset.VBK
+[vmimage_bakfile] FRB:swilib.PRV backed up to FRB:swilib.VBK
+[vmimage_bakfile] FRB:swiupdt.PRV backed up to FRB:swiupdt.VBK
+[vdat] wake up
+[vdat] oschggrp(112, 4, 0) 0x00000000
+WEB Server starting
+Web Enhancements installed
+[HTTP]: Binding to tcp port number 80
+[HTTPD] ready for connections
+[KCL] failed to locate DEV_KCL_C but continuing
+[ASBN] started
+[PGPCLOAD] Creating system variable $HSCD_GROUP from FRS:HSCDLR2C.PC!!
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:svparam.PRV backed up to FRB:svparam.VBK
+[vmimage_bakfile] FRB:piparam.PRV backed up to FRB:piparam.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:cpparam.PRV backed up to FRB:cpparam.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+"CONTROL1 complete"
+[NTSYIN] userctrl.com file not found
+[NTSYIN_STEP] Startup Step #63
+[syinit]CONTROL2 gp_made = 1, group = 1, rlibsoc=0
+"CONTROL2 for V7.70P/53 (FD V7.70.07)"
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:muparam.PRV backed up to FRB:muparam.VBK
+[vmimage_bakfile] FRB:smparam.PRV backed up to FRB:smparam.VBK
+[vmimage_bakfile] FRB:tlparam.PRV backed up to FRB:tlparam.VBK
+[vmimage_bakfile] FRB:tjparam.PRV backed up to FRB:tjparam.VBK
+[vmimage_bakfile] FRB:piparam.PRV backed up to FRB:piparam.VBK
+[vmimage_bakfile] FRB:cpparam.PRV backed up to FRB:cpparam.VBK
+[vmimage_bakfile] FRB:dcparam.PRV backed up to FRB:dcparam.VBK
+[vmimage_bakfile] FRB:svparam.PRV backed up to FRB:svparam.VBK
+[vmimage_bakfile] FRB:aaparam.PRV backed up to FRB:aaparam.VBK
+[vmimage_bakfile] FRB:dgparam.PRV backed up to FRB:dgparam.VBK
+[vmimage_bakfile] FRB:swimest.PRV backed up to FRB:swimest.VBK
+"[swilib] [swimest] Check Orderfil Passed "
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-002 Installed: `SHADOW MOVE TO CMOS O'                                  
+OPTN-008 Requires: `SMB Client           '                                   
+OPTN-008 Requires: `ServoTorch for Alumi '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `ROS Ethernet Packets '                                   
+OPTN-002 Installed: `get_var fails to get '                                  
+OPTN-002 Installed: `Arc End STEP Hold Bus'                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-002 Installed: `CVIS UPDATE IRTORCHMA'                                  
+OPTN-002 Installed: `CVIS UPDATE WELDTIP S'                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `Local Stop           '                                   
+OPTN-002 Installed: `CVIS: R741 should be '                                  
+OPTN-002 Installed: `BACKGROUND EDIT SHADO'                                  
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `REPTCD CAN CRASH FRVR'                                  
+OPTN-002 Installed: `CVIS: Crashes 2-D Bar'                                  
+OPTN-002 Installed: `$FNO NOT RESTORED AUT'                                  
+OPTN-002 Installed: `JOINT QUICK STOP FLEN'                                  
+OPTN-008 Requires: `ROS Ethernet Packets '                                   
+OPTN-008 Requires: `Modbus TCP           '                                   
+OPTN-008 Requires: `P-250iA iC           '                                   
+OPTN-008 Requires: `Line Track Core      '                                   
+OPTN-002 Installed: `Local Hold TIMQ Adjus'                                  
+OPTN-002 Installed: `FPLN:  Support facepl'                                  
+OPTN-002 Installed: `FMD DEVICE ASSERT WIT'                                  
+OPTN-002 Installed: `KAREL CANNOT ACCESS M'                                  
+OPTN-008 Requires: `Common Color Change  '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `Line Track Core      '                                   
+OPTN-008 Requires: `iRVision UIF Controls'                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-002 Installed: `Joint Quick Stop FLEN'                                  
+OPTN-008 Requires: `Shape Generation II  '                                   
+OPTN-008 Requires: `iRVision UIF Controls'                                   
+OPTN-002 Installed: `USB insert & removal '                                  
+OPTN-002 Installed: `SMB NULL POINTER FIX '                                  
+OPTN-008 Requires: `Sgdiag core          '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `MACHINE TOOL DEMO OPT'                                  
+OPTN-008 Requires: `PMC(FAPT Ladder)     '                                   
+OPTN-008 Requires: `ArcLink I/O          '                                   
+OPTN-008 Requires: `C-flex UIF           '                                   
+OPTN-008 Requires: `ArcTool Ramping      '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-002 Installed: `CPPOSTPC CAN CRASH DU'                                  
+OPTN-008 Requires: `iRVision UIF Controls'                                   
+OPTN-002 Installed: `CVIS Add reader visio'                                  
+OPTN-002 Installed: `$PASSWORD.$AUTOLOGIN '                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-002 Installed: `CP:fix CPMO-046 issue'                                  
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-008 Requires: `Lincoln Weld Eq Lib  '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-002 Installed: `J AUTO-T1 CPMO-130   '                                  
+OPTN-008 Requires: `Fronius Weld Eq Lib  '                                   
+OPTN-008 Requires: `ArcLink I/O          '                                   
+OPTN-002 Installed: `CVIS SET VARIABLES TO'                                  
+OPTN-002 Installed: `CVIS: 3D multi-view d'                                  
+OPTN-002 Installed: `Increase Number of FD'                                  
+OPTN-008 Requires: `Paint Mate 200iA/5L  '                                   
+OPTN-002 Installed: `CP: fix OS-144 with s'                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-002 Installed: `Robot Settings are lo'                                  
+OPTN-008 Requires: `PMC(FAPT Ladder)     '                                   
+OPTN-008 Requires: `iRVision 3DM Comm.   '                                   
+OPTN-002 Installed: `CP WAIT Mode 3 CNT0 T'                                  
+OPTN-008 Requires: `Vision SP CTEP       '                                   
+OPTN-008 Requires: `Vision SP CTBC       '                                   
+OPTN-008 Requires: `Vision SP CTML       '                                   
+OPTN-008 Requires: `Vision SP VPDS       '                                   
+OPTN-008 Requires: `Vision SP CTHS       '                                   
+OPTN-008 Requires: `Vision SP CTSO       '                                   
+OPTN-008 Requires: `Vision SP CTEV       '                                   
+OPTN-008 Requires: `Vision SP CTBL       '                                   
+OPTN-008 Requires: `Vision SP CCGP       '                                   
+OPTN-008 Requires: `Vision SP CCLV       '                                   
+OPTN-008 Requires: `Vision SP CTLN       '                                   
+OPTN-008 Requires: `Vision SP VPCB       '                                   
+OPTN-008 Requires: `Vision SP VPBS       '                                   
+OPTN-008 Requires: `Vision SP VPEP       '                                   
+OPTN-008 Requires: `iRVision SP VP3M     '                                   
+OPTN-008 Requires: `iRVision Sel Img Pth '                                   
+OPTN-008 Requires: `Vision Training UIF  '                                   
+OPTN-008 Requires: `Vision SP CTPA       '                                   
+OPTN-008 Requires: `Vision SP VPLM       '                                   
+OPTN-008 Requires: `Vision SP CTGC       '                                   
+OPTN-008 Requires: `Vision SP VP2M       '                                   
+OPTN-008 Requires: `Vision SP CTCS       '                                   
+OPTN-008 Requires: `iRVision 2D BC       '                                   
+OPTN-008 Requires: `Vision SP CTCT       '                                   
+OPTN-008 Requires: `Vision SP CTLD       '                                   
+OPTN-008 Requires: `Vision SP CCRG       '                                   
+OPTN-008 Requires: `Vision SP CTCY       '                                   
+OPTN-008 Requires: `Vision SP CTLP       '                                   
+OPTN-008 Requires: `Vision SP VPTS       '                                   
+OPTN-008 Requires: `Vision SP VPCS       '                                   
+OPTN-008 Requires: `Vision SP CCVT       '                                   
+OPTN-008 Requires: `Vision SP CTMW       '                                   
+OPTN-008 Requires: `Vision SP CTAC       '                                   
+OPTN-008 Requires: `Vision SP CTMO       '                                   
+OPTN-008 Requires: `Vision SP VPRD       '                                   
+OPTN-008 Requires: `Vision SP VPFF       '                                   
+OPTN-008 Requires: `Vision SP CTEH       '                                   
+OPTN-008 Requires: `Vision SP VPLC       '                                   
+OPTN-008 Requires: `Vision SP CTWS       '                                   
+OPTN-008 Requires: `Vision SP VP2S       '                                   
+OPTN-008 Requires: `Vision SP CTPC       '                                   
+OPTN-008 Requires: `Vision SP CTSC       '                                   
+OPTN-008 Requires: `Vision SP VPLS       '                                   
+OPTN-008 Requires: `Vision SP CTCP       '                                   
+OPTN-008 Requires: `Vision SP CTCB       '                                   
+OPTN-008 Requires: `Vision SP VPIS       '                                   
+OPTN-008 Requires: `Vision SP CTCE       '                                   
+OPTN-008 Requires: `Vision Image File CS '                                   
+OPTN-008 Requires: `Vision SP CTGL       '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-002 Installed: `Mirror Image Shift ca'                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Vision SP CTBC       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-002 Installed: `SPOT:When viewing STY'                                  
+OPTN-008 Requires: `Vision SP CTBC       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `Attempt to do GET_VAR'                                  
+OPTN-002 Installed: `VMGR LOAD REALLOCATE '                                  
+OPTN-002 Installed: `Arc Production Monito'                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `C-flex Tray Server   '                                   
+OPTN-002 Installed: `SELECT FILTERING IMPR'                                  
+OPTN-002 Installed: `REMOVE KAREL PROGRAM '                                  
+OPTN-002 Installed: `RIPE:STARTUP MAIN-MAI'                                  
+OPTN-002 Installed: `ASCII UPLOAD OF LINE '                                  
+OPTN-002 Installed: `PTTB: New ML Setup me'                                  
+OPTN-008 Requires: `Basic Process Axes   '                                   
+OPTN-008 Requires: `iRVision TorchMate   '                                   
+OPTN-002 Installed: `USB: memory allocatio'                                  
+OPTN-008 Requires: `Basic Process Axes   '                                   
+OPTN-002 Installed: `Torch Angle supports '                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Servo Robot          '                                   
+OPTN-008 Requires: `Universal Sensor IF  '                                   
+OPTN-008 Requires: `PickTool + iRVision  '                                   
+OPTN-008 Requires: `PickTool - iRVision  '                                   
+OPTN-002 Installed: `Enhanced thickness ch'                                  
+OPTN-002 Installed: `Support program touch'                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-002 Installed: `iRCalibration Signatu'                                  
+OPTN-008 Requires: `Palletizing          '                                   
+OPTN-008 Requires: `PalletTool Core      '                                   
+OPTN-008 Requires: `PalletTool           '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `Palletizing          '                                   
+OPTN-008 Requires: `PalletTool Core      '                                   
+OPTN-008 Requires: `PalletTool           '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `Support Thresh123    '                                  
+OPTN-008 Requires: `Auto SingularityAvoid'                                   
+OPTN-002 Installed: `HOST : MSG_PING asser'                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-002 Installed: `CP: All zero move tim'                                  
+OPTN-002 Installed: `CVIS: Improve 2D barc'                                  
+OPTN-008 Requires: `AccuCal2             '                                   
+OPTN-002 Installed: `SOMETIMES ON STARTUP '                                  
+OPTN-002 Installed: `SREG: Support string '                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `SREG: KANJI string no'                                  
+OPTN-008 Requires: `SMB Client           '                                   
+OPTN-008 Requires: `Vision SP CTBC       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `cvis vision data file'                                  
+OPTN-002 Installed: `PROGRAM INISITALIZATI'                                  
+OPTN-002 Installed: `Arc weave estop drift'                                  
+OPTN-002 Installed: `CVIS: Add minimum rec'                                  
+OPTN-008 Requires: `ROS Ethernet Packets '                                   
+OPTN-008 Requires: `iRCalib. Signature   '                                   
+OPTN-002 Installed: `CVIS: Problem with ro'                                  
+OPTN-002 Installed: `CVIS: Selected image '                                  
+OPTN-008 Requires: `Ethernet/IP Adapter  '                                   
+OPTN-002 Installed: `ASCII Load fails when'                                  
+OPTN-008 Requires: `Weaving              '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `CVIS Allow user to se'                                  
+OPTN-008 Requires: `EtherNet/IP Safety   '                                   
+OPTN-008 Requires: `ArcLink I/O          '                                   
+OPTN-008 Requires: `Lincoln Weld Eq Lib  '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `ROS Ethernet Packets '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-002 Installed: `SYSTEM FILES CAN GET '                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Program ToolBox      '                                   
+OPTN-002 Installed: `CVIS Include Error Re'                                  
+OPTN-008 Requires: `iRCalib. Signature   '                                   
+OPTN-002 Installed: `CPMO-014 with Group m'                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `C-flex UIF           '                                   
+OPTN-002 Installed: `Warning Prompt Box fo'                                  
+OPTN-002 Installed: `OVERWRITE OF LS FILE '                                  
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `Fix upgrade-related d'                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Lincoln Weld Eq Lib  '                                   
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-002 Installed: `Switching between IND'                                  
+OPTN-002 Installed: `GigE snap causing spo'                                  
+OPTN-002 Installed: `TPDRAM DOES NOT HANDL'                                  
+OPTN-002 Installed: `CVIS GET_READING not '                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-002 Installed: `GigE Interoperability'                                  
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `HOST: Handle leading '                                  
+OPTN-002 Installed: `CVIS: Image to points'                                  
+OPTN-002 Installed: `PORT FAST RIPE TO V7.'                                  
+OPTN-008 Requires: `C-flex Tray Server   '                                   
+OPTN-002 Installed: `CGTP: piMenus does no'                                  
+OPTN-002 Installed: `Line-Remark Paste RM-'                                  
+OPTN-002 Installed: `SHADOW PATH SAVE LOOS'                                  
+OPTN-008 Requires: `AccuCal2             '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-002 Installed: `Password Config - GLA'                                  
+OPTN-008 Requires: `C-flex Tray Manager  '                                   
+OPTN-008 Requires: `DeviceNet Interface  '                                   
+OPTN-008 Requires: `DeviceNet Safety     '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `Seal Common          '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `SPOT: Add plib suppor'                                  
+OPTN-002 Installed: `Ethernet Line Trackin'                                  
+OPTN-008 Requires: `Shape Generation II  '                                   
+OPTN-002 Installed: `Weave Hold CPMO-073  '                                  
+OPTN-008 Requires: `TorchMate            '                                   
+OPTN-008 Requires: `Seal Common          '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-002 Installed: `CP: arc weave plan er'                                  
+OPTN-008 Requires: `iRVision TorchMate   '                                   
+OPTN-008 Requires: `Weldtip Inspect SW   '                                   
+OPTN-002 Installed: `HTTP: Long delays wit'                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Weldtip Inspect SW   '                                   
+OPTN-008 Requires: `Weldtip Inspect SW   '                                   
+OPTN-008 Requires: `Multi-Arm Core Modul '                                   
+OPTN-008 Requires: `AccuCal2             '                                   
+OPTN-008 Requires: `AccuCal2             '                                   
+OPTN-008 Requires: `Multi-Arm Core Modul '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `Standard Color Change'                                   
+OPTN-008 Requires: `AccuChop             '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-002 Installed: `PTTB: Payload[2] not '                                  
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-002 Installed: `T1: group slowdown   '                                  
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-002 Installed: `DISABLE CPMEMCHK EXCE'                                  
+OPTN-002 Installed: `CP: MF + Local hold C'                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `iRCalib. Signature   '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `Speed Ramp           '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `iRCalib. Signature   '                                   
+OPTN-008 Requires: `Deflection Comp.     '                                   
+OPTN-002 Installed: `PIPE PROGRAM CAN BE C'                                  
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `LR PaintTool (N. A.) '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `IC Multi-Arm Recovery'                                   
+OPTN-008 Requires: `Wait/Release Comm    '                                   
+OPTN-008 Requires: `Interference Check   '                                   
+OPTN-008 Requires: `LR PaintTool (N. A.) '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `iRCalib. Signature   '                                   
+OPTN-008 Requires: `Deflection Comp.     '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `PickTool core        '                                   
+OPTN-008 Requires: `PalletTool Turbo     '                                   
+OPTN-008 Requires: `Seal Common          '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Common Color Change  '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `iRVision GiGe Camera '                                   
+OPTN-002 Installed: `TPDRAM DOES NOT RESTO'                                  
+OPTN-002 Installed: `Line Remark can cause'                                  
+OPTN-008 Requires: `Flex Tool            '                                   
+OPTN-008 Requires: `AccuCal2             '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Weaving              '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-002 Installed: `CP: False alarm CPMO-'                                  
+OPTN-002 Installed: `IRail: Add gravity to'                                  
+OPTN-002 Installed: `Copy to background pr'                                  
+OPTN-008 Requires: `Weaving              '                                   
+OPTN-002 Installed: `Line Remark does not '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `C-flex Tray Server   '                                   
+OPTN-008 Requires: `Integral Pump Control'                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-008 Requires: `Core PaintTool       '                                   
+OPTN-002 Installed: `SPOT: Stud weld can b'                                  
+OPTN-008 Requires: `Line/Rail Tracking   '                                   
+OPTN-002 Installed: `CVIS: UIF BUG FIX    '                                  
+OPTN-002 Installed: `DOT PETTERN BUG      '                                  
+OPTN-002 Installed: `EXPANSION DIGITAL I/O'                                  
+OPTN-002 Installed: `CVIS CCRG ENHANCEMENT'                                  
+OPTN-008 Requires: `FANUC ServoGun Change'                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Tool Change    '                                   
+OPTN-008 Requires: `Servo Hand Change    '                                   
+OPTN-002 Installed: `MLOCK CHK WITH GUNCHG'                                  
+OPTN-002 Installed: `EXTEND PROFILE STEPS '                                  
+OPTN-002 Installed: `VISION MEMORYLEAK FIX'                                  
+OPTN-008 Requires: `Vision SP CCRG       '                                   
+OPTN-002 Installed: `AUTO CALC WRDN RATIO '                                  
+OPTN-002 Installed: `CVIS:SPEC CHANGE OF V'                                  
+OPTN-008 Requires: `Initial Setting Load '                                   
+OPTN-002 Installed: `VMASTER FIX          '                                  
+OPTN-008 Requires: `Initial Setting Load '                                   
+OPTN-008 Requires: `Vision SP CTEP       '                                   
+OPTN-008 Requires: `Vision SP CTPC       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `DispenseTool         '                                   
+OPTN-002 Installed: `GRID PATTERN BUG FIX '                                  
+OPTN-008 Requires: `DispenseTool         '                                   
+OPTN-008 Requires: `NEMO Pump            '                                   
+OPTN-002 Installed: `PMC ETHERNET SUPPORT '                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Arc Abnormal Monitor '                                   
+OPTN-008 Requires: `Initial Setting Load '                                   
+OPTN-002 Installed: `DISPENSE INST IMPROVE'                                  
+OPTN-008 Requires: `FL-net               '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `BROWSER TOOL RMV ADD '                                  
+OPTN-008 Requires: `FANUC ServoGun Change'                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Spot Program Touchup '                                   
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-002 Installed: `FIX DCS COUNT3 ALARM '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `SVGN EARLY WELD INIT '                                  
+OPTN-002 Installed: `STOP PATTERN DISPLAY '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `IMP SPD SEARCH ALARMS'                                  
+OPTN-008 Requires: `SSG Common           '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Spot Program Touchup '                                   
+OPTN-002 Installed: `TOUCHUP AND OFFSET   '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `ADD VISION ERROR CODE'                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `WRONG CURSOR POSITION'                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `FIX SVGN-158         '                                  
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Tracking Softpart    '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Integral Weld Control'                                   
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-002 Installed: `RSR IS NOT USABLE    '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `FIX GUNTCHUP FUNCTION'                                  
+OPTN-002 Installed: `TOUCHUP WITH OFFSET  '                                  
+OPTN-008 Requires: `Palletizing          '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-002 Installed: `FIX DB BUSY RUNNING  '                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Vision SP CCRG       '                                   
+OPTN-002 Installed: `FIX BRKCTRL PROBLEM  '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `PMC(FAPT Ladder)     '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Nadex DeviceNet WC   '                                   
+OPTN-002 Installed: `VISION AXIS MASTER   '                                  
+OPTN-002 Installed: `FIX VMASTER ISSUE    '                                  
+OPTN-008 Requires: `InterBus PxC         '                                   
+OPTN-008 Requires: `PMC(FAPT Ladder)     '                                   
+OPTN-002 Installed: `IMPROVED CTSI MASK   '                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `CIPSAFETY CLOCK CHECK'                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `FIX LOADING DB SYSVAR'                                  
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Spot Program Touchup '                                   
+OPTN-002 Installed: `ENHANCED SVGN TWD    '                                  
+OPTN-002 Installed: `DCS INVALID ZONE     '                                  
+OPTN-002 Installed: `FIX BUSY WITH DUALGUN'                                  
+OPTN-002 Installed: `DCS TOOL FRAME FIX   '                                  
+OPTN-008 Requires: `C-flex Environment   '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `PR INDEX FOR TOUCHUP '                                  
+OPTN-002 Installed: `WRONG UF FOR PALLET  '                                  
+OPTN-002 Installed: `FIX SRVO117 AT STRTUP'                                  
+OPTN-008 Requires: `DCS Pos./Speed check '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-002 Installed: `FIX FALSE INTP247    '                                  
+OPTN-008 Requires: `PROFINET I/O         '                                   
+OPTN-002 Installed: `PLID SUPPORT HIGH ACC'                                  
+OPTN-002 Installed: `SUPPORT SNPX COMMAND '                                  
+OPTN-002 Installed: `FIX CANNOT SAVE VR FI'                                  
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Arc Abnormal Monitor '                                   
+OPTN-008 Requires: `PROFINET I/O         '                                   
+OPTN-008 Requires: `Palletizing          '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-002 Installed: `FIX VISION GRID DETEC'                                  
+OPTN-008 Requires: `PROFINET I/O         '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `iRVision Core        '                                   
+OPTN-008 Requires: `iRVision Core VCPU   '                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-008 Requires: `iRCalibration VMaster'                                   
+OPTN-008 Requires: `iRCalibration VMRecov'                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-008 Requires: `LVC function         '                                   
+OPTN-002 Installed: `FIX ARC INSTRUCTION  '                                  
+OPTN-008 Requires: `LVC function         '                                   
+OPTN-002 Installed: `FIX CALL INSTRUCTION '                                  
+OPTN-008 Requires: `Multi Robot Basic    '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `PROFINET I/O         '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `FIX FALSE CPMO-073   '                                  
+OPTN-002 Installed: `GRID DETECT BUG FIX  '                                  
+OPTN-008 Requires: `iRCalibration VMaster'                                   
+OPTN-008 Requires: `iRCalibration VMCal  '                                   
+OPTN-008 Requires: `iRCalibration VMRecov'                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-008 Requires: `iRCalibration GnktVM '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-008 Requires: `Servo Gun Core       '                                   
+OPTN-002 Installed: `FIX GUNCHG SVGUN DROP'                                  
+OPTN-008 Requires: `iRCalibration VMaster'                                   
+OPTN-008 Requires: `iRCalibration VMRecov'                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-008 Requires: `iRCalibration GnktVM '                                   
+OPTN-008 Requires: `iRCalibration GnktVM '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Arc Softpart         '                                   
+OPTN-008 Requires: `Lincoln Weld Eq Lib  '                                   
+OPTN-008 Requires: `Palletizing          '                                   
+OPTN-008 Requires: `Spot Plug-in         '                                   
+OPTN-008 Requires: `LVC function         '                                   
+OPTN-008 Requires: `TorchMate            '                                   
+OPTN-002 Installed: `ARMBEND ITP4MS BUGFIX'                                  
+OPTN-008 Requires: `Weldtip Inspect SW   '                                   
+OPTN-008 Requires: `WeldTip Inspection   '                                   
+OPTN-002 Installed: `FIX RCOPY FUNCTION   '                                  
+OPTN-008 Requires: `Commet set           '                                   
+OPTN-008 Requires: `Seal Common          '                                   
+OPTN-008 Requires: `iRCalibration VMaster'                                   
+OPTN-008 Requires: `iRCalibration VMRecov'                                   
+OPTN-002 Installed: `VISION DETECT BUG FIX'                                  
+OPTN-008 Requires: `iRCalibration VMaster'                                   
+OPTN-008 Requires: `iRCalibration VMRecov'                                   
+OPTN-008 Requires: `PMC(FAPT Ladder)     '                                   
+OPTN-002 Installed: `FIX SKIP PROBLEM     '                                  
+OPTN-002 Installed: `FIX CMP POS DATA SIZE'                                  
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-008 Requires: `iRCalibration VAxis  '                                   
+OPTN-002 Installed: `OS-147 START-UP      '                                  
+"[swilib] Done with frs:init2.com"
+OPTN-018 No Language additions on this media                                 
+"Install Customization"
+OPTN-018 No CUSTOMIZ additions on this media                                 
+"CONTROL2 complete"
+"INIT3 for V7.70P/53 (FD V7.70.07)"
+"INIT3 complete"
+[syinit]CONTROL2 command status  0
+[NTSYIN_STEP] Startup Step #64
+[SYINISUB] forcing user device MC: was PATH:
+[FTP] FTP Interface V5.10
+[FTP] FTP debug addr = 2F91B880
+[FTP] Ethernet event flag received.
+[NTSYIN_STEP] Startup Step #65
+[TPSPART] Found KAREL ATMSKCHG 200
+[TPSPART] Found KAREL ROBMAINT 201
+[TPSPART] Found KAREL ATPRGADJ 930
+[TPSPART] Found KAREL ATWAITRL 931
+[TPSPART] Found KAREL ATPRSCRN 932
+[TPSPART] Found KAREL ATPASWRD 935
+[TPSPART] Found KAREL ATINSTAL 936
+[TPKSINIT] dname -K943- not found devstat = 0 cfg $8FB2A48
+[TPSPART] Found KAREL ATCELLIO 955
+[TPSPART] Found KAREL HTSETUP 962
+[TPKSINIT] dname -K972- not found devstat = 0 cfg $8F20498
+[TPKSINIT] dname -K973- not found devstat = 0 cfg $8F1759C
+[TPSPART] Found KAREL ATSOFTPA 992
+[FTP] getservbyname failed
+[FTP] getservbyname failed
+[hcnetupt] synetrd failed FFFFFFFF
+[TPHCCOMM] bad tp core ver format ..
+[tphlplod] No help option
+[NTSYIN_STEP] Startup Step #66
+[TPMAIN] AUTOUPDT.DAT is removed
+[syinisub] running @FRS:autoctrl.com
+"[swiupdt] MED:\CUSTOM\UPDTCUSA.COM not found "
+med:update\pr41670x\ap.com Opening
+OPTN-002 Installed: `FVR FILE SAVED FOR TP'                                  
+frs:pr41670x.com Opening
+[DSFL] No cch entry 0x100006
+med:update\pr43516\ap.com Opening
+OPTN-002 Installed: `FANUC AU FAIL        '                                  
+frs:pr43516.com Opening
+[SPRUNCMDF]control restrore sequence start
+[osppc] Tick time changed -20000
+[vdat] num_run 2, runtime_size 1380, image_size 322167
+[vxlib] osxsndpkt() 0x0000010C
+[vdat] vxlib_check_feature stat=$ 10C
+[ntsyin] VIRTUAL enabling all web options
+[SKMG] Socket Messaging Interface V5.22 @0x2F3012F0
+[TELNET] start
+[TELNET] debug address 2FD11FEC
+[TELNET] Ethernet event flag received.
+[ntsyin] VIRTUAL setting $MSKSIGN=0
+[ntsyin] VIRTUAL setting $MSKCONREL=0
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmiloadf] $GROUP created by TD:\SYSVARS.SV
+VARS-052 Variable $AUTOBACKUP converted                                      
+VARS-005 $DB_RECORD PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $DB_RECORD converted                                       
+VARS-005 $PGTRACECTL PC array length ignored                                 
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $PGTRACECTL converted                                      
+VARS-005 $PGTRACEDT PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $PGTRACEDT converted                                       
+VARS-005 $REFPOS1 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS1 converted                                         
+VARS-005 $REFPOS2 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS2 converted                                         
+VARS-005 $REFPOS3 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS3 converted                                         
+VARS-005 $REFPOS4 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS4 converted                                         
+VARS-005 $REFPOS5 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS5 converted                                         
+VARS-005 $REFPOS6 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS6 converted                                         
+VARS-005 $REFPOS7 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS7 converted                                         
+VARS-005 $REFPOS8 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS8 converted                                         
+VARS-052 Variable $RSCH_LOG converted                                        
+VARS-052 Variable $VISION_CFG converted                                      
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-206 SYSVARS.SV will load at startup                                     
+SYST-039 Operation mode T2 Selected                                            
+SYST-043 TP disabled in T1/T2 mode                                             
+SYST-043 TP disabled in T1/T2 mode                                             
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-052 Variable $MACROTABLE converted                                      
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:s-posreg.PRV backed up to FRB:s-posreg.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[VM_CPCOPY_RC] FRS:\LR2C.DT
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:tpfdef.PRV backed up to FRB:tpfdef.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-numreg.PRV backed up to FRB:s-numreg.VBK
+[vmimage_bakfile] FRB:s-posreg.PRV backed up to FRB:s-posreg.VBK
+[vmimage_bakfile] FRB:s-strreg.PRV backed up to FRB:s-strreg.VBK
+[VM_CPCOPY_RC] FR:\PANEL1.STM
+[VM_CPCOPY_RC] FR:\PANEL2.STM
+[VM_CPCOPY_RC] FR:\PANEL3.STM
+[VM_CPCOPY_RC] FR:\PANEL4.STM
+[VM_CPCOPY_RC] FR:\AMBERLED.GIF
+[VM_CPCOPY_RC] FR:\DARKLED.GIF
+[VM_CPCOPY_RC] FR:\GREENLED.GIF
+[VM_CPCOPY_RC] FR:\NBUTTON.GIF
+[VM_CPCOPY_RC] FR:\PBUTTON.GIF
+[VM_CPCOPY_RC] FR:\REDLED.GIF
+[VM_CPCOPY_RC] FR:\SPACER.GIF
+[VM_CPCOPY_RC] FR:\XXXXXLED.GIF
+[VM_CPCOPY_RC] FR:\PANEL1.DT
+[VM_CPCOPY_RC] FR:\PANEL2.DT
+[VM_CPCOPY_RC] FR:\PANEL3.DT
+[VM_CPCOPY_RC] FR:\PANEL4.DT
+[VM_CPCOPY_RC] FR:\TPEINS.XML
+TPIF-218 MED:\00\TEMP\GETDATA.TP failed to load                              
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\REQMENU.TP failed to load                              
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDDATA.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDEVNT.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDSYSV.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\TPREC.TP failed to load                                
+MEMO-006 Protection error occurred                                             
+[spruncmdf] Did xcopy, from: MED:\00\TEMP\FR\*.* to: FR:\*.*, with stat:0
+[spruncmdf] Did xcopy, from: MED:\00\TEMP\FRA\*.* to: FRA:\*.*, with stat:0
+Error - file MED:\IMGALL.COM is being opened for writing.
+Error - file \IMGALL.COM is being opened for writing.
+[sprun] Found 0 files in initload
+[SPRUN] Restarting CTRL sequence
+[syrestart] Restart = 1
+[syrestart_pendant] Restart = 1
+[vminit_restart] Saving variable context
+[vmimage_bakfile] FRB:atshell.PRV backed up to FRB:atshell.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[SYRESTART] switching modes from 1 to 1
+[pal_reset] Restarting system
+Switching states: old = STARTUP   new = RESTART 
+Tick            Avg: 2.383 ms, Min: 0.000 ms, Max: 5011.874 ms, ticks: 12378
+Execution times Avg: 0.003 ms, Min: 0.000 ms, Max: 0.027 ms
+Switching states: old = RESTART   new = STARTUP 
+[NTINIT] Frequency 10000000, Ticks/ms 10000 BusClock 40000000
+[IEWTQ] Count = 0 add to head/tail task: 199  cnt: 24  pri: 10
+[osppc] Virtual Clock timer device resolution discovery suceeded, min res: 1 ms
+[NTPORT] Ready for connections at 9100
+[NTPORT] Ready for connections at 9101
+[NTPORT] Ready for connections at 9102
+[NTPORT] Ready for connections at 9103
+[OSSERV] VIRTUAL not doing multi-processing service
+main bus clock 40
+main PCB version 4
+[ostkinit] TPWDOG_CHK $0
+ 
+[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
+[ksinitsk] syin continues
+Updated $MC_PATH = C:\Git\KARELC~1\TCPCAL~1\Robot_1\mc
+Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
+Updated $UD1_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\ud1
+Updated $UD2_PATH to = C:\Git\KARELC~1\TCPCAL~1\Robot_1\ud2
+[syinit] bootrom time: 429476 ms
+[syinit] ** CONTROLLED START **
+[syinit] System Version V7.70107      10/3/2018
+[ERLOG] Waiting for UIF to start up
+[syinisb0]VIRTUAL case,setting master_p->initializing to FALSE
+[ostkinit] ID $31 type 1D baud 31 version I
+[ostkinit] TP Baud Rate 19200
+[NTPORT] accept connection
+[syinit] ** CONTROLLED START **
+[dpinit] setting cur lang to NULL
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[sycfgmen] cfgmenu_p 0x406F758C
+[ostkinit] TPWDOG_CHK+2 $1000
+[syinisb0] tpid check ltp = 0x6191A50, tpid = 49
+[NTSYIN_STEP] Startup Step #67
+VMGR for R-J3iC V7.20
+[vmshadow_periodic] Normal power shutdown state = 0
+[vminit_loadctx] Loaded FRB:\S-SYSTEM.PRV only
+[vminit_loadctx] Loaded FRB:\S-INTERN.PRV only
+[vminit_loadctx] Done Loading Time = 22353us
+[vmiloadf] $GROUP created by FR:\initload\SYSVARS.SV
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[NTSYIN_STEP] Startup Step #68
+[ntspfload] Skipping \CETX.DLL because it is already loaded
+[ntspfload] Skipping \DVHTTP.DLL because it is already loaded
+[ntspfload] Skipping \HTTPD.DLL because it is already loaded
+[ntspfload] Skipping \PMON.DLL because it is already loaded
+[ntspfload] Skipping \RPCLIB.DLL because it is already loaded
+[ntspfload] Skipping \RPCM.DLL because it is already loaded
+[ntspfload] Skipping \RPCMAINS.DLL because it is already loaded
+[ntspfload] Skipping \RPCDAQS.DLL because it is already loaded
+[ntspfload] Skipping \SFDIAGTP.DLL because it is already loaded
+[ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \TMILIB.DLL
+[ntspfload] Skipping \TPTX.DLL because it is already loaded
+[NTSYIN_STEP] Startup Step #69
+[TX] Start
+[PMON] PC Monitor Task
+[rpcm] create TCP/IP RPC service
+[svctcp_create] RPCMAIN Server ready for connections on 3002
+[rpcm] call softparts to register service
+[rpcdaqs] register RPCDAQS service
+[rpcm] wait for connection
+[syinit] spmk2tsk(HTCG), status = $0
+CGTP WEB Server starting
+Web Enhancements installed
+[HTCG]: Binding to tcp port number 3080
+[HTTPD] ready for connections
+[syinisb0] Legacy 2, tpid = 49
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30821616
+[dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 220 Time 0ms
+[dpimage_restctx] Dictionaries loaded pool_avail = 29983964
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[NTSYIN_STEP] Startup Step #70
+[SYINISB0] Loading main system softparts please wait ...
+[ntspfload] Skipping \ASBN.DLL because it is already loaded
+[ntspfload] Skipping \BGLG.DLL because it is already loaded
+[ntspfload] Skipping \BINASC.DLL because it is already loaded
+[ntspfload] Skipping \CFMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \COMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPTPMAIN.DLL because it is already loaded
+[ntspfload] Skipping \CRCRC.DLL because it is already loaded
+[ntspfload] Skipping \CSXC.DLL because it is already loaded
+[ntspfload] Skipping \DAQSP.DLL because it is already loaded
+[ntspfload] Skipping \DAQTSKSP.DLL because it is already loaded
+[NTFRCPY] Did not load \DCSTSK.DLL
+[ntspfload] Skipping \DVFORM.DLL because it is already loaded
+[ntspfload] Skipping \DVHTT2.DLL because it is already loaded
+[ntspfload] Skipping \DVNEWMD.DLL because it is already loaded
+[ntspfload] Skipping \ERRSEV.DLL because it is already loaded
+[ntspfload] Skipping \FTP.DLL because it is already loaded
+[ntspfload] Skipping \GENLINK.DLL because it is already loaded
+[ntspfload] Skipping \GLOFILE.DLL because it is already loaded
+[ntspfload] Skipping \HCLIB.DLL because it is already loaded
+[ntspfload] Skipping \HCOM.DLL because it is already loaded
+[ntspfload] Skipping \IPGENSET.DLL because it is already loaded
+[ntspfload] Skipping \KCL.DLL because it is already loaded
+[ntspfload] Skipping \KCLIB.DLL because it is already loaded
+[ntspfload] Skipping \LCMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \LGSP.DLL because it is already loaded
+[ntspfload] Skipping \LUSAT2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSLSMN.DLL because it is already loaded
+[ntspfload] Skipping \LUSMN2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSPS2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSWBIAS.DLL because it is already loaded
+[ntspfload] Skipping \MKSP.DLL because it is already loaded
+[ntspfload] Skipping \MNTBLSP.DLL because it is already loaded
+[ntspfload] Skipping \MODAQ.DLL because it is already loaded
+[ntspfload] Skipping \MR.DLL because it is already loaded
+[ntspfload] Skipping \NE.DLL because it is already loaded
+[ntspfload] Skipping \NECALC.DLL because it is already loaded
+[ntspfload] Skipping \NTMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \OTCASE.DLL because it is already loaded
+[ntspfload] Skipping \OTTASK.DLL because it is already loaded
+[ntspfload] Skipping \PBDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PBIOBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBIOSETU.DLL because it is already loaded
+[ntspfload] Skipping \PBMARRY.DLL because it is already loaded
+[ntspfload] Skipping \PBMBYNAM.DLL because it is already loaded
+[ntspfload] Skipping \PBMCORE.DLL because it is already loaded
+[ntspfload] Skipping \PBMERRS.DLL because it is already loaded
+[ntspfload] Skipping \PBMFDEV.DLL because it is already loaded
+[ntspfload] Skipping \PBMFLBT.DLL because it is already loaded
+[ntspfload] Skipping \PBMKCLOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMMEMO.DLL because it is already loaded
+[ntspfload] Skipping \PBMMIR.DLL because it is already loaded
+[ntspfload] Skipping \PBMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \PBMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \PBMPATH.DLL because it is already loaded
+[ntspfload] Skipping \PBMQMGR.DLL because it is already loaded
+[ntspfload] Skipping \PBMREGOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMSTRNG.DLL because it is already loaded
+[ntspfload] Skipping \PBMTIME.DLL because it is already loaded
+[ntspfload] Skipping \PBMTPE.DLL because it is already loaded
+[ntspfload] Skipping \PBMUIF.DLL because it is already loaded
+[ntspfload] Skipping \PBMVECTR.DLL because it is already loaded
+[ntspfload] Skipping \PBPC.DLL because it is already loaded
+[ntspfload] Skipping \PBSWGBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBXML.DLL because it is already loaded
+[ntspfload] Skipping \PGDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PGSETUP.DLL because it is already loaded
+[ntspfload] Skipping \PIMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \POMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \PROXY.DLL because it is already loaded
+[ntspfload] Skipping \RDGNTASK.DLL because it is already loaded
+[ntspfload] Skipping \RDM.DLL because it is already loaded
+[ntspfload] Skipping \RFLR2C.DLL because it is already loaded
+[ntspfload] Skipping \SCP.DLL because it is already loaded
+[ntspfload] Skipping \SFAPMHND.DLL because it is already loaded
+[ntspfload] Skipping \SFATBCK.DLL because it is already loaded
+[ntspfload] Skipping \SFCNTREL.DLL because it is already loaded
+[ntspfload] Skipping \SFDRYRN.DLL because it is already loaded
+[ntspfload] Skipping \SFEXHIST.DLL because it is already loaded
+[ntspfload] Skipping \SFEXTSET.DLL because it is already loaded
+[ntspfload] Skipping \SFIOLNK.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSLC2.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSTD.DLL because it is already loaded
+[ntspfload] Skipping \SFKAREL.DLL because it is already loaded
+[ntspfload] Skipping \SFMACC.DLL because it is already loaded
+[ntspfload] Skipping \SFMAIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMAPPL.DLL because it is already loaded
+[ntspfload] Skipping \SFMARTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMCALL.DLL because it is already loaded
+[ntspfload] Skipping \SFMCLB.DLL because it is already loaded
+[ntspfload] Skipping \SFMCTRLS.DLL because it is already loaded
+[ntspfload] Skipping \SFMDEST.DLL because it is already loaded
+[ntspfload] Skipping \SFMDIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMIF.DLL because it is already loaded
+[ntspfload] Skipping \SFMINC.DLL because it is already loaded
+[ntspfload] Skipping \SFMJUMP.DLL because it is already loaded
+[ntspfload] Skipping \SFMLOGIC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMACRO.DLL because it is already loaded
+[ntspfload] Skipping \SFMMISC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMIX.DLL because it is already loaded
+[ntspfload] Skipping \SFMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \SFMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \SFMNFOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNHM.DLL because it is already loaded
+[ntspfload] Skipping \SFMNLIB.DLL because it is already loaded
+[ntspfload] Skipping \SFMNMIR.DLL because it is already loaded
+[ntspfload] Skipping \SFMNOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNSFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMOFST.DLL because it is already loaded
+[ntspfload] Skipping \SFMPCTL.DLL because it is already loaded
+[ntspfload] Skipping \SFMPITM.DLL because it is already loaded
+[ntspfload] Skipping \SFMPREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMPTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMQSKP.DLL because it is already loaded
+[ntspfload] Skipping \SFMREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMSKIP.DLL because it is already loaded
+[ntspfload] Skipping \SFMSREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMTIME.DLL because it is already loaded
+[ntspfload] Skipping \SFMTOFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWAIT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWHEN.DLL because it is already loaded
+[ntspfload] Skipping \SFOVSL.DLL because it is already loaded
+[ntspfload] Skipping \SFPSMMR.DLL because it is already loaded
+[ntspfload] Skipping \SFRDIAG.DLL because it is already loaded
+[ntspfload] Skipping \SFREFPOS.DLL because it is already loaded
+[ntspfload] Skipping \SFTHRIO2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALRM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPCMN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDATA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDCS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFIL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFILS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPGUI.DLL because it is already loaded
+[ntspfload] Skipping \SFTPJGM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPKY2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPMFTN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPPOSN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSOP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSRVO.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTUP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYSV.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTCH2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTSTC.DLL because it is already loaded
+[ntspfload] Skipping \SFTPUTIL.DLL because it is already loaded
+[ntspfload] Skipping \SFVCCM.DLL because it is already loaded
+[ntspfload] Skipping \SFVRGR.DLL because it is already loaded
+[ntspfload] Skipping \SFVSHIF.DLL because it is already loaded
+[ntspfload] Skipping \SFVTRN.DLL because it is already loaded
+[ntspfload] Skipping \SMACC.DLL because it is already loaded
+[ntspfload] Skipping \SMBASVAR.DLL because it is already loaded
+[ntspfload] Skipping \SMC.DLL because it is already loaded
+[ntspfload] Skipping \SMENET.DLL because it is already loaded
+[ntspfload] Skipping \SMEVO.DLL because it is already loaded
+[ntspfload] Skipping \SMJ.DLL because it is already loaded
+[ntspfload] Skipping \SMLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTASK.DLL because it is already loaded
+[ntspfload] Skipping \SMTLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTPLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \SMUSB.DLL
+[ntspfload] Skipping \SNPX.DLL because it is already loaded
+[ntspfload] Skipping \SSSSPACE.DLL because it is already loaded
+[ntspfload] Skipping \SYOPINSP.DLL because it is already loaded
+[ntspfload] Skipping \SYPNS.DLL because it is already loaded
+[ntspfload] Skipping \SYRSR.DLL because it is already loaded
+[ntspfload] Skipping \SYSHXSP.DLL because it is already loaded
+[ntspfload] Skipping \TBC.DLL because it is already loaded
+[ntspfload] Skipping \TBJ.DLL because it is already loaded
+[ntspfload] Skipping \TBTASKSP.DLL because it is already loaded
+[ntspfload] Skipping \TCPMSG.DLL because it is already loaded
+[ntspfload] Skipping \TELNET.DLL because it is already loaded
+[ntspfload] Skipping \TKLIB.DLL because it is already loaded
+[ntspfload] Skipping \TPACCN.DLL because it is already loaded
+[ntspfload] Skipping \TPANAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPATBTSK.DLL because it is already loaded
+[ntspfload] Skipping \TPAXLM.DLL because it is already loaded
+[ntspfload] Skipping \TPCHOV.DLL because it is already loaded
+[ntspfload] Skipping \TPCOOR.DLL because it is already loaded
+[ntspfload] Skipping \TPDAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDIGIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDMEM.DLL because it is already loaded
+[ntspfload] Skipping \TPEXTDIO.DLL because it is already loaded
+[ntspfload] Skipping \TPFMEM.DLL because it is already loaded
+[ntspfload] Skipping \TPFRAME.DLL because it is already loaded
+[ntspfload] Skipping \TPGRPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPGUI.DLL because it is already loaded
+[ntspfload] Skipping \TPHCCOMM.DLL because it is already loaded
+[ntspfload] Skipping \TPHCHTMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPGMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPPMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPRMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCRPHS.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTAMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTCMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHINTS.DLL because it is already loaded
+[ntspfload] Skipping \TPKM909.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1200.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1201.DLL because it is already loaded
+[ntspfload] Skipping \TPKS930.DLL because it is already loaded
+[ntspfload] Skipping \TPKS931.DLL because it is already loaded
+[ntspfload] Skipping \TPKS932.DLL because it is already loaded
+[ntspfload] Skipping \TPKS935.DLL because it is already loaded
+[ntspfload] Skipping \TPKS936.DLL because it is already loaded
+[ntspfload] Skipping \TPKS943.DLL because it is already loaded
+[ntspfload] Skipping \TPKS955.DLL because it is already loaded
+[ntspfload] Skipping \TPKS962.DLL because it is already loaded
+[ntspfload] Skipping \TPKS972.DLL because it is already loaded
+[ntspfload] Skipping \TPKS973.DLL because it is already loaded
+[ntspfload] Skipping \TPKS992.DLL because it is already loaded
+[ntspfload] Skipping \TPMASCAL.DLL because it is already loaded
+[ntspfload] Skipping \TPOPLG.DLL because it is already loaded
+[ntspfload] Skipping \TPOTREL.DLL because it is already loaded
+[ntspfload] Skipping \TPPASCFG.DLL because it is already loaded
+[ntspfload] Skipping \TPPRTFTN.DLL because it is already loaded
+[ntspfload] Skipping \TPROBIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSAVE.DLL because it is already loaded
+[ntspfload] Skipping \TPSETGEN.DLL because it is already loaded
+[ntspfload] Skipping \TPSFTY.DLL because it is already loaded
+[ntspfload] Skipping \TPSOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSPRINT.DLL because it is already loaded
+[ntspfload] Skipping \TPTSTRUN.DLL because it is already loaded
+[ntspfload] Skipping \TPUOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER2.DLL because it is already loaded
+[ntspfload] Skipping \TPVERSN.DLL because it is already loaded
+[ntspfload] Skipping \TPVEXE.DLL because it is already loaded
+[NTFRCPY] Did not load \UECK.DLL
+[ntspfload] Skipping \VASCLIB.DLL because it is already loaded
+[ntspfload] Skipping \VCAM.DLL because it is already loaded
+[ntspfload] Skipping \VCVT.DLL because it is already loaded
+[ntspfload] Skipping \VDAT.DLL because it is already loaded
+[ntspfload] Skipping \VDLIB.DLL because it is already loaded
+[ntspfload] Skipping \VEXE.DLL because it is already loaded
+[ntspfload] Skipping \VGPM.DLL because it is already loaded
+[ntspfload] Skipping \VIPL.DLL because it is already loaded
+[ntspfload] Skipping \VLLIB.DLL because it is already loaded
+[ntspfload] Skipping \VLOG.DLL because it is already loaded
+[ntspfload] Skipping \VSFT.DLL because it is already loaded
+[NTFRCPY] Did not load \VSMO.DLL
+[ntspfload] Skipping \VTRN.DLL because it is already loaded
+[ntspfload] Skipping \VXLIB.DLL because it is already loaded
+[ntspfload] Skipping \VXMN.DLL because it is already loaded
+[ntspfload] Skipping \WEBEXEC.DLL because it is already loaded
+[NTFRCPY] Did not load \YBOX.DLL
+[SYSINISB0] spspload reference time 44355 ms, This Time 1922ms
+[vminit_loadctx] Loading all files
+[vminit_loadctx] Done Loading Time = 26818us
+[Syin] Mobo start 0xFFFFFFFF
+[NTSYIN_STEP] Startup Step #71
+[SYINISB)] total time 2956
+[NTSYIN_STEP] Startup Step #72
+[NTSYIN_STEP] Startup Step #73
 [SYINISUB] Saving user device MC:
 [SNPX] Client_Type 1, Port 18245
 [SNPX] Client_Type 2, Port 60008
 [syporti]pkt send to TLNT fails 10C
-[NTSYIN_STEP] Startup Step #8
-[NTSYIN_STEP] Startup Step #9
+[NTSYIN_STEP] Startup Step #74
+[ntsyin] VIRTUAL enabling all web options
+[SKMG] Socket Messaging Interface V5.22 @0x2F3012F0
+[TELNET] start
+[TELNET] debug address 2FD11FEC
+[TELNET] Ethernet event flag received.
+[ntsyin] VIRTUAL setting $MSKSIGN=0
+[ntsyin] VIRTUAL setting $MSKCONREL=0
+[ostksock_create] Socket 1308 binding to IP port # 60004
+[ostksock_create] T-X IP address <001.001.001.011>
+[NTSYIN_STEP] Startup Step #75
 [syinit] : calling iosetup
 [ripini] Initializing
 [ripini] SID_RIPSERV task start status = 0x380001
-[NTSYIN_STEP] Startup Step #10
-[NTSYIN_STEP] Startup Step #11
+[NTSYIN_STEP] Startup Step #76
+[NTSYIN_STEP] Startup Step #77
+[syinisub] Memory manager started
+[mmiage_init] TP DRAM Imaging system startup
+MEMO for R-J3iC Version V7.50 Rev-0
+[NTSYIN_STEP] Startup Step #78
+[NTSYIN_STEP] Startup Step #79
+[NTSYIN_STEP] Startup Step #80
+[NTSYIN_STEP] Startup Step #81
+[syinit] mosetvpr status #2<0>
+
+[syinisub] status after vmgetvar #2 = $0
+[NTSYIN_STEP] Startup Step #82
+[NTSYIN_STEP] Startup Step #83
+[syinit] mosetvpr status <0>
+[NTSYIN_STEP] Startup Step #84
+[SMTPXML] SMTP option not loaded
+[NTSYIN_STEP] Startup Step #85
+[ERLOG] continue stat = 0x0
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-052 Variable $AUTOBACKUP converted                                      
+VARS-005 $DB_RECORD PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $DB_RECORD converted                                       
+VARS-005 $PGTRACECTL PC array length ignored                                 
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $PGTRACECTL converted                                      
+VARS-005 $PGTRACEDT PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $PGTRACEDT converted                                       
+VARS-052 Variable $RSCH_LOG converted                                        
+VARS-052 Variable $VISION_CFG converted                                      
+VARS-207 SYSVARS.SV loaded at startup                                        
+[NTSYIN_STEP] Startup Step #86
+[syinisub] VMGR called to register program with MEMO
+[NTSYIN_STEP] Startup Step #87
+[NTSYIN_STEP] Startup Step #88
+[NTSYIN_STEP] Startup Step #89
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[NTSYIN_STEP] Startup Step #90
+[NTSYIN_STEP] Startup Step #91
+[NTSYIN_STEP] Startup Step #92
+[sytimque]: trigger loaded 0
+[CHND] Low Priority Condition Handler started.
+[CHND] init done. starting scanning
+[tpmains_start] executing legacy mode case
+[NTSYIN_STEP] Startup Step #93
+[SYINIT] OCTK started 380001
+[NTSYIN_STEP] Startup Step #94
+[NTSYIN_STEP] Startup Step #95
+[sycgtp] LED time = 0 ms
+[sycgtp] EXT time = 0 ms
+[NTSYIN_STEP] Startup Step #96
+"CONTROL1 for V7.70P/53 (FD V7.70.07)"
+"MENU for V7.70P/53 (FD V7.70.07)"
+"MENU complete"
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vdat] wake up
+[vdat] oschggrp(112, 4, 0) 0x00000000
+WEB Server starting
+Web Enhancements installed
+[HTTP]: Binding to tcp port number 80
+[HTTPD] ready for connections
+[vdat] num_run 2, runtime_size 1380, image_size 322167
+[vxlib] osxsndpkt() 0x0000010C
+[vdat] vxlib_check_feature stat=$ 10C
+[ASBN] started
+[vmimage_bakfile] FRB:svparam.PRV backed up to FRB:svparam.VBK
+[vmimage_bakfile] FRB:tjparam.PRV backed up to FRB:tjparam.VBK
+[vmimage_bakfile] FRB:tlparam.PRV backed up to FRB:tlparam.VBK
+[vmimage_bakfile] FRB:piparam.PRV backed up to FRB:piparam.VBK
+[vmimage_bakfile] FRB:csfparam.PRV backed up to FRB:csfparam.VBK
+[vmimage_bakfile] FRB:vcparam.PRV backed up to FRB:vcparam.VBK
+[vmimage_bakfile] FRB:dtparam.PRV backed up to FRB:dtparam.VBK
+[vmimage_bakfile] FRB:dgparam.PRV backed up to FRB:dgparam.VBK
+[vmimage_bakfile] FRB:smparam.PRV backed up to FRB:smparam.VBK
+[vmimage_bakfile] FRB:muparam.PRV backed up to FRB:muparam.VBK
+[vmimage_bakfile] FRB:fcparam.PRV backed up to FRB:fcparam.VBK
+[vmimage_bakfile] FRB:cpparam.PRV backed up to FRB:cpparam.VBK
+[vmimage_bakfile] FRB:dcparam.PRV backed up to FRB:dcparam.VBK
+[vmimage_bakfile] FRB:wvparam.PRV backed up to FRB:wvparam.VBK
+[vmimage_bakfile] FRB:aaparam.PRV backed up to FRB:aaparam.VBK
+"CONTROL1 complete"
+[NTSYIN] userctrl.com file not found
+[NTSYIN_STEP] Startup Step #97
+[NTSYIN_STEP] Startup Step #98
+[SYINISUB] restored user device MC:
+[FTP] FTP Interface V5.10
+[FTP] FTP debug addr = 2F91B880
+[FTP] Ethernet event flag received.
+[NTSYIN_STEP] Startup Step #99
+[TPSPART] Found KAREL ATMSKCHG 200
+[TPSPART] Found KAREL ROBMAINT 201
+[TPSPART] Found KAREL ATPRGADJ 930
+[TPSPART] Found KAREL ATWAITRL 931
+[TPSPART] Found KAREL ATPRSCRN 932
+[TPSPART] Found KAREL ATPASWRD 935
+[TPSPART] Found KAREL ATINSTAL 936
+[TPKSINIT] dname -K943- not found devstat = 0 cfg $90C95A8
+[TPSPART] Found KAREL ATCELLIO 955
+[TPSPART] Found KAREL HTSETUP 962
+[TPKSINIT] dname -K972- not found devstat = 0 cfg $907D47C
+[TPKSINIT] dname -K973- not found devstat = 0 cfg $8F3B39C
+[TPSPART] Found KAREL ATSOFTPA 992
+[FTP] getservbyname failed
+[FTP] getservbyname failed
+[TPHCCOMM] bad tp core ver format ..
+[tphlplod] No help option
+[NTSYIN_STEP] Startup Step #100
+[syinisub] running @FRS:autoctrl.com
+[osppc] Tick time changed -20000
+"[swiupdt] MED:\CUSTOM\UPDTCUSA.COM not found "
+OPTN-003 Skipped: `FVR FILE SAVED FOR TP'                                    
+OPTN-003 Skipped: `FANUC AU FAIL        '                                    
+[SPRUNCMDF]control restrore sequence start
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmiloadf] $GROUP created by TD:\SYSVARS.SV
+VARS-052 Variable $AUTOBACKUP converted                                      
+VARS-005 $DB_RECORD PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $DB_RECORD converted                                       
+VARS-005 $REFPOS1 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS1 converted                                         
+VARS-005 $REFPOS2 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS2 converted                                         
+VARS-005 $REFPOS3 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS3 converted                                         
+VARS-005 $REFPOS4 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS4 converted                                         
+VARS-005 $REFPOS5 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS5 converted                                         
+VARS-005 $REFPOS6 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS6 converted                                         
+VARS-005 $REFPOS7 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS7 converted                                         
+VARS-005 $REFPOS8 PC array length ignored                                    
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $REFPOS8 converted                                         
+VARS-052 Variable $RSCH_LOG converted                                        
+VARS-052 Variable $VISION_CFG converted                                      
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-206 SYSVARS.SV will load at startup                                     
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:tpfdef.PRV backed up to FRB:tpfdef.VBK
+[vmimage_bakfile] FRB:s-numreg.PRV backed up to FRB:s-numreg.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-052 Variable $MACROTABLE converted                                      
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-strreg.PRV backed up to FRB:s-strreg.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:s-posreg.PRV backed up to FRB:s-posreg.VBK
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[VM_CPCOPY_RC] FRS:\LR2C.DT
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+[vmimage_bakfile] FRB:aterrjob.PRV backed up to FRB:aterrjob.VBK
+[vmimage_bakfile] FRB:calprxy.PRV backed up to FRB:calprxy.VBK
+[vmimage_bakfile] FRB:calprz.PRV backed up to FRB:calprz.VBK
+[vmimage_bakfile] FRB:calptcp.PRV backed up to FRB:calptcp.VBK
+[vmimage_bakfile] FRB:tpfdef.PRV backed up to FRB:tpfdef.VBK
+[vmimage_bakfile] FRB:gemdata.PRV backed up to FRB:gemdata.VBK
+[vmimage_bakfile] FRB:htcolrec.PRV backed up to FRB:htcolrec.VBK
+[vmimage_bakfile] FRB:mem_port.PRV backed up to FRB:mem_port.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-numreg.PRV backed up to FRB:s-numreg.VBK
+[vmimage_bakfile] FRB:otemgmon.PRV backed up to FRB:otemgmon.VBK
+[vmimage_bakfile] FRB:otemgrun.PRV backed up to FRB:otemgrun.VBK
+[vmimage_bakfile] FRB:s-posreg.PRV backed up to FRB:s-posreg.VBK
+[vmimage_bakfile] FRB:s-strreg.PRV backed up to FRB:s-strreg.VBK
+[vmimage_bakfile] FRB:tcp_1.PRV backed up to FRB:tcp_1.VBK
+[vmimage_bakfile] FRB:tcp_2.PRV backed up to FRB:tcp_2.VBK
+[vmimage_bakfile] FRB:tpreckl.PRV backed up to FRB:tpreckl.VBK
+[VM_CPCOPY_RC] FR:\PANEL1.STM
+[VM_CPCOPY_RC] FR:\PANEL2.STM
+[VM_CPCOPY_RC] FR:\PANEL3.STM
+[VM_CPCOPY_RC] FR:\PANEL4.STM
+[VM_CPCOPY_RC] FR:\AMBERLED.GIF
+[VM_CPCOPY_RC] FR:\DARKLED.GIF
+[VM_CPCOPY_RC] FR:\GREENLED.GIF
+[VM_CPCOPY_RC] FR:\NBUTTON.GIF
+[VM_CPCOPY_RC] FR:\PBUTTON.GIF
+[VM_CPCOPY_RC] FR:\REDLED.GIF
+[VM_CPCOPY_RC] FR:\SPACER.GIF
+[VM_CPCOPY_RC] FR:\XXXXXLED.GIF
+[VM_CPCOPY_RC] FR:\PANEL1.DT
+[VM_CPCOPY_RC] FR:\PANEL2.DT
+[VM_CPCOPY_RC] FR:\PANEL3.DT
+[VM_CPCOPY_RC] FR:\PANEL4.DT
+[VM_CPCOPY_RC] FR:\TPEINS.XML
+TPIF-218 MED:\00\TEMP\GETDATA.TP failed to load                              
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\REQMENU.TP failed to load                              
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDDATA.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDEVNT.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\SENDSYSV.TP failed to load                             
+MEMO-006 Protection error occurred                                             
+TPIF-218 MED:\00\TEMP\TPREC.TP failed to load                                
+MEMO-006 Protection error occurred                                             
+[spruncmdf] Did xcopy, from: MED:\00\TEMP\FR\*.* to: FR:\*.*, with stat:0
+[spruncmdf] Did xcopy, from: MED:\00\TEMP\FRA\*.* to: FRA:\*.*, with stat:0
+Error - file MED:\IMGALL.COM is being opened for writing.
+Error - file \IMGALL.COM is being opened for writing.
+[sprun] Found 0 files in initload
+"[swiupdt] MED:\CUSTOM\UPDTCUSB.COM not found "
+OPTN-003 Skipped: `FVR FILE SAVED FOR TP'                                    
+OPTN-003 Skipped: `FANUC AU FAIL        '                                    
+"Dummy FNOREST"
+[NTSYIN_STEP] Startup Step #101
+[NTPORT] accept connection
+[NTPORT] accept connection
+[sychkbmon] bmon version <V0.00P/00> <V7.70P/53 >
+BMON not updated status -2
+[syrestart] Restart = 1
+[syrestart_pendant] Restart = 1
+[SYRESTART] Running volatil
+"CONTROL3 for V7.70P/53 (FD V7.70.07)"
+"CONTROL3 complete"
+[vminit_restart] Saving variable context
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[NTSYIN] userctrl2.com file not found
+[SYRESTART] switching modes from 1 to 2
+[pal_reset] Restarting system
+Switching states: old = STARTUP   new = RESTART 
+Tick            Avg: 2.529 ms, Min: 0.000 ms, Max: 5011.874 ms, ticks: 19191
+Execution times Avg: 0.004 ms, Min: 0.000 ms, Max: 0.219 ms
+Switching states: old = RESTART   new = STARTUP 
+[NTINIT] Frequency 10000000, Ticks/ms 10000 BusClock 40000000
+[IEWTQ] Count = 0 add to head/tail task: 199  cnt: 24  pri: 10
+[osppc] Virtual Clock timer device resolution discovery suceeded, min res: 1 ms
+[NTPORT] Ready for connections at 9100
+[NTPORT] Ready for connections at 9101
+[NTPORT] Ready for connections at 9102
+[NTPORT] Ready for connections at 9103
+[OSSERV] VIRTUAL not doing multi-processing service
+main bus clock 40
+main PCB version 4
+[ostkinit] TPWDOG_CHK $0
+ 
+[DSFL] MAIN V7.20 PCMCIA-ATA RD@0x0 (-128) dfdevtbl@0x2D836511
+[ksinitsk] syin continues
+Updated $MC_PATH = C:\Git\karelCalibration\TCPCalibrator\Robot_1\MC
+Updated $MED_PATH to = C:\ProgramData\FANUC\FRVRC Media\V7.70
+Updated $UD1_PATH to = C:\Git\karelCalibration\TCPCalibrator\Robot_1\UD1
+Updated $UD2_PATH to = C:\Git\karelCalibration\TCPCalibrator\Robot_1\UD2
+[syinit] bootrom time: 19200 ms
+[syinit] ** COLD START **
+[syinit] System Version V7.70107      10/3/2018
+[ERLOG] Waiting for UIF to start up
+[syinisb0]VIRTUAL case,setting master_p->initializing to FALSE
+[ostkinit] ID $31 type 1D baud 31 version I
+[ostkinit] TP Baud Rate 19200
+[NTPORT] accept connection
+[syinit] ** COLD START **
+[dpinit] setting cur lang to NULL
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[sycfgmen] cfgmenu_p 0x406F758C
+[ostkinit] TPWDOG_CHK+2 $1000
+[syinisb0] tpid check ltp = 0x6191A50, tpid = 49
+[NTSYIN_STEP] Startup Step #102
+VMGR for R-J3iC V7.20
+[vmshadow_periodic] Normal power shutdown state = 0
+[vminit_loadctx] Loaded FRB:\S-SYSTEM.PRV only
+[vminit_loadctx] Loaded FRB:\S-INTERN.PRV only
+[vminit_loadctx] Done Loading Time = 31508us
+[vmiloadf] $GROUP created by FR:\initload\SYSVARS.SV
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[NTSYIN_STEP] Startup Step #103
+[ntspfload] Skipping \CETX.DLL because it is already loaded
+[ntspfload] Skipping \DVHTTP.DLL because it is already loaded
+[ntspfload] Skipping \HTTPD.DLL because it is already loaded
+[ntspfload] Skipping \PMON.DLL because it is already loaded
+[ntspfload] Skipping \RPCLIB.DLL because it is already loaded
+[ntspfload] Skipping \RPCM.DLL because it is already loaded
+[ntspfload] Skipping \RPCMAINS.DLL because it is already loaded
+[ntspfload] Skipping \RPCDAQS.DLL because it is already loaded
+[ntspfload] Skipping \SFDIAGTP.DLL because it is already loaded
+[ntspfload] Skipping \SHTMLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \TMILIB.DLL
+[ntspfload] Skipping \TPTX.DLL because it is already loaded
+[NTSYIN_STEP] Startup Step #104
+[TX] Start
+[PMON] PC Monitor Task
+[rpcm] create TCP/IP RPC service
+[svctcp_create] RPCMAIN Server ready for connections on 3002
+[rpcm] call softparts to register service
+[rpcdaqs] register RPCDAQS service
+[rpcm] wait for connection
+[syinit] spmk2tsk(HTCG), status = $0
+CGTP WEB Server starting
+Web Enhancements installed
+[HTCG]: Binding to tcp port number 3080
+[HTTPD] ready for connections
+[syinisb0] Legacy 2, tpid = 49
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[dpimage_restctx] Loading DEFAULT      dictionaries pool_avail = 30842816
+[dpimage_restctx] Ref time cached:120ms nocache:620ms, Numfiles = 220 Time 0ms
+[dpimage_restctx] Dictionaries loaded pool_avail = 30005200
+[dpsetlng] setting cur lang to DEFAULT     
+[tppascon_config] wait for EVB_SPINITDONE
+[NTSYIN_STEP] Startup Step #105
+[SYINISB0] Loading main system softparts please wait ...
+[ntspfload] Skipping \ASBN.DLL because it is already loaded
+[ntspfload] Skipping \BGLG.DLL because it is already loaded
+[ntspfload] Skipping \BINASC.DLL because it is already loaded
+[ntspfload] Skipping \CFMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \COMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \CPTPMAIN.DLL because it is already loaded
+[ntspfload] Skipping \CRCRC.DLL because it is already loaded
+[ntspfload] Skipping \CSXC.DLL because it is already loaded
+[ntspfload] Skipping \DAQSP.DLL because it is already loaded
+[ntspfload] Skipping \DAQTSKSP.DLL because it is already loaded
+[NTFRCPY] Did not load \DCSTSK.DLL
+[ntspfload] Skipping \DVFORM.DLL because it is already loaded
+[ntspfload] Skipping \DVHTT2.DLL because it is already loaded
+[ntspfload] Skipping \DVNEWMD.DLL because it is already loaded
+[ntspfload] Skipping \ERRSEV.DLL because it is already loaded
+[ntspfload] Skipping \FTP.DLL because it is already loaded
+[ntspfload] Skipping \GENLINK.DLL because it is already loaded
+[ntspfload] Skipping \GLOFILE.DLL because it is already loaded
+[ntspfload] Skipping \HCLIB.DLL because it is already loaded
+[ntspfload] Skipping \HCOM.DLL because it is already loaded
+[ntspfload] Skipping \IPGENSET.DLL because it is already loaded
+[ntspfload] Skipping \KCL.DLL because it is already loaded
+[ntspfload] Skipping \KCLIB.DLL because it is already loaded
+[ntspfload] Skipping \LCMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \LGSP.DLL because it is already loaded
+[ntspfload] Skipping \LUSAT2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSLSMN.DLL because it is already loaded
+[ntspfload] Skipping \LUSMN2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSPS2AS.DLL because it is already loaded
+[ntspfload] Skipping \LUSWBIAS.DLL because it is already loaded
+[ntspfload] Skipping \MKSP.DLL because it is already loaded
+[ntspfload] Skipping \MNTBLSP.DLL because it is already loaded
+[ntspfload] Skipping \MODAQ.DLL because it is already loaded
+[ntspfload] Skipping \MR.DLL because it is already loaded
+[ntspfload] Skipping \NE.DLL because it is already loaded
+[ntspfload] Skipping \NECALC.DLL because it is already loaded
+[ntspfload] Skipping \NTMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \OTCASE.DLL because it is already loaded
+[ntspfload] Skipping \OTTASK.DLL because it is already loaded
+[ntspfload] Skipping \PBDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PBIOBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBIOSETU.DLL because it is already loaded
+[ntspfload] Skipping \PBMARRY.DLL because it is already loaded
+[ntspfload] Skipping \PBMBYNAM.DLL because it is already loaded
+[ntspfload] Skipping \PBMCORE.DLL because it is already loaded
+[ntspfload] Skipping \PBMERRS.DLL because it is already loaded
+[ntspfload] Skipping \PBMFDEV.DLL because it is already loaded
+[ntspfload] Skipping \PBMFLBT.DLL because it is already loaded
+[ntspfload] Skipping \PBMKCLOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMMEMO.DLL because it is already loaded
+[ntspfload] Skipping \PBMMIR.DLL because it is already loaded
+[ntspfload] Skipping \PBMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \PBMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \PBMPATH.DLL because it is already loaded
+[ntspfload] Skipping \PBMQMGR.DLL because it is already loaded
+[ntspfload] Skipping \PBMREGOP.DLL because it is already loaded
+[ntspfload] Skipping \PBMSTRNG.DLL because it is already loaded
+[ntspfload] Skipping \PBMTIME.DLL because it is already loaded
+[ntspfload] Skipping \PBMTPE.DLL because it is already loaded
+[ntspfload] Skipping \PBMUIF.DLL because it is already loaded
+[ntspfload] Skipping \PBMVECTR.DLL because it is already loaded
+[ntspfload] Skipping \PBPC.DLL because it is already loaded
+[ntspfload] Skipping \PBSWGBLT.DLL because it is already loaded
+[ntspfload] Skipping \PBXML.DLL because it is already loaded
+[ntspfload] Skipping \PGDAQ.DLL because it is already loaded
+[ntspfload] Skipping \PGSETUP.DLL because it is already loaded
+[ntspfload] Skipping \PIMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \POMAINSP.DLL because it is already loaded
+[ntspfload] Skipping \PROXY.DLL because it is already loaded
+[ntspfload] Skipping \RDGNTASK.DLL because it is already loaded
+[ntspfload] Skipping \RDM.DLL because it is already loaded
+[ntspfload] Skipping \RFLR2C.DLL because it is already loaded
+[ntspfload] Skipping \SCP.DLL because it is already loaded
+[ntspfload] Skipping \SFAPMHND.DLL because it is already loaded
+[ntspfload] Skipping \SFATBCK.DLL because it is already loaded
+[ntspfload] Skipping \SFCNTREL.DLL because it is already loaded
+[ntspfload] Skipping \SFDRYRN.DLL because it is already loaded
+[ntspfload] Skipping \SFEXHIST.DLL because it is already loaded
+[ntspfload] Skipping \SFEXTSET.DLL because it is already loaded
+[ntspfload] Skipping \SFIOLNK.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSLC2.DLL because it is already loaded
+[ntspfload] Skipping \SFIOSTD.DLL because it is already loaded
+[ntspfload] Skipping \SFKAREL.DLL because it is already loaded
+[ntspfload] Skipping \SFMACC.DLL because it is already loaded
+[ntspfload] Skipping \SFMAIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMAPPL.DLL because it is already loaded
+[ntspfload] Skipping \SFMARTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMCALL.DLL because it is already loaded
+[ntspfload] Skipping \SFMCLB.DLL because it is already loaded
+[ntspfload] Skipping \SFMCTRLS.DLL because it is already loaded
+[ntspfload] Skipping \SFMDEST.DLL because it is already loaded
+[ntspfload] Skipping \SFMDIO.DLL because it is already loaded
+[ntspfload] Skipping \SFMIF.DLL because it is already loaded
+[ntspfload] Skipping \SFMINC.DLL because it is already loaded
+[ntspfload] Skipping \SFMJUMP.DLL because it is already loaded
+[ntspfload] Skipping \SFMLOGIC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMACRO.DLL because it is already loaded
+[ntspfload] Skipping \SFMMISC.DLL because it is already loaded
+[ntspfload] Skipping \SFMMIX.DLL because it is already loaded
+[ntspfload] Skipping \SFMMOTN.DLL because it is already loaded
+[ntspfload] Skipping \SFMMULTI.DLL because it is already loaded
+[ntspfload] Skipping \SFMNFOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNHM.DLL because it is already loaded
+[ntspfload] Skipping \SFMNLIB.DLL because it is already loaded
+[ntspfload] Skipping \SFMNMIR.DLL because it is already loaded
+[ntspfload] Skipping \SFMNOST.DLL because it is already loaded
+[ntspfload] Skipping \SFMNSFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMOFST.DLL because it is already loaded
+[ntspfload] Skipping \SFMPCTL.DLL because it is already loaded
+[ntspfload] Skipping \SFMPITM.DLL because it is already loaded
+[ntspfload] Skipping \SFMPREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMPTH.DLL because it is already loaded
+[ntspfload] Skipping \SFMQSKP.DLL because it is already loaded
+[ntspfload] Skipping \SFMREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMSKIP.DLL because it is already loaded
+[ntspfload] Skipping \SFMSREG.DLL because it is already loaded
+[ntspfload] Skipping \SFMTIME.DLL because it is already loaded
+[ntspfload] Skipping \SFMTOFT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWAIT.DLL because it is already loaded
+[ntspfload] Skipping \SFMWHEN.DLL because it is already loaded
+[ntspfload] Skipping \SFOVSL.DLL because it is already loaded
+[ntspfload] Skipping \SFPSMMR.DLL because it is already loaded
+[ntspfload] Skipping \SFRDIAG.DLL because it is already loaded
+[ntspfload] Skipping \SFREFPOS.DLL because it is already loaded
+[ntspfload] Skipping \SFTHRIO2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPALRM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPCMN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDATA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPDCS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFIL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPFILS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPGUI.DLL because it is already loaded
+[ntspfload] Skipping \SFTPJGM.DLL because it is already loaded
+[ntspfload] Skipping \SFTPKY2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPMFTN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPPOSN.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSL.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSOP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSRVO.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTA.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSTUP.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYS.DLL because it is already loaded
+[ntspfload] Skipping \SFTPSYSV.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTCH2.DLL because it is already loaded
+[ntspfload] Skipping \SFTPTSTC.DLL because it is already loaded
+[ntspfload] Skipping \SFTPUTIL.DLL because it is already loaded
+[ntspfload] Skipping \SFVCCM.DLL because it is already loaded
+[ntspfload] Skipping \SFVRGR.DLL because it is already loaded
+[ntspfload] Skipping \SFVSHIF.DLL because it is already loaded
+[ntspfload] Skipping \SFVTRN.DLL because it is already loaded
+[ntspfload] Skipping \SMACC.DLL because it is already loaded
+[ntspfload] Skipping \SMBASVAR.DLL because it is already loaded
+[ntspfload] Skipping \SMC.DLL because it is already loaded
+[ntspfload] Skipping \SMENET.DLL because it is already loaded
+[ntspfload] Skipping \SMEVO.DLL because it is already loaded
+[ntspfload] Skipping \SMJ.DLL because it is already loaded
+[ntspfload] Skipping \SMLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTASK.DLL because it is already loaded
+[ntspfload] Skipping \SMTLB.DLL because it is already loaded
+[ntspfload] Skipping \SMTPLIB.DLL because it is already loaded
+[NTFRCPY] Did not load \SMUSB.DLL
+[ntspfload] Skipping \SNPX.DLL because it is already loaded
+[ntspfload] Skipping \SSSSPACE.DLL because it is already loaded
+[ntspfload] Skipping \SYOPINSP.DLL because it is already loaded
+[ntspfload] Skipping \SYPNS.DLL because it is already loaded
+[ntspfload] Skipping \SYRSR.DLL because it is already loaded
+[ntspfload] Skipping \SYSHXSP.DLL because it is already loaded
+[ntspfload] Skipping \TBC.DLL because it is already loaded
+[ntspfload] Skipping \TBJ.DLL because it is already loaded
+[ntspfload] Skipping \TBTASKSP.DLL because it is already loaded
+[ntspfload] Skipping \TCPMSG.DLL because it is already loaded
+[ntspfload] Skipping \TELNET.DLL because it is already loaded
+[ntspfload] Skipping \TKLIB.DLL because it is already loaded
+[ntspfload] Skipping \TPACCN.DLL because it is already loaded
+[ntspfload] Skipping \TPANAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPATBTSK.DLL because it is already loaded
+[ntspfload] Skipping \TPAXLM.DLL because it is already loaded
+[ntspfload] Skipping \TPCHOV.DLL because it is already loaded
+[ntspfload] Skipping \TPCOOR.DLL because it is already loaded
+[ntspfload] Skipping \TPDAIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDIGIO.DLL because it is already loaded
+[ntspfload] Skipping \TPDMEM.DLL because it is already loaded
+[ntspfload] Skipping \TPEXTDIO.DLL because it is already loaded
+[ntspfload] Skipping \TPFMEM.DLL because it is already loaded
+[ntspfload] Skipping \TPFRAME.DLL because it is already loaded
+[ntspfload] Skipping \TPGRPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPGUI.DLL because it is already loaded
+[ntspfload] Skipping \TPHCCOMM.DLL because it is already loaded
+[ntspfload] Skipping \TPHCHTMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPGMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPPMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCPRMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCRPHS.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTAMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHCTCMN.DLL because it is already loaded
+[ntspfload] Skipping \TPHINTS.DLL because it is already loaded
+[ntspfload] Skipping \TPKM909.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1200.DLL because it is already loaded
+[ntspfload] Skipping \TPKS1201.DLL because it is already loaded
+[ntspfload] Skipping \TPKS930.DLL because it is already loaded
+[ntspfload] Skipping \TPKS931.DLL because it is already loaded
+[ntspfload] Skipping \TPKS932.DLL because it is already loaded
+[ntspfload] Skipping \TPKS935.DLL because it is already loaded
+[ntspfload] Skipping \TPKS936.DLL because it is already loaded
+[ntspfload] Skipping \TPKS943.DLL because it is already loaded
+[ntspfload] Skipping \TPKS955.DLL because it is already loaded
+[ntspfload] Skipping \TPKS962.DLL because it is already loaded
+[ntspfload] Skipping \TPKS972.DLL because it is already loaded
+[ntspfload] Skipping \TPKS973.DLL because it is already loaded
+[ntspfload] Skipping \TPKS992.DLL because it is already loaded
+[ntspfload] Skipping \TPMASCAL.DLL because it is already loaded
+[ntspfload] Skipping \TPOPLG.DLL because it is already loaded
+[ntspfload] Skipping \TPOTREL.DLL because it is already loaded
+[ntspfload] Skipping \TPPASCFG.DLL because it is already loaded
+[ntspfload] Skipping \TPPRTFTN.DLL because it is already loaded
+[ntspfload] Skipping \TPROBIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSAVE.DLL because it is already loaded
+[ntspfload] Skipping \TPSETGEN.DLL because it is already loaded
+[ntspfload] Skipping \TPSFTY.DLL because it is already loaded
+[ntspfload] Skipping \TPSOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPSPRINT.DLL because it is already loaded
+[ntspfload] Skipping \TPTSTRUN.DLL because it is already loaded
+[ntspfload] Skipping \TPUOPIO.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER.DLL because it is already loaded
+[ntspfload] Skipping \TPUSER2.DLL because it is already loaded
+[ntspfload] Skipping \TPVERSN.DLL because it is already loaded
+[ntspfload] Skipping \TPVEXE.DLL because it is already loaded
+[NTFRCPY] Did not load \UECK.DLL
+[ntspfload] Skipping \VASCLIB.DLL because it is already loaded
+[ntspfload] Skipping \VCAM.DLL because it is already loaded
+[ntspfload] Skipping \VCVT.DLL because it is already loaded
+[ntspfload] Skipping \VDAT.DLL because it is already loaded
+[ntspfload] Skipping \VDLIB.DLL because it is already loaded
+[ntspfload] Skipping \VEXE.DLL because it is already loaded
+[ntspfload] Skipping \VGPM.DLL because it is already loaded
+[ntspfload] Skipping \VIPL.DLL because it is already loaded
+[ntspfload] Skipping \VLLIB.DLL because it is already loaded
+[ntspfload] Skipping \VLOG.DLL because it is already loaded
+[ntspfload] Skipping \VSFT.DLL because it is already loaded
+[NTFRCPY] Did not load \VSMO.DLL
+[ntspfload] Skipping \VTRN.DLL because it is already loaded
+[ntspfload] Skipping \VXLIB.DLL because it is already loaded
+[ntspfload] Skipping \VXMN.DLL because it is already loaded
+[ntspfload] Skipping \WEBEXEC.DLL because it is already loaded
+[NTFRCPY] Did not load \YBOX.DLL
+[SYSINISB0] spspload reference time 44355 ms, This Time 2367ms
+[vminit_loadctx] Loading all files
+[vminit_loadctx] Done Loading Time = 21832us
+[Syin] Mobo start 0xFFFFFFFF
+[NTSYIN_STEP] Startup Step #106
+[SYINISB)] total time 3638
+[NTSYIN_STEP] Startup Step #107
+[NTSYIN_STEP] Startup Step #108
+[SYINISUB] Saving user device MC:
+[SNPX] Client_Type 1, Port 18245
+[SNPX] Client_Type 2, Port 60008
+[syporti]pkt send to TLNT fails 10C
+[NTSYIN_STEP] Startup Step #109
+[NTSYIN_STEP] Startup Step #110
+[syinit] : calling iosetup
+[ripini] Initializing
+[ripini] SID_RIPSERV task start status = 0x380001
+[NTSYIN_STEP] Startup Step #111
+[NTSYIN_STEP] Startup Step #112
 [mmiage_init] TP DRAM Imaging system startup
 MEMO for R-J3iC Version V7.50 Rev-0
 [syinisub] Memory manager started
-[NTSYIN_STEP] Startup Step #12
-[NTSYIN_STEP] Startup Step #13
-[NTSYIN_STEP] Startup Step #14
-[NTSYIN_STEP] Startup Step #15
-[NTSYIN_STEP] Startup Step #16
-[NTSYIN_STEP] Startup Step #17
+[NTSYIN_STEP] Startup Step #113
+[NTSYIN_STEP] Startup Step #114
+[NTSYIN_STEP] Startup Step #115
+[NTSYIN_STEP] Startup Step #116
+[NTSYIN_STEP] Startup Step #117
+[NTSYIN_STEP] Startup Step #118
 [syinit] mosetvpr status <0>
-[NTSYIN_STEP] Startup Step #18
+[NTSYIN_STEP] Startup Step #119
 [SMTPXML] SMTP option not loaded
-[NTSYIN_STEP] Startup Step #19
+[NTSYIN_STEP] Startup Step #120
 [ERLOG] continue stat = 0x0
-[NTSYIN_STEP] Startup Step #20
+VARS-054 Sysvars - V7.7077        2/6/2013 loaded                            
+VARS-052 Variable $AUTOBACKUP converted                                      
+VARS-005 $DB_RECORD PC array length ignored                                  
+VARS-023 Array len creation mismatch                                           
+VARS-052 Variable $DB_RECORD converted                                       
+VARS-052 Variable $RSCH_LOG converted                                        
+VARS-052 Variable $VISION_CFG converted                                      
+VARS-207 SYSVARS.SV loaded at startup                                        
+[NTSYIN_STEP] Startup Step #121
 [syinisub] VMGR called to register program with MEMO
-[NTSYIN_STEP] Startup Step #21
-[NTSYIN_STEP] Startup Step #22
-[NTSYIN_STEP] Startup Step #23
-[NTSYIN_STEP] Startup Step #24
-[NTSYIN_STEP] Startup Step #25
-[NTSYIN_STEP] Startup Step #26
+[NTSYIN_STEP] Startup Step #122
+[NTSYIN_STEP] Startup Step #123
+[NTSYIN_STEP] Startup Step #124
+[NTSYIN_STEP] Startup Step #125
+[NTSYIN_STEP] Startup Step #126
+[NTSYIN_STEP] Startup Step #127
 [sytimque]: trigger loaded 0
 [CHND] Low Priority Condition Handler started.
 [CHND] init done. starting scanning
@@ -175,19 +2618,29 @@ MEMO for R-J3iC Version V7.50 Rev-0
 [TELNET] start
 [TELNET] debug address 2FD11FEC
 [TELNET] Ethernet event flag received.
-[NTSYIN_STEP] Startup Step #27
-sswrkset ****rspaceg_p is 40626978
+[NTSYIN_STEP] Startup Step #128
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+sswrkset ****rspaceg_p is 406258F8
 [sswrkset] no cd installed
 [sswrkset] no cd installed
 [sswrkset] no cd installed
 [sswrkset] no cd installed
 [sswrkset] cp installed and enabled = 1
 [SYINIT] OCTK started 380001
-[NTSYIN_STEP] Startup Step #28
-[NTSYIN_STEP] Startup Step #29
-[NTSYIN_STEP] Startup Step #30
-"COLD1 for V7.70P/36 (FD V7.70.07)"
-"MENU for V7.70P/36 (FD V7.70.07)"
+[NTSYIN_STEP] Startup Step #129
+[NTSYIN_STEP] Startup Step #130
+[sycgtp] LED time = 0 ms
+[sycgtp] EXT time = 0 ms
+[NTSYIN_STEP] Startup Step #131
+"COLD1 for V7.70P/53 (FD V7.70.07)"
+"MENU for V7.70P/53 (FD V7.70.07)"
 "MENU complete"
 [SPRUNCMDF] status = 380001; "RUNTSK SID_YBOX" : COLD1.COM
 [vxmn] wake up
@@ -201,7 +2654,7 @@ sswrkset ****rspaceg_p is 40626978
 [vlog] oschggrp(115, 4, 0) 0x00000000
 [vtrn] wake up
 [vtrn] oschggrp(136, 4, 0) 0x00000000
-[vtrn] VTRN_P: $08C48430
+[vtrn] VTRN_P: $0902E378
 
 WEB Server starting
 Web Enhancements installed
@@ -211,38 +2664,33 @@ Web Enhancements installed
 [ASBN] started
 [spruncmdf] +++ no abort
 "COLD1 complete"
-[NTSYIN_STEP] Startup Step #31
-[NTSYIN_STEP] Startup Step #32
+[NTSYIN_STEP] Startup Step #132
+[NTSYIN_STEP] Startup Step #133
 [SYINISUB] restored user device MC:
 [FTP] FTP Interface V5.10
 [FTP] FTP debug addr = 2F91B880
 [FTP] Ethernet event flag received.
 [SYINISUB] Saving user device MC:
-[NTSYIN_STEP] Startup Step #33
+[NTSYIN_STEP] Startup Step #134
 [DEBUG] Entering moinit
+SYST-026 System normal power up                                                
 [lcmainsp] size of $SERV_REC is 3616
-[modaq] create XYZ named pipe hPipe = 62C
-[sfmdest] null_flg_p:8888098
-[pmgr]shakehand px01, px_starting=126
-[pmgr]shakehand px02, px_starting=124
-[pmgr]shakehand px03, px_starting=120
-[pmgr]shakehand px04, px_starting=112
-[pmgr]shakehand px05, px_starting=96
-[pmgr]shakehand px06, px_starting=64
-[pmgr]shakehand px07, px_starting=0
-[miinit][1] posted init PKT <71EE00C> to task<72> (0)
+[modaq] create XYZ named pipe hPipe = 4F4
+[sfmdest] null_flg_p:8C35FFC
+[miinit][1] posted init PKT <75EB904> to task<72> (0)
 [mpinit] initialize mb_fp
 [mpinit] after mpdyinit
 [mpinit] ossndpkt <0>
 [mpinit] done mpinit
 [mfinit] start
 [mfinit]abc_olympic_enb[1] = FALSE
+[otbefini] !!!! all $DTREC_ENB is zero !!!!
   [load_safety_param(MAIN)]load_address:0x11FE8000, size:0xA5DC
 [tbjtkini] finish wake up stat = 0
 [nectkini] finish wake up  stat = 0
 [moinit] done
 [miinit] done 
-[ostksock_create] Socket 1524 binding to IP port # 60004
+[ostksock_create] Socket 1604 binding to IP port # 60004
 [ostksock_create] T-X IP address <001.001.001.011>
 [mfinidsp] wait for SCRDY
 [mfinidsp] start ITP
@@ -250,28 +2698,27 @@ Web Enhancements installed
 [mfinidsp] check FSSB open
 [mfinidsp] waiting for SSTB...
 [mfinidsp] all SSTB become 1
-[syinisub] TICK_OFFSET 6B23F4 to 0
-[NTSYIN_STEP] Startup Step #34
-[NTSYIN_STEP] Startup Step #35
+[syinisub] TICK_OFFSET 738824 to 0
+[NTSYIN_STEP] Startup Step #135
+[NTSYIN_STEP] Startup Step #136
 [syinit] waiting for EVF_ENB_PWF...
 [syinit] osconflg(EVF_ENB_PWF) $16A
 [SYINISUB] VIRTUAL not waiting on EVF_ENB_PWF
 [syinit] oswaiflg(EVF_ENB_PWF) $16A
 [syinit] oswaiflg(EVF_ENB_PWF) failed, status = $16A
-[NTSYIN_STEP] Startup Step #36
-[NTSYIN_STEP] Startup Step #37
+[NTSYIN_STEP] Startup Step #137
+[NTSYIN_STEP] Startup Step #138
 R E S E T                                                                     
+SYST-043 TP disabled in T1/T2 mode                                             
 [syinit] syrset(), status = $0
 [syinisub] VIRTUAL not waiting for servo on
-INTP-127 Power fail detected                                                   
-SRVO-012 Power failure recovery                                                
-[NTSYIN_STEP] Startup Step #38
+[NTSYIN_STEP] Startup Step #139
 [syinisub] Starting C shell 0x0
 [Shxsp] Ref positions in use
 [Shxsp] Initialize extension
 [syinisub]starting shell $0
-[NTSYIN_STEP] Startup Step #39
-"COLD2 for V7.70P/36 (FD V7.70.07)"
+[NTSYIN_STEP] Startup Step #140
+"COLD2 for V7.70P/53 (FD V7.70.07)"
 "COLD2 complete"
 [syinisub] Ready to run ATSHELL
 Ready to run SHELL
@@ -293,25 +2740,55 @@ WEB Server starting
 [HTTC]: Binding to tcp port number 4080
 [symonutl] Getting data (3EA, 0)
 [symonutl] Fail to get mac from I2C (1)
-SYINISUB TOTAL TIME 358
+SYINISUB TOTAL TIME 2508
 [SYINISUB] restored user device MC:
-[NTSYIN_STEP] Startup Step #40
+[NTSYIN_STEP] Startup Step #141
 [TPSPART] Found KAREL ATMSKCHG 200
 [TPSPART] Found KAREL ATPRGADJ 930
 [TPSPART] Found KAREL ATWAITRL 931
 [TPSPART] Found KAREL ATPRSCRN 932
 [TPSPART] Found KAREL ATPASWRD 935
-[TPKSINIT] dname -K943- not found devstat = 0 cfg $85B24D8
+[TPKSINIT] dname -K943- not found devstat = 0 cfg $898F240
 [TPSPART] Found KAREL ATCELLIO 955
-[TPKSINIT] dname -K972- not found devstat = 0 cfg $85B224C
-[TPKSINIT] dname -K973- not found devstat = 0 cfg $85B2130
+[TPKSINIT] dname -K972- not found devstat = 0 cfg $898EFB4
+[TPKSINIT] dname -K973- not found devstat = 0 cfg $898EE98
 [TPSPART] Found KAREL ATSOFTPA 992
 [FTP] getservbyname failed
 [FTP] getservbyname failed
-[NTSYIN_STEP] Startup Step #41
-[osppc] Tick time changed -1200
-[NTSYIN_STEP] Startup Step #42
+[TPHCCOMM] bad tp core ver format ..
+[tphlplod] No help option
+[NTSYIN_STEP] Startup Step #142
+[syinisub] running @MED:\00\TEMP\IOSTATUS.CM
+[syinisub] running @FRS:autocold.com
+[SPRUNCMDF] status = 2000E; "DEL MED:\AUKEPDCS.DAT" : MODIFORD
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "DEL MED:\core6\DCSFROM.LD1 " : MODIFORD
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "DEL MED:\core6\DCSFROM.LD2 " : MODIFORD
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "DEL MED:\core6\DCSVRFY.BIN " : MODIFORD
+[spruncmdf] +++ no abort
+[SPRUNCMDF] status = 2000E; "DEL MED:\core6\DCSDEFS.BIN" : MODIFORD
+[spruncmdf] +++ no abort
+[osppc] Tick time changed -20000
+[SPRUNCMDF] status = 2000E; "FRREP UD1:\00\IGALBKUP.CM "REN UD1:\\00\\TEMP" "IGALBKUP -AU"" : MED:\00\TEMP\RENAME.COM
+[spruncmdf] +++ no abort
+                                                                               
+SYST-176 Software was updated                                                  
+[NTSYIN_STEP] Startup Step #143
+FILE-077 Auto backup start (FRA:\)                                           
+APSH-155 HOME position not recorded                                            
+APSH-156 Specify Home in Ref Pos Menu                                          
+[FRSOCK] recv failed (no pending)! 0x2745
 [PMON] Connecting to <127.000.000.001:5182>
+SYST-040 Operation mode AUTO Selected                                          
+
+SMON(main)> copy frs:orderfil.dat virt:\temp\=>172.23.254.7:17884
+Copy time 0 
+
+SMON(main)> copy frs:*.dt virt:\temp\=>172.23.254.7:17884
+Copy time 21 
+[osppc] Tick time changed -1200
 R E S E T                                                                     
 
 SMON(main)> xyzrate 61
@@ -320,177 +2797,104 @@ spcmd completed successfully.
 [ntsuperv] Sync state change from 0 to 1
 [ntsuperv] Sync state change from 1 to 0
 
-SMON(main)> xyzrate 61=>laptop-3jv248ms:13960
+SMON(main)> xyzrate 61=>172.23.254.7:17884
 spcmd time 0 
 spcmd completed successfully.
 
+FILE-078 Auto backup complete                                                  
 
-SMON(main)> copy virt:\output\cal_tcp.ls md: over =>37224448:878185
-[dvnewmd] Set needs_update program
-Copy time 24 
+SMON(main)> copy frh:\support\*.* virt:\support\*.* =>41484288:936428
+Copy time 62 
 
-SMON(main)> copy md:cal_tcp.tp virt:\output\cal_tcp.tp over =>37224448:878185
-Copy time 3 
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>41484288:936428
+[vmimage_bakfile] FRB:tcp_1.PRV backed up to FRB:tcp_1.VBK
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+[vmimage_bakfile] FRB:s-intern.PRV backed up to FRB:s-intern.VBK
+Copy time 90 
 
-SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\tcp_2.pc md: over =>37224448:878185
-Copy time 3 
-
-SMON(main)> tpdisc 0=>laptop-3jv248ms:13960
-[ostkdisc] F_CANCL packet sent
-[ostkdisc] TP is disconnected
-[ostchp] TP is disconnected
-[ostchp] Executing tpmulti_constop mode 1
-[tpaccn] disconnect current TP
-[sytp_disc] setting CGTPFLAG_TPDISC
-spcmd time 411 
-spcmd completed successfully.
-
-
-SMON(main)> tpconn 0
-[dpsetlng] setting cur lang to DEFAULT     
-[sytp_disc] resetting CGTPFLAG_TPDISC
-spcmd time 1 
-spcmd completed successfully.
-[wdwmclng]
-[ostkdisc] connecting to tpid 51
-[ostkdisc] Sending COLD msg to P1
-[ostkdisc] TP is connected
-   CHINESE OK
-[ostchp] TP is connected in graphic mode
-[ostksock_startPPP] F_SHUTDOWN packet sent
-[PMON] Connecting to <127.000.000.001:60005>
-[pmon] client is iPendant
-[ostkey] recevied iPendant socket 1740 from PMON
-[PMON] Sent iPendant socket 1740 to TKEY
-[TXPROC] version of iPendant V8.2014
-[TXPROC] core version of iPendant V8.2014
-SYST-039 Operation mode T2 Selected                                            
-R E S E T                                                                     
-MOTN-018 Position not reachable                                                
-MOTN-018 Position not reachable                                                
-JOG -008 Turn on TP to jog                                                     
-JOG -009 Hold deadman to jog                                                   
-JOG -008 Turn on TP to jog                                                     
-SYST-043 TP disabled in T1/T2 mode                                             
-SYST-040 Operation mode AUTO Selected                                          
-JOG -009 Hold deadman to jog                                                   
-JOG -008 Turn on TP to jog                                                     
-JOG -007 Press shift key to jog                                                
-R E S E T                                                                     
-JOG -009 Hold deadman to jog                                                   
-JOG -008 Turn on TP to jog                                                     
-JOG -010 Jog pressed before shift                                              
-JOG -008 Turn on TP to jog                                                     
-JOG -010 Jog pressed before shift                                              
-SYST-039 Operation mode T2 Selected                                            
-R E S E T                                                                     
-JOG -010 Jog pressed before shift                                              
-JOG -010 Jog pressed before shift                                              
-MOTN-018 Position not reachable                                                
-MOTN-017 Limit error (G:1, A:10 Hex)                                           
-MOTN-017 Limit error (G:1, A:8 Hex)                                            
-MOTN-017 Limit error (G:1, A:8 Hex)                                            
-MOTN-018 Position not reachable                                                
-MOTN-018 Position not reachable                                                
-MOTN-017 Limit error (G:1, A:8 Hex)                                            
-R E S E T                                                                     
-SYST-178 SHIFT-RESET Pressed                                                   
-SYST-179 SHIFT-RESET Released                                                  
-
-SMON(main)> copy virt:\output\calptcp.pc md: over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\calprxy.pc md: over =>37224448:878185
-Copy time 3 
-
-SMON(main)> copy virt:\output\calprz.pc md: over =>37224448:878185
-Copy time 2 
-
-SMON(main)> copy virt:\output\test_xy.ls md: over =>37224448:878185
-Copy time 5 
-
-SMON(main)> copy md:test_xy.tp virt:\output\test_xy.tp over =>37224448:878185
-Copy time 3 
-
-SMON(main)> copy virt:\output\test_z.ls md: over =>37224448:878185
-[dvnewmd] Set needs_update program
-Copy time 9 
-
-SMON(main)> copy md:test_z.tp virt:\output\test_z.tp over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\cal_dv_xy.ls md: over =>37224448:878185
-[dvnewmd] Set needs_update program
-Copy time 7 
-
-SMON(main)> copy md:cal_dv_xy.tp virt:\output\cal_dv_xy.tp over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\cal_dv_z.ls md: over =>37224448:878185
-[dvnewmd] Set needs_update program
-Copy time 5 
-
-SMON(main)> copy md:cal_dv_z.tp virt:\output\cal_dv_z.tp over =>37224448:878185
-Copy time 3 
-
-SMON(main)> copy virt:\output\calptcp.pc md: over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\tcp_1.pc md: over =>37224448:878185
-Copy time 5 
-
-SMON(main)> copy virt:\output\tcp_2.pc md: over =>37224448:878185
-Copy time 4 
-
-SMON(main)> copy virt:\output\cal_tcp.ls md: over =>37224448:878185
-Copy time 19 
-
-SMON(main)> copy md:cal_tcp.tp virt:\output\cal_tcp.tp over =>37224448:878185
-Copy time 3 
-
-SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:13960
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>172.23.254.7:17884
 Copy time 0 
 
-SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:13960
-Copy time 966 
+SMON(main)> copy mdb:*.* virt:\tmpback\=>172.23.254.7:17884
+Copy time 849 
 
-SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
-spcmd time 12 
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 8 
 spcmd completed successfully.
 
 
-SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
-[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
-End of directory
-[SMON] error 0x002A0014
-R E S E T                                                                     
-SYST-178 SHIFT-RESET Pressed                                                   
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 117 
+spcmd completed successfully.
 
-SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>laptop-3jv248ms:13960
+R E S E T                                                                     
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>172.23.254.7:17884
 Copy time 0 
 
-SMON(main)> copy mdb:*.* virt:\tmpback\=>laptop-3jv248ms:13960
-Copy time 963 
+SMON(main)> copy mdb:*.* virt:\tmpback\=>172.23.254.7:17884
+Copy time 855 
 
-SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
-spcmd time 11 
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 8 
 spcmd completed successfully.
 
 
-SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>laptop-3jv248ms:13960
-[SPRUNCMDF] status = 2A0014; "XCOPY FRA:\*.* VIRT:\TMPBACK\*.*  " : FRA:\*.*
-End of directory
-[SMON] error 0x002A0014
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+[DSFL]findfir elim for B:\OS\FRA\_BACKUP_\BACKUP02\*.*
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 108 
+spcmd completed successfully.
+
 R E S E T                                                                     
-SYST-178 SHIFT-RESET Pressed                                                   
-SYST-179 SHIFT-RESET Released                                                  
-SYST-043 TP disabled in T1/T2 mode                                             
-SYST-040 Operation mode AUTO Selected                                          
-[PMON] Disconnecting from <127.000.000.001:60005>
-[pmon] iPendant connection closed
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>172.23.254.7:17884
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>172.23.254.7:17884
+Copy time 864 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+[DSFL]findfir elim for B:\FR\INITLOAD\*.*
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 13 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+[DSFL]findfir elim for B:\OS\FRA\_BACKUP_\*.*
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 118 
+spcmd completed successfully.
+
+R E S E T                                                                     
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>172.23.254.7:17884
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>172.23.254.7:17884
+Copy time 870 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 8 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 104 
+spcmd completed successfully.
+
+R E S E T                                                                     

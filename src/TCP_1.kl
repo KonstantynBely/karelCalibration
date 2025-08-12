@@ -96,15 +96,11 @@ BEGIN
 
   deltaX = deltaX2 - deltaX1
   deltaY = deltaY2 - deltaY1
-  WRITE('deltaX = ', deltaX, CR)
-  WRITE('deltaY = ', deltaY, CR)
 
   atan_beta = ATAN2(deltaZ, deltaX)
-  WRITE('ATAN(beta) = ', atan_beta, CR)
   beta = atan_beta
 
   atan_alfa = ATAN2(deltaZ, deltaY)
-  WRITE('ATAN(alfa) = ', atan_alfa, CR)
   alfa = atan_alfa
 
   WRITE('alfa deg = ', alfa, CR)

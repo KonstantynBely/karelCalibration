@@ -1,0 +1,1238 @@
+LOGBOOK.LS     Robot Name ROBOT 12-AUG-25 17:24     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Operation        
+========================================
+FILE 'IOSTATUS.CM' is saved            
+12-AUG-25 17:24 :46
+========================================
+FILE 'HTTPKCL.VR' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'HTCOLREC.VR' is saved            
+12-AUG-25 17:24 :46
+========================================
+FILE 'HIST.LS' is saved                
+12-AUG-25 17:24 :46
+========================================
+FILE 'GREENLED.GIF' is saved           
+12-AUG-25 17:24 :46
+========================================
+FILE 'GETDATA.TP' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'GEMDATA.VR' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'FTPLOG.DG' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'FRAMEVAR.VR' is saved            
+12-AUG-25 17:24 :46
+========================================
+FILE 'ETHERNET.DG' is saved            
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRSYS.LS' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRPWD.LS' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRMOT.LS' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRHIST.LS' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERREXT.LS' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRCURR.LS' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRCOMM.LS' is saved             
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRAPP.LS' is saved              
+12-AUG-25 17:24 :46
+========================================
+FILE 'ERRALL.LS' is saved              
+12-AUG-25 17:24 :44
+========================================
+FILE 'ERRACT.LS' is saved              
+12-AUG-25 17:24 :44
+========================================
+FILE 'DIOCFGSV.IO' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI6.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI5.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI4.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI3.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI2.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DF_LOGI1.DF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSVRFY3.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSVRFY2.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSVRFY1.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSVRFY.DG' is saved             
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSDIFF.DG' is saved             
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSCHGD3.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSCHGD2.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DCSCHGD1.DG' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'DARKLED.GIF' is saved            
+12-AUG-25 17:24 :44
+========================================
+FILE 'CONSLOG.DG' is saved             
+12-AUG-25 17:24 :44
+========================================
+FILE 'CELLIO.SV' is saved              
+12-AUG-25 17:24 :42
+========================================
+Override 100%                          
+12-AUG-25 17:24 :42
+========================================
+R E S E T                              
+                                       
+                              00000000 
+12-AUG-25 17:24 :42
+========================================
+FILE 'CAL_TCP.TP' is saved             
+12-AUG-25 17:24 :42
+========================================
+FILE 'CAL_DV_Z.TP' is saved            
+12-AUG-25 17:24 :42
+========================================
+FILE 'CAL_DV_XY.TP' is saved           
+12-AUG-25 17:24 :42
+========================================
+FILE 'CALPTCP.VR' is saved             
+12-AUG-25 17:24 :42
+========================================
+FILE 'CALPTCP.PC' is saved             
+12-AUG-25 17:24 :42
+========================================
+FILE 'CALPRZ.VR' is saved              
+12-AUG-25 17:24 :42
+========================================
+FILE 'CALPRZ.PC' is saved              
+12-AUG-25 17:24 :42
+========================================
+FILE 'CALPRXY.VR' is saved             
+12-AUG-25 17:24 :40
+========================================
+FILE 'CALPRXY.PC' is saved             
+12-AUG-25 17:24 :40
+========================================
+FILE 'BACKDATE.DT' is saved            
+12-AUG-25 17:24 :40
+========================================
+FILE 'ATERRJOB.VR' is saved            
+12-AUG-25 17:24 :40
+========================================
+FILE 'AMBERLED.GIF' is saved           
+12-AUG-25 17:24 :40
+========================================
+SYST-040 Operation mode AUTO Selected  
+                                       
+                                       
+SERVO                         00110110 
+12-AUG-25 17:24 :40
+========================================
+Menu changed 'UTILITIES Hints'         
+12-AUG-25 17:24 :40
+========================================
+Override 10%                           
+12-AUG-25 17:24 :40
+========================================
+FILE '-BCKEDT-.TP' is saved            
+12-AUG-25 17:24 :40
+========================================
+FILE '-BCKED9-.TP' is saved            
+12-AUG-25 17:24 :40
+========================================
+FILE '-BCKED8-.TP' is saved            
+12-AUG-25 17:24 :40
+========================================
+FILE 'MEMORY.DG' is saved              
+12-AUG-25 17:24 :40
+========================================
+SYST-176 Software was updated          
+                                       
+                                       
+PAUSE.G                       00100010 
+12-AUG-25 17:24 :40
+========================================
+FILE 'ERRALL.LS' is saved              
+12-AUG-25 17:24 :40
+========================================
+FILE 'FRS:\CMIO.VR' is loaded          
+12-AUG-25 17:24 :38
+========================================
+SYST-043 TP disabled in T1/T2 mode     
+                                       
+                                       
+STOP.L                        00000110 
+12-AUG-25 17:24 :38
+========================================
+R E S E T                              
+                                       
+                              00000000 
+12-AUG-25 17:24 :38
+========================================
+Cold start                             
+12-AUG-25 17:24 :34
+========================================
+'START (COLD)' is selected in FCTN     
+12-AUG-25 17:24 :32
+========================================
+Menu changed 'S/W INSTALL'             
+12-AUG-25 17:24 :32
+========================================
+'S/W INSTALL' is selected in MENU      
+12-AUG-25 17:24 :32
+========================================
+Menu changed 'Tool Setup'              
+12-AUG-25 17:24 :24
+========================================
+FILE 'MEMORY.DG' is saved              
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI6.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI5.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI4.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI3.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI2.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI1.DF' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\TEST_Z.TP' is loaded
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\TEST_XY.TP' is loade
+d                                      
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\PRO_MOV2.TP' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\CAL_TCP.TP' is loade
+d                                      
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\CAL_DV_Z.TP' is load
+ed                                     
+12-AUG-25 17:24 :24
+========================================
+FILE 'MED:\00\TEMP\CAL_DV_XY.TP' is loa
+ded                                    
+12-AUG-25 17:24 :22
+========================================
+FILE 'MED:\00\TEMP\-BCKEDT-.TP' is load
+ed                                     
+12-AUG-25 17:24 :22
+========================================
+FILE 'MED:\00\TEMP\-BCKED9-.TP' is load
+ed                                     
+12-AUG-25 17:24 :22
+========================================
+FILE 'MED:\00\TEMP\-BCKED8-.TP' is load
+ed                                     
+12-AUG-25 17:24 :22
+========================================
+FILE 'TPEINS.XML' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL4.DT' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL3.DT' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL2.DT' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL1.DT' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'XXXXXLED.GIF' is loaded          
+12-AUG-25 17:24 :22
+========================================
+FILE 'SPACER.GIF' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'REDLED.GIF' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'PBUTTON.GIF' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'NBUTTON.GIF' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'GREENLED.GIF' is loaded          
+12-AUG-25 17:24 :22
+========================================
+FILE 'DARKLED.GIF' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'AMBERLED.GIF' is loaded          
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL4.STM' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL3.STM' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL2.STM' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'PANEL1.STM' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'TCP_2.PC' is loaded              
+12-AUG-25 17:24 :22
+========================================
+FILE 'TCP_1.PC' is loaded              
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPTCP.PC' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPRZ.PC' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPRXY.PC' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'TPRECKL.VR' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'TCP_2.VR' is loaded              
+12-AUG-25 17:24 :22
+========================================
+FILE 'TCP_1.VR' is loaded              
+12-AUG-25 17:24 :22
+========================================
+FILE 'STRREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'POSREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'OTEMGRUN.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'OTEMGMON.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'NUMREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'NTDAQ.VR' is loaded              
+12-AUG-25 17:24 :22
+========================================
+FILE 'MEM_PORT.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'HTTPKCL.VR' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'HTCOLREC.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'GEMDATA.VR' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'FRAMEVAR.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPTCP.VR' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPRZ.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'CALPRXY.VR' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'ATERRJOB.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSPASS.SV' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSHOST.SV' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSFSAC.SV' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'LR2C.DT' is loaded               
+12-AUG-25 17:24 :22
+========================================
+FILE 'CELLIO.SV' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'MIXLOGIC.SV' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'POSREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSUIF.SV' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'STRREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSFRAME.SV' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSMACRO.SV' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSMAST.SV' is loaded            
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSSERVO.SV' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'DIOCFGSV.IO' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'NUMREG.VR' is loaded             
+12-AUG-25 17:24 :22
+========================================
+FILE 'FRAMEVAR.VR' is loaded           
+12-AUG-25 17:24 :22
+========================================
+FILE 'SYSVARS.SV' is loaded            
+12-AUG-25 17:24 :20
+========================================
+Control start                          
+12-AUG-25 17:24 :14
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI6.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI5.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI4.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI3.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI2.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\DF_LOGI1.DF' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\TEST_Z.TP' is loaded
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\TEST_XY.TP' is loade
+d                                      
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\PRO_MOV2.TP' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\CAL_TCP.TP' is loade
+d                                      
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\CAL_DV_Z.TP' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\CAL_DV_XY.TP' is loa
+ded                                    
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\-BCKEDT-.TP' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\-BCKED9-.TP' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'MED:\00\TEMP\-BCKED8-.TP' is load
+ed                                     
+12-AUG-25 17:24 :12
+========================================
+FILE 'TPEINS.XML' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL4.DT' is loaded             
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL3.DT' is loaded             
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL2.DT' is loaded             
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL1.DT' is loaded             
+12-AUG-25 17:24 :12
+========================================
+FILE 'XXXXXLED.GIF' is loaded          
+12-AUG-25 17:24 :12
+========================================
+FILE 'SPACER.GIF' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'REDLED.GIF' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'PBUTTON.GIF' is loaded           
+12-AUG-25 17:24 :12
+========================================
+FILE 'NBUTTON.GIF' is loaded           
+12-AUG-25 17:24 :12
+========================================
+FILE 'GREENLED.GIF' is loaded          
+12-AUG-25 17:24 :12
+========================================
+FILE 'DARKLED.GIF' is loaded           
+12-AUG-25 17:24 :12
+========================================
+FILE 'AMBERLED.GIF' is loaded          
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL4.STM' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL3.STM' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL2.STM' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'PANEL1.STM' is loaded            
+12-AUG-25 17:24 :12
+========================================
+FILE 'TCP_2.PC' is loaded              
+12-AUG-25 17:24 :12
+========================================
+FILE 'TCP_1.PC' is loaded              
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPTCP.PC' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPRZ.PC' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPRXY.PC' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'TPRECKL.VR' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'TCP_2.VR' is loaded              
+12-AUG-25 17:24 :10
+========================================
+FILE 'TCP_1.VR' is loaded              
+12-AUG-25 17:24 :10
+========================================
+FILE 'STRREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'POSREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'OTEMGRUN.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'OTEMGMON.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'NUMREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'NTDAQ.VR' is loaded              
+12-AUG-25 17:24 :10
+========================================
+FILE 'MEM_PORT.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'HTTPKCL.VR' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'HTCOLREC.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'GEMDATA.VR' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'FRAMEVAR.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPTCP.VR' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPRZ.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'CALPRXY.VR' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'ATERRJOB.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSPASS.SV' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSHOST.SV' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSFSAC.SV' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'LR2C.DT' is loaded               
+12-AUG-25 17:24 :10
+========================================
+FILE 'CELLIO.SV' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'MIXLOGIC.SV' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'POSREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSUIF.SV' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'STRREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSFRAME.SV' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSMACRO.SV' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSMAST.SV' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSSERVO.SV' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'DIOCFGSV.IO' is loaded           
+12-AUG-25 17:24 :10
+========================================
+FILE 'NUMREG.VR' is loaded             
+12-AUG-25 17:24 :10
+========================================
+FILE 'FRAMEVAR.VR' is loaded           
+12-AUG-25 17:24 :10
+========================================
+SYST-043 TP disabled in T1/T2 mode     
+                                       
+                                       
+STOP.L                        00000110 
+12-AUG-25 17:24 :10
+========================================
+SYST-043 TP disabled in T1/T2 mode     
+                                       
+                                       
+STOP.L                        00000110 
+12-AUG-25 17:24 :10
+========================================
+SYST-039 Operation mode T2 Selected    
+                                       
+                                       
+SERVO                         00110110 
+12-AUG-25 17:24 :10
+========================================
+FILE 'SYSVARS.SV' is loaded            
+12-AUG-25 17:24 :10
+========================================
+FILE 'MFS:\RLSPLR2C.PC' is loaded      
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\DGLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\DGSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\RLSTLVC.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\MSSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\AALR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\AASETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\RLSTHSCD.PC' is loaded      
+12-AUG-25 17:24 :02
+========================================
+FILE 'PATH:\SVLR2C.VR' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'PATH:\RLSETSV.PC' is loaded      
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\DCLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\DCSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\CPLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\CPSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\PILR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\PISETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\TJLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'PATH:\RLSETTBJ.PC' is loaded     
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\TLLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'PATH:\RLSETTBC.PC' is loaded     
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\SMLR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\SMSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\MULR2C.VR' is loaded        
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\MUSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'MFS:\RVSETUP.PC' is loaded       
+12-AUG-25 17:24 :02
+========================================
+FILE 'PATH:\RLSVLR2C.PC' is loaded     
+12-AUG-25 17:24 :00
+========================================
+Control start                          
+12-AUG-25 17:23 :58
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I/O              
+========================================
+ SO[    3]    ON  -> OFF
+Tick:   1943
+TB:     297420021
+12-AUG-25 17:24 :44
+========================================
+ UO[    2]    OFF -> ON 
+ UO[    6]    ON  -> OFF
+Tick:   1942
+TB:     297410978
+12-AUG-25 17:24 :44
+========================================
+ SO[    0]    ON  -> OFF
+Tick:   1751
+TB:     294994017
+12-AUG-25 17:24 :42
+========================================
+ SO[    0]    OFF -> ON 
+Tick:   599
+TB:     265302918
+12-AUG-25 17:24 :40
+========================================
+ SO[    3]    OFF -> ON 
+Tick:   275
+TB:     251386973
+12-AUG-25 17:24 :38
+========================================
+ UO[    6]    OFF -> ON 
+Tick:   274
+TB:     251386549
+12-AUG-25 17:24 :38
+========================================
+ AO[    3]    0
+ AO[    3]    0
+ AO[    5]    0
+ AO[    5]    0
+ AO[    7]    0
+ UI[    1]    ON 
+ UI[    2]    ON 
+ UI[    3]    ON 
+ UI[    4]    OFF
+ UI[    5]    OFF
+ UI[    6]    OFF
+ UI[    7]    OFF
+ UI[    8]    ON 
+ UI[   17]    OFF
+ UI[   18]    OFF
+ UI[   19]    OFF
+ UI[   20]    OFF
+ UI[   21]    OFF
+ UI[   22]    OFF
+ UI[   23]    OFF
+ UI[   24]    OFF
+ UI[   33]    OFF
+ UI[   34]    OFF
+ UO[    1]    OFF
+ UO[    2]    OFF
+ UO[    3]    OFF
+ UO[    4]    OFF
+ UO[    5]    OFF
+ UO[    6]    OFF
+ UO[    7]    OFF
+ UO[    8]    OFF
+ UO[   17]    OFF
+ UO[   18]    OFF
+ UO[   19]    OFF
+ UO[   20]    OFF
+ UO[   21]    OFF
+ UO[   22]    OFF
+ UO[   23]    OFF
+ UO[   24]    OFF
+ UO[   33]    OFF
+ UO[   34]    OFF
+ UO[   35]    OFF
+ UO[   36]    OFF
+Tick:   232
+TB:     250136107
+12-AUG-25 17:24 :38
+========================================
+ AI[   17]    0
+ AI[   13]    0
+ AI[   15]    0
+ AI[   17]    0
+ AI[   19]    0
+ AI[   21]    0
+ AI[   23]    0
+ AO[    1]    0
+Tick:   231
+TB:     250135814
+12-AUG-25 17:24 :38
+========================================
+ AI[    7]    0
+ AI[    9]    0
+ AI[   11]    0
+ AI[    7]    0
+ AI[    9]    0
+ AI[   11]    0
+ AI[   13]    0
+ AI[   15]    0
+Tick:   230
+TB:     250133972
+12-AUG-25 17:24 :38
+========================================
+ DO[   65]    OFF
+ DO[   66]    OFF
+ DO[   67]    OFF
+ DO[   68]    OFF
+ DO[   69]    OFF
+ DO[   70]    OFF
+ DO[   71]    OFF
+ DO[   72]    OFF
+ DO[   73]    OFF
+ DO[   74]    OFF
+ DO[   75]    OFF
+ DO[   76]    OFF
+ DO[   77]    OFF
+ DO[   78]    OFF
+ DO[   79]    OFF
+ DO[   80]    OFF
+ DO[   81]    OFF
+ DO[   82]    OFF
+ DO[   83]    OFF
+ DO[   84]    OFF
+ DO[   85]    OFF
+ DO[   86]    OFF
+ DO[   87]    OFF
+ DO[   88]    OFF
+ DO[   89]    OFF
+ DO[   90]    OFF
+ DO[   91]    OFF
+ DO[   92]    OFF
+ DO[   93]    OFF
+ DO[   94]    OFF
+ DO[   95]    OFF
+ DO[   96]    OFF
+ DO[   97]    OFF
+ DO[   98]    OFF
+ DO[   99]    OFF
+ DO[  100]    OFF
+ DO[  101]    OFF
+ DO[  102]    OFF
+ DO[  103]    OFF
+ DO[  104]    OFF
+ DO[  105]    OFF
+ DO[  106]    OFF
+ DO[  107]    OFF
+ DO[  108]    OFF
+ DO[  109]    OFF
+ DO[  110]    OFF
+ DO[  111]    OFF
+ DO[  112]    OFF
+ DO[  113]    OFF
+ DO[  114]    OFF
+ DO[  115]    OFF
+ DO[  116]    OFF
+ DO[  117]    OFF
+ DO[  118]    OFF
+ DO[  119]    OFF
+ DO[  120]    OFF
+ DO[  121]    OFF
+ DO[  122]    OFF
+ DO[  123]    OFF
+ DO[  124]    OFF
+ DO[  125]    OFF
+ DO[  126]    OFF
+ DO[  127]    OFF
+ DO[  128]    OFF
+ DO[  129]    OFF
+ DO[  130]    OFF
+ DO[  131]    OFF
+ DO[  132]    OFF
+ DO[  133]    OFF
+ DO[  134]    OFF
+ DO[  135]    OFF
+ DO[  136]    OFF
+ DO[  137]    OFF
+ DO[  138]    OFF
+ DO[  139]    OFF
+ DO[  140]    OFF
+ DO[  141]    OFF
+ DO[  142]    OFF
+ DO[  143]    OFF
+ DO[  144]    OFF
+ AI[    1]    0
+ AI[    3]    0
+ AI[    5]    0
+Tick:   229
+TB:     250124966
+12-AUG-25 17:24 :38
+========================================
+ DI[   81]    OFF
+ DI[   82]    OFF
+ DI[   83]    OFF
+ DI[   84]    OFF
+ DI[   85]    OFF
+ DI[   86]    OFF
+ DI[   87]    OFF
+ DI[   88]    OFF
+ DI[   89]    OFF
+ DI[   90]    OFF
+ DI[   91]    OFF
+ DI[   92]    OFF
+ DI[   93]    OFF
+ DI[   94]    OFF
+ DI[   95]    OFF
+ DI[   96]    OFF
+ DI[   97]    OFF
+ DI[   98]    OFF
+ DI[   99]    OFF
+ DI[  100]    OFF
+ DI[  101]    OFF
+ DI[  102]    OFF
+ DI[  103]    OFF
+ DI[  104]    OFF
+ DI[  105]    OFF
+ DI[  106]    OFF
+ DI[  107]    OFF
+ DI[  108]    OFF
+ DI[  109]    OFF
+ DI[  110]    OFF
+ DI[  111]    OFF
+ DI[  112]    OFF
+ DI[  113]    OFF
+ DI[  114]    OFF
+ DI[  115]    OFF
+ DI[  116]    OFF
+ DI[  117]    OFF
+ DI[  118]    OFF
+ DI[  119]    OFF
+ DI[  120]    OFF
+ DI[  121]    OFF
+ DI[  122]    OFF
+ DI[  123]    OFF
+ DI[  124]    OFF
+ DI[  125]    OFF
+ DI[  126]    OFF
+ DI[  127]    OFF
+ DI[  128]    OFF
+ DI[  129]    OFF
+ DI[  130]    OFF
+ DI[  131]    OFF
+ DI[  132]    OFF
+ DI[  133]    OFF
+ DI[  134]    OFF
+ DI[  135]    OFF
+ DI[  136]    OFF
+ DI[  137]    OFF
+ DI[  138]    OFF
+ DI[  139]    OFF
+ DI[  140]    OFF
+ DI[  141]    OFF
+ DI[  142]    OFF
+ DI[  143]    OFF
+ DI[  144]    OFF
+ DO[   21]    OFF
+ DO[   22]    OFF
+ DO[   23]    OFF
+ DO[   24]    OFF
+ DO[   25]    OFF
+ DO[   26]    OFF
+ DO[   27]    OFF
+ DO[   28]    OFF
+ DO[   37]    OFF
+ DO[   38]    OFF
+ DO[   39]    OFF
+ DO[   40]    OFF
+ DO[   41]    OFF
+ DO[   42]    OFF
+ DO[   43]    OFF
+ DO[   44]    OFF
+ DO[   53]    OFF
+ DO[   54]    OFF
+ DO[   55]    OFF
+ DO[   56]    OFF
+ DO[   25]    OFF
+ DO[   26]    OFF
+ DO[   27]    OFF
+ DO[   28]    OFF
+ DO[   29]    OFF
+ DO[   30]    OFF
+ DO[   31]    OFF
+ DO[   32]    OFF
+ DO[   33]    OFF
+ DO[   34]    OFF
+ DO[   35]    OFF
+ DO[   36]    OFF
+ DO[   37]    OFF
+ DO[   38]    OFF
+ DO[   39]    OFF
+ DO[   40]    OFF
+ DO[   41]    OFF
+ DO[   42]    OFF
+ DO[   43]    OFF
+ DO[   44]    OFF
+ DO[   45]    OFF
+ DO[   46]    OFF
+ DO[   47]    OFF
+ DO[   48]    OFF
+ DO[   49]    OFF
+ DO[   50]    OFF
+ DO[   51]    OFF
+ DO[   52]    OFF
+ DO[   53]    OFF
+ DO[   54]    OFF
+ DO[   55]    OFF
+ DO[   56]    OFF
+ DO[   57]    OFF
+ DO[   58]    OFF
+ DO[   59]    OFF
+ DO[   60]    OFF
+ DO[   61]    OFF
+ DO[   62]    OFF
+ DO[   63]    OFF
+ DO[   64]    OFF
+Tick:   228
+TB:     250124800
+12-AUG-25 17:24 :38
+========================================
+ SI[    0]    ON 
+ SI[    1]    OFF
+ SI[    2]    ON 
+ SI[    3]    ON 
+ SI[    4]    OFF
+ SI[    5]    OFF
+ SI[    6]    OFF
+ SI[    7]    OFF
+ SI[    8]    OFF
+ SI[    9]    OFF
+ SI[   10]    OFF
+ SI[   11]    OFF
+ SI[   12]    OFF
+ SI[   13]    OFF
+ SI[   14]    OFF
+ SI[   15]    OFF
+ SO[    0]    OFF
+ SO[    1]    OFF
+ SO[    2]    OFF
+ SO[    3]    OFF
+ SO[    4]    OFF
+ SO[    5]    OFF
+ SO[    6]    OFF
+ SO[    7]    OFF
+ SO[    8]    OFF
+ SO[    9]    OFF
+ SO[   10]    OFF
+ SO[   11]    OFF
+ SO[   12]    OFF
+ SO[   13]    OFF
+ SO[   14]    OFF
+ SO[   15]    OFF
+ RI[    1]    OFF
+ RI[    2]    OFF
+ RI[    3]    OFF
+ RI[    4]    OFF
+ RI[    5]    OFF
+ RI[    6]    OFF
+ RI[    7]    OFF
+ RI[    8]    OFF
+ RO[    1]    OFF
+ RO[    2]    OFF
+ RO[    3]    OFF
+ RO[    4]    OFF
+ RO[    5]    OFF
+ RO[    6]    OFF
+ RO[    7]    OFF
+ RO[    8]    OFF
+ DI[   19]    OFF
+ DI[   20]    OFF
+ DI[   21]    OFF
+ DI[   22]    OFF
+ DI[   23]    OFF
+ DI[   24]    OFF
+ DI[   25]    OFF
+ DI[   26]    OFF
+ DI[   35]    OFF
+ DI[   36]    OFF
+ DI[   37]    OFF
+ DI[   38]    OFF
+ DI[   39]    OFF
+ DI[   40]    OFF
+ DI[   41]    OFF
+ DI[   42]    OFF
+ DI[   51]    OFF
+ DI[   52]    OFF
+ DI[   53]    OFF
+ DI[   54]    OFF
+ DI[   55]    OFF
+ DI[   56]    OFF
+ DI[   25]    OFF
+ DI[   26]    OFF
+ DI[   27]    OFF
+ DI[   28]    OFF
+ DI[   29]    OFF
+ DI[   30]    OFF
+ DI[   31]    OFF
+ DI[   32]    OFF
+ DI[   33]    OFF
+ DI[   34]    OFF
+ DI[   35]    OFF
+ DI[   36]    OFF
+ DI[   37]    OFF
+ DI[   38]    OFF
+ DI[   39]    OFF
+ DI[   40]    OFF
+ DI[   41]    OFF
+ DI[   42]    OFF
+ DI[   43]    OFF
+ DI[   44]    OFF
+ DI[   45]    OFF
+ DI[   46]    OFF
+ DI[   47]    OFF
+ DI[   48]    OFF
+ DI[   49]    OFF
+ DI[   50]    OFF
+ DI[   51]    OFF
+ DI[   52]    OFF
+ DI[   53]    OFF
+ DI[   54]    OFF
+ DI[   55]    OFF
+ DI[   56]    OFF
+ DI[   57]    OFF
+ DI[   58]    OFF
+ DI[   59]    OFF
+ DI[   60]    OFF
+ DI[   61]    OFF
+ DI[   62]    OFF
+ DI[   63]    OFF
+ DI[   64]    OFF
+ DI[   65]    OFF
+ DI[   66]    OFF
+ DI[   67]    OFF
+ DI[   68]    OFF
+ DI[   69]    OFF
+ DI[   70]    OFF
+ DI[   71]    OFF
+ DI[   72]    OFF
+ DI[   73]    OFF
+ DI[   74]    OFF
+ DI[   75]    OFF
+ DI[   76]    OFF
+ DI[   77]    OFF
+ DI[   78]    OFF
+ DI[   79]    OFF
+ DI[   80]    OFF
+Tick:   227
+TB:     250124346
+12-AUG-25 17:24 :38

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+  <BASE HREF="http://1.1.1.10/fr/panel3.stm">
+</HEAD>
+<BODY BGCOLOR="#C0C0C0">
+  <DIV ALIGN="center">
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <TR>
+    <TD><A HREF="../../../fr/panel2.stm"><IMG SRC="pbutton.gif"></A></TD>
+    <TD WIDTH="500"><IMG SRC="spacer.gif"></TD>
+    <TD><A HREF="../../../fr/panel4.stm"><IMG SRC="nbutton.gif"></A></TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD ALIGN="center"><FONT SIZE="6">Panel 3 - blank page</FONT></TD>
+    <TD>&nbsp;</TD>
+  </TR>
+  </TABLE>
+  </DIV>
+</BODY>
+</HTML>
