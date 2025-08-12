@@ -5,11 +5,12 @@ VAR
   pr_y     : XYZWPR
   pr_z     : XYZWPR
   cal_pos  : XYZWPR
+  def_pos  : XYZWPR
   rod_diam : REAL
   status   : INTEGER
 
 BEGIN
-  rod_diam = 20.0
+  rod_diam = 19.8
 
   pr_x = GET_POS_REG(21, status)
   IF status <> 0 THEN
@@ -28,7 +29,14 @@ BEGIN
     WRITE('Błąd odczytu PR[23]', CR)
     ABORT
   ENDIF
+  
+  def_pos = GET_POS_REG(13, status)
+  IF status <> 0 THEN
+    WRITE('Błąd odczytu PR[13]', CR)
+    ABORT
+  ENDIF
 
+  cal_pos = def_pos
   cal_pos.x = pr_x.x + rod_diam / 2.0
   cal_pos.y = pr_y.y - rod_diam / 2.0
   cal_pos.z = pr_z.z - rod_diam / 2.0

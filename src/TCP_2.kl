@@ -39,12 +39,12 @@ VAR
 BEGIN
   TCP_ideal.x = 0
   TCP_ideal.y = 0.0
-  TCP_ideal.z = 150.0
+  TCP_ideal.z = 145.0
   TCP_ideal.w = 0.0
   TCP_ideal.p = 0.0
   TCP_ideal.r = 0.0
 
-  rod_diam = 20.0
+  rod_diam = 19.8
   deltaZ = 20.0
 
   cal_pos = GET_POS_REG(99, status)

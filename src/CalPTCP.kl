@@ -13,6 +13,7 @@ VAR
   XZ_pos_Z2_s: XYZWPR
   XZ_pos_Z2_t: XYZWPR
   deltaZ : XYZWPR
+  startZ : XYZWPR
   cal_pos  : XYZWPR
   rod_diam : REAL
   status   : INTEGER
@@ -23,8 +24,8 @@ VAR
   z2       : REAL
 
 BEGIN
-  rod_diam = 20.0
-  tool_length = 150.0
+  rod_diam = 19.8
+  tool_length = 145.0
   dist_appr = 100.0
   dist_over = 50.0
 
@@ -168,6 +169,19 @@ BEGIN
   SET_POS_REG(30, deltaZ, status)
   IF status <> 0 THEN
     WRITE('Blad zapisu do PR[30]', CR)
+    ABORT
+  ENDIF
+
+  startZ = cal_pos
+  startZ.x = cal_pos.x - 100
+  startZ.z = cal_pos.z - 30
+  startZ.w = 0
+  startZ.p = 90
+  startZ.r = 0
+
+  SET_POS_REG(36, startZ, status)
+  IF status <> 0 THEN
+    WRITE('Blad zapisu do PR[36]', CR)
     ABORT
   ENDIF
 

@@ -19,32 +19,32 @@ PROTECT     = READ_WRITE;
   5:  J PR[20] 25% FINE ;
   6:  J PR[21] 25% FINE ;
   7:  J PR[22] 25% FINE ;
-  8:  SKIP CONDITION DI[1]=ON ;
+  8:  SKIP CONDITION DI[101]=ON ;
   9:  L PR[23] 10mm/sec FINE Skip,LBL[999] ;
  10:  PR[31] = LPOS ;
  11:  J PR[22] 25% FINE ;
 
  12:  J PR[24] 25% FINE ;
- 13:  SKIP CONDITION DI[1]=ON ; 
+ 13:  SKIP CONDITION DI[101]=ON ; 
  14:  L PR[25] 10mm/sec FINE Skip,LBL[999] ;
  15:  PR[32] = LPOS ;
  16:  J PR[24] 25% FINE ;
 
  17:  J PR[26] 25% FINE ;
- 18:  SKIP CONDITION DI[1]=ON ;
+ 18:  SKIP CONDITION DI[101]=ON ;
  19:  L PR[27] 10mm/sec FINE Skip,LBL[999] ;
  20:  PR[33] = LPOS ;
  21:  J PR[26] 25% FINE ;
 
  22:  J PR[28] 25% FINE ;
- 23:  SKIP CONDITION DI[1]=ON ;  
+ 23:  SKIP CONDITION DI[101]=ON ;  
  24:  L PR[29] 10mm/sec FINE Skip,LBL[999] ;
  25:  PR[34] = LPOS ;
  26:  J PR[28] 25% FINE ;
  27:  J PR[21] 25% FINE ;
  28:  J PR[20] 25% FINE ;
 
- 29:  PR[52] = UTOOL[5] ;
+ 29:  PR[52] = UTOOL[1] ;
  30:  CALL TCP_1 ;
 
  31:  PR[50] = UTOOL[5]  ;
@@ -57,11 +57,11 @@ PROTECT     = READ_WRITE;
  38:  UTOOL[5] = PR[52] ;
  39:  UTOOL_NUM = 5 ;
 
- 40:  J PR[20] 25% FINE ;
- 41:  SKIP CONDITION DI[1]=ON ;
+ 40:  J PR[36] 25% FINE ;
+ 41:  SKIP CONDITION DI[101]=ON ;
  42:  L PR[30] 10mm/sec FINE Skip,LBL[999] ;
  43:  PR[35] = LPOS ;
- 44:  J PR[20] 25% FINE ;
+ 44:  J PR[36] 25% FINE ;
 
  45:  PR[97] = UTOOL[1] ;
  46:  CALL TCP_2 ;

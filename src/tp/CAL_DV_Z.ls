@@ -17,7 +17,7 @@ PROTECT     = READ_WRITE;
   4:  CALL CALPRZ ;            
 
   5:  J PR[11] 25% FINE ;
-  6:  SKIP CONDITION DI[1]=ON ;               
+  6:  SKIP CONDITION DI[101]=ON ;               
   7:  L PR[12] 10mm/sec FINE Skip,LBL[999] ;     
   8:  PR[23] = LPOS ;                           
   9:  J PR[11] 25% FINE ;                             

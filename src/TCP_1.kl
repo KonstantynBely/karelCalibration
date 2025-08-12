@@ -24,10 +24,8 @@ VAR
 
   alfa : REAL
   beta : REAL
-  alfa_deg : REAL
-  beta_deg : REAL
-
-  angle_rad : REAL
+  atan_beta : REAL 
+  atan_alfa : REAL
 
   TCP_ideal : XYZWPR
   TCP1 : XYZWPR
@@ -43,12 +41,12 @@ VAR
 BEGIN
   TCP_ideal.x = 0
   TCP_ideal.y = 0.0
-  TCP_ideal.z = 150.0
+  TCP_ideal.z = 145.0
   TCP_ideal.w = 0.0
   TCP_ideal.p = 0.0
   TCP_ideal.r = 0.0
 
-  rod_diam = 20.0
+  rod_diam = 19.8
   deltaZ = 20.0
 
   cal_pos = GET_POS_REG(99, status)
@@ -98,43 +96,19 @@ BEGIN
 
   deltaX = deltaX2 - deltaX1
   deltaY = deltaY2 - deltaY1
-
-  angle_rad = deltaX / deltaZ
   WRITE('deltaX = ', deltaX, CR)
   WRITE('deltaY = ', deltaY, CR)
 
-  WRITE('beta angle = ', angle_rad, CR)
-  IF angle_rad <= 0.00001 THEN
-   IF angle_rad >= -0.00001 THEN
-      angle_rad = 0.0
-   ENDIF
-  ENDIF
+  atan_beta = ATAN2(deltaZ, deltaX)
+  WRITE('ATAN(beta) = ', atan_beta, CR)
+  beta = atan_beta
 
-  IF TAN(angle_rad) <> 0.0 THEN
-    beta = 1.0 / TAN(angle_rad)
-  ELSE
-    beta = 0.0
-  ENDIF  
+  atan_alfa = ATAN2(deltaZ, deltaY)
+  WRITE('ATAN(alfa) = ', atan_alfa, CR)
+  alfa = atan_alfa
 
-  angle_rad = deltaY / deltaZ
-
-  WRITE('alfa angle = ', angle_rad, CR)
-  IF angle_rad <= 0.00001 THEN
-   IF angle_rad >= -0.00001 THEN
-      angle_rad = 0.0
-   ENDIF
-  ENDIF
-
-  IF TAN(angle_rad) <> 0.0 THEN
-    alfa = 1.0 / TAN(angle_rad)
-  ELSE
-    alfa = 0.0
-  ENDIF
-
-  alfa_deg = alfa * 180.0 / 3.1415926
-  beta_deg = beta * 180.0 / 3.1415926
-  WRITE('alfa = ', alfa, CR)
-  WRITE('beta = ', beta, CR)
+  WRITE('alfa deg = ', alfa, CR)
+  WRITE('beta deg = ', beta, CR)
 
   cosA = COS(alfa)
   sinB = SIN(beta)
@@ -145,8 +119,8 @@ BEGIN
   TCP1.y = 0.0 - TCP_ideal.z * sinA * sinB
   TCP1.z = TCP_ideal.z * cosA * cosB
   TCP1.w = 0.0
-  TCP1.p = beta_deg
-  TCP1.r = alfa_deg
+  TCP1.p = beta
+  TCP1.r = alfa
 
   x0 = ref_pos.y
   y0 = ref_pos.x
@@ -161,7 +135,7 @@ BEGIN
   denominator = SQRT((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
 
   IF denominator <> 0.0 THEN
-    dX = (numerator / denominator) - (rod_diam * sinB * COS((3.1415926 - beta) / 2.0))
+    dX = (numerator / denominator) - (rod_diam * sinB * COS((180.0 - beta) / 2.0))
   ELSE
     dX = 0.0
   ENDIF
@@ -176,7 +150,7 @@ BEGIN
   denominator = SQRT((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
 
   IF denominator <> 0.0 THEN
-    dY = (numerator / denominator) - (rod_diam * sinA * COS((3.1415926 - alfa) / 2.0))
+    dY = (numerator / denominator) - (rod_diam * sinA * COS((180.0 - alfa) / 2.0))
   ELSE
     dY = 0.0
   ENDIF

@@ -13,7 +13,7 @@ VAR
     status : INTEGER
 
 BEGIN
-    rod_diam = 20.0
+    rod_diam = 19.8
     dist_appr = 100
     go_dist = 120
 
