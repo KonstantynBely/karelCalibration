@@ -35,6 +35,7 @@ VAR
   cosA, sinA, cosB, sinB : REAL
 
   rod_diam : REAL
+  tool_diam : REAL
   status : INTEGER
 BEGIN
   TCP_ideal.x = 0
@@ -46,6 +47,7 @@ BEGIN
 
   rod_diam = 19.8
   deltaZ = 20.0
+  tool_diam = 5.0
 
   cal_pos = GET_POS_REG(99, status)
   IF status <> 0 THEN
@@ -54,7 +56,7 @@ BEGIN
   ENDIF
 
   ref_pos = cal_pos
-  ref_pos.y = cal_pos.y - rod_diam / 2.0
+  ref_pos.y = cal_pos.y - rod_diam / 2.0 - tool_diam / 2.0
 
   touch_pos = cal_pos
   touch_pos.x = cal_pos.x - rod_diam / 2.0
@@ -101,51 +103,30 @@ BEGIN
   deltaY2 = YZ_pos_Z2.y - ref_pos.y
   deltaY1 = YZ_pos_Z1.y - ref_pos.y
 
-  deltaX = deltaX2 - deltaX1
-  deltaY = deltaY2 - deltaY1
+  deltaX = deltaX1 - deltaX2
+  deltaY = deltaY1 - deltaY2
 
-  angle_rad = deltaX / deltaZ
+  beta = ATAN2(deltaZ, deltaX)
+  alfa = ATAN2(deltaZ, deltaY)
 
-  IF angle_rad <= 0.00001 THEN
-   IF angle_rad >= -0.00001 THEN
-      angle_rad = 0.0
-   ENDIF
-  ENDIF
-
-  IF TAN(angle_rad) <> 0.0 THEN
-    beta = 1.0 / TAN(angle_rad)
-  ELSE
-    beta = 0.0
-  ENDIF  
-
-  angle_rad = deltaY / deltaZ
-
-  IF angle_rad <= 0.00001 THEN
-   IF angle_rad >= -0.00001 THEN
-      angle_rad = 0.0
-   ENDIF
-  ENDIF
-
-  IF TAN(angle_rad) <> 0.0 THEN
-    alfa = 1.0 / TAN(angle_rad)
-  ELSE
-    alfa = 0.0
-  ENDIF
-
-  alfa_deg = alfa * 180.0 / 3.1415926
-  beta_deg = beta * 180.0 / 3.1415926
+  WRITE('alfa deg = ', alfa, CR)
+  WRITE('beta deg = ', beta, CR)
 
   sinA = SIN(alfa)
   cosA = COS(alfa)
   sinB = SIN(beta)
   cosB = COS(beta)
 
-  dZ = touch_pos.x - Z_pos.x  
+  dZ = touch_pos.x - Z_pos.x 
+  WRITE('touch_pos = ', touch_pos.x, CR) 
+  WRITE('Z_pos = ', Z_pos.x, CR)
+  WRITE('dZ = ', dZ, CR)
 
   TCP = TCP2
   TCP.x = TCP2.x + (TCP_ideal.z + dZ) * sinB
   TCP.y = TCP2.y - (TCP_ideal.z + dZ) * sinA * cosB
   TCP.z = TCP2.z + (TCP_ideal.z + dZ) * cosA * cosB  
+  TCP.z = TCP2.z + (TCP_ideal.z + dZ) * cosA * cosB - TCP_ideal.z
 
   SET_POS_REG(98, TCP, status)
   IF status <> 0 THEN

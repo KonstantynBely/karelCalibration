@@ -37,6 +37,7 @@ VAR
   numerator, denominator : REAL
 
   rod_diam : REAL
+  tool_diam : REAL
   status : INTEGER
 BEGIN
   TCP_ideal.x = 0
@@ -48,6 +49,8 @@ BEGIN
 
   rod_diam = 19.8
   deltaZ = 20.0
+  tool_diam = 5.0
+  
 
   cal_pos = GET_POS_REG(99, status)
   IF status <> 0 THEN
@@ -56,7 +59,7 @@ BEGIN
   ENDIF
 
   ref_pos = cal_pos
-  ref_pos.y = cal_pos.y - rod_diam / 2.0
+  ref_pos.y = cal_pos.y - rod_diam / 2.0 - tool_diam / 2.0
 
   YZ_pos_Z2 = GET_POS_REG(31, status) 
   IF status <> 0 THEN
@@ -94,14 +97,14 @@ BEGIN
   deltaY2 = YZ_pos_Z2.y - ref_pos.y
   deltaY1 = YZ_pos_Z1.y - ref_pos.y
 
-  deltaX = deltaX2 - deltaX1
-  deltaY = deltaY2 - deltaY1
+  deltaX = deltaX1 - deltaX2
+  deltaY = deltaY1 - deltaY2
 
-  atan_beta = ATAN2(deltaZ, deltaX)
-  beta = atan_beta
+  WRITE('deltaX = ', deltaX, CR)
+  WRITE('deltaY = ', deltaY, CR)
 
-  atan_alfa = ATAN2(deltaZ, deltaY)
-  alfa = atan_alfa
+  beta = ATAN2(deltaZ, deltaX)
+  alfa = ATAN2(deltaZ, deltaY)
 
   WRITE('alfa deg = ', alfa, CR)
   WRITE('beta deg = ', beta, CR)
@@ -117,6 +120,8 @@ BEGIN
   TCP1.w = 0.0
   TCP1.p = beta
   TCP1.r = alfa
+
+  WRITE('TCP1: ', TCP1.x, ', ', TCP1.y, ',', CR, TCP1.z, ', ', TCP1.w, ',', CR, TCP1.p, ', ', TCP1.r, CR)
 
   x0 = ref_pos.y
   y0 = ref_pos.x
@@ -136,6 +141,8 @@ BEGIN
     dX = 0.0
   ENDIF
 
+  WRITE('dX = ', dX, CR)
+
   x1 = YZ_pos_Z2.y
   y1 = YZ_pos_Z2.x
 
@@ -150,6 +157,7 @@ BEGIN
   ELSE
     dY = 0.0
   ENDIF
+  WRITE('dY = ', dY, CR)
 
   TCP2.x = dX * cosB + TCP_ideal.z * sinB
   TCP2.y = dX * sinA * sinB + dY * cosA - TCP_ideal.z * sinA * cosB
@@ -158,6 +166,7 @@ BEGIN
   TCP2.p = TCP1.p
   TCP2.r = TCP1.r
 
+  WRITE('TCP2: ', TCP2.x, ', ', TCP2.y, ',', CR, TCP2.z, ', ', TCP2.w, ',', CR, TCP2.p, ', ', TCP2.r, CR)
 
   SET_POS_REG(51, TCP2, status)
   IF status <> 0 THEN
