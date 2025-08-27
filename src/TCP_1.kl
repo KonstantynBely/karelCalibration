@@ -49,7 +49,7 @@ BEGIN
 
   rod_diam = 19.8
   deltaZ = 20.0
-  tool_diam = 5.0
+  tool_diam = 6.0
   
 
   cal_pos = GET_POS_REG(99, status)
@@ -166,7 +166,7 @@ BEGIN
   TCP2.p = TCP1.p
   TCP2.r = TCP1.r
 
-  WRITE('TCP2: ', TCP2.x, ', ', TCP2.y, ',', CR, TCP2.z, ', ', TCP2.w, ',', CR, TCP2.p, ', ', TCP2.r, CR)
+  -- WRITE('TCP2: ', TCP2.x, ', ', TCP2.y, ',', CR, TCP2.z, ', ', TCP2.w, ',', CR, TCP2.p, ', ', TCP2.r, CR)
 
   SET_POS_REG(51, TCP2, status)
   IF status <> 0 THEN
