@@ -104,7 +104,7 @@ BEGIN
   WRITE('deltaY = ', deltaY, CR)
 
   beta = ATAN2(deltaZ, deltaX)
-  alfa = ATAN2(deltaZ, deltaY)
+  alfa = 0.0 - ATAN2(deltaZ, deltaY)
 
   WRITE('alfa deg = ', alfa, CR)
   WRITE('beta deg = ', beta, CR)
@@ -117,9 +117,9 @@ BEGIN
   TCP1.x = TCP_ideal.z * sinB
   TCP1.y = 0.0 - TCP_ideal.z * sinA * sinB
   TCP1.z = TCP_ideal.z * cosA * cosB
-  TCP1.w = 0.0
+  TCP1.w = alfa
   TCP1.p = beta
-  TCP1.r = alfa
+  TCP1.r = 0.0
 
   WRITE('TCP1: ', TCP1.x, ', ', TCP1.y, ',', CR, TCP1.z, ', ', TCP1.w, ',', CR, TCP1.p, ', ', TCP1.r, CR)
 
