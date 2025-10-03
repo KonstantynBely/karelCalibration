@@ -6,11 +6,11 @@ VAR
   pr_z     : XYZWPR
   cal_pos  : XYZWPR
   def_pos  : XYZWPR
-  rod_diam : REAL
+  rod_rad : REAL
   status   : INTEGER
 
 BEGIN
-  rod_diam = 19.8
+  rod_rad = 9.9
 
   pr_x = GET_POS_REG(21, status)
   IF status <> 0 THEN
@@ -37,9 +37,9 @@ BEGIN
   ENDIF
 
   cal_pos = def_pos
-  cal_pos.x = pr_x.x + rod_diam / 2.0
-  cal_pos.y = pr_y.y - rod_diam / 2.0
-  cal_pos.z = pr_z.z - rod_diam / 2.0
+  cal_pos.x = pr_x.x + rod_rad
+  cal_pos.y = pr_y.y + rod_rad
+  cal_pos.z = pr_z.z - rod_rad
 
   cal_pos.w = 0 
   cal_pos.p = 0
