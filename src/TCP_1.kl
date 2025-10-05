@@ -115,7 +115,7 @@ BEGIN
   sinA = SIN(alfa)
 
   TCP1.x = TCP_ideal.z * sinB
-  TCP1.y = 0.0 - TCP_ideal.z * sinA * sinB
+  TCP1.y = TCP_ideal.z * sinA * sinB
   TCP1.z = TCP_ideal.z * cosA * cosB
   TCP1.w = alfa
   TCP1.p = beta

@@ -2882,3 +2882,52 @@ SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>172.23.254.7:17884
 Copy time 0 
 
 SMON(main)> copy mdb:*.* virt:\tmpback\=>172.23.254.7:17884
+Copy time 870 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 8 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>172.23.254.7:17884
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 104 
+spcmd completed successfully.
+
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>27983872:301555
+Copy time 4 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>asusvivobook14:7704
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>asusvivobook14:7704
+Copy time 889 
+
+SMON(main)> xcopy fr:\*.* virt:\tmpback\*.*=>asusvivobook14:7704
+Created directory VIRT:\TMPBACK\INITLOAD
+spcmd time 7 
+spcmd completed successfully.
+
+
+SMON(main)> xcopy fra:\*.* virt:\tmpback\*.*=>asusvivobook14:7704
+Created directory VIRT:\TMPBACK\_BACKUP_
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP01
+Created directory VIRT:\TMPBACK\_BACKUP_\BACKUP02
+spcmd time 104 
+spcmd completed successfully.
+
+R E S E T                                                                     
+
+SMON(main)> copy virt:\output\tcp_1.pc md: over =>27983872:301555
+[vmimage_bakfile] FRB:s-system.PRV backed up to FRB:s-system.VBK
+Copy time 65 
+
+SMON(main)> copy frs:orderfil.dat virt:\tmpback\=>asusvivobook14:7704
+Copy time 0 
+
+SMON(main)> copy mdb:*.* virt:\tmpback\=>asusvivobook14:7704
